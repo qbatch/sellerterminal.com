@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal Starter
+  Seller Terminal Landing Page
 </h1>
 
 ## 🚀 Quick start
