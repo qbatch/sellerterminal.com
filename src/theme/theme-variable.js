@@ -11,7 +11,7 @@ const fsXxs = "12px";
 const theme = {
   name: "theme",
   colors: {
-    primaryColor: "#0054A6", // primary color for all components
+    primaryColor: "#008989", // primary color for all components
     secondaryColor: "#002548",
     backgroundColor: "#F9FAFB",
     bodyText: "#667176",

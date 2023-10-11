@@ -1,0 +1,84 @@
+import React, { useState } from "react";
+import { navigate } from "gatsby";
+import { Link } from "gatsby";
+import { Container } from "react-bootstrap";
+import Button from "../button/index";
+import Drawer from "../headerDrawer";
+
+import Logo from "../../assets/images/st-logo.svg";
+
+import HeaderWrapper from "./style";
+
+const headerMenu = [
+  {
+    name: "About",
+    to: "/",
+  },
+  {
+    name: "How we work",
+    to: "/",
+  },
+  {
+    name: "Pricing",
+    to: "/",
+  },
+  {
+    name: "FAQs",
+    to: "/",
+  },
+  {
+    name: "Support",
+    to: "/",
+  },
+];
+
+const Index = () => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  return (
+    <>
+      <HeaderWrapper>
+        <Container className="custom-container">
+          <div className="header-main">
+            <div className="logo">
+              <Link to="/">
+                <Logo />
+              </Link>
+            </div>
+            <nav className="header-menu">
+              <ul>
+                {headerMenu.map((menu, ind) => (
+                  <li key={ind}>
+                    <Link to={menu.to} activeClassName="active">
+                      <span>{menu.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="menu-items">
+              <Link to="/sign-up">Sign Up</Link>
+              <Button
+                onClick={() => navigate("/contact")}
+                text="Get Your First $500 Free"
+                arrow="true"
+                variant="primary"
+              />
+              <div
+                className="burger-icon d-none"
+                onClick={() => setOpenDrawer(true)}
+              >
+                {[1, 2, 3].map((key) => (
+                  <span key={key}></span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </HeaderWrapper>
+      <Drawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
+    </>
+  );
+};
+
+export default Index;

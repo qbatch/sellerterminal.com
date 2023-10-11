@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
         font-size:${({ theme }) => theme.fonts.baseFontSize};    
         font-weight:400;
         line-height:normal;
-        font-family: 'Inter Tight', sans-serif;
+        font-family: 'Lato', sans-serif!important;
         margin: 0;
         padding: 0;
         background-color: ${({ theme }) => theme.colors.backgroundColor};  
@@ -89,7 +89,37 @@ const GlobalStyles = createGlobalStyle`
     .header-drawer {
       overflow: auto;
     }
-
+    .container.custom-container{
+      @media screen and (min-width: 1400px){
+        max-width: 1408px;
+      }
+    }
+    .section-head {
+    h4 {
+      color: var(--Body-Text-Light, #95a9a9);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      color: var(--Body-Text-Medium, #576f6f);
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 56px;
+      max-width: 871px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+      span {
+        color: #008989;
+        font-weight: 700;
+      }
+    }
+    .btn {
+    }
+  }
     @media (max-width: 1200px) {
       h1{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH2};

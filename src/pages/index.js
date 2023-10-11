@@ -1,15 +1,17 @@
 import * as React from "react";
-import { Row, Col, Container } from "react-bootstrap";
 // components for home page
 import Layout from "../layout";
+import Banner from "../components/pageComponents/banner";
+import WeInvestigate from "../components/pageComponents/weInvestigate";
+import Marketplace from "../components/pageComponents/supportedMarketplace";
+import Challenges from "../components/pageComponents/challenges";
 
 const IndexPage = () => (
   <Layout>
-    <Container>
-      <div className="p-4 text-center">
-        <h3>Landing page code here</h3>
-      </div>
-    </Container>
+    <Banner />
+    <WeInvestigate />
+    <Marketplace />
+    <Challenges />
   </Layout>
 );
 
