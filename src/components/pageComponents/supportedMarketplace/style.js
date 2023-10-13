@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { media } from "../../../theme/media-mixins";
 
-const MarketplaceWrapper = styled.div`
-  padding-top: 120px;
+const MarketplaceWrapper = styled.section`
+  &.st-section {
+    padding-bottom: 0;
+  }
   .section-head {
     gap: 32px;
     justify-content: center;
@@ -26,13 +28,13 @@ const MarketplaceWrapper = styled.div`
     padding-top: 58px;
     padding-bottom: 58px;
     .marquee-item {
-      margin-right: 16px;
+      margin-right: 18px;
       img {
         max-height: 80px;
       }
     }
     .marketplace-marq-sec {
-      margin-top: 29px;
+      margin-top: 32px;
     }
   }
 `;

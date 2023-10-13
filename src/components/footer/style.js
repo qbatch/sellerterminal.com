@@ -2,8 +2,6 @@ import styled from "styled-components";
 import Footerbg from "/static/footer-bg.png";
 
 const FooterWrapper = styled.div`
-  margin-top: 300px;
-  min-height: 300px;
   background-size: cover;
   background-image: url(${Footerbg});
   padding-top: 64px;

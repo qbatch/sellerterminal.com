@@ -13,7 +13,7 @@ import InvestigateWrapper from "./style";
 const WeInvestigate = () => {
   return (
     <>
-      <InvestigateWrapper>
+      <InvestigateWrapper className="st-section">
         <Container className="custom-container">
           <h2>
             We Investigate <Arrow /> We File Cases <Arrow /> We Get You Paid
@@ -21,10 +21,11 @@ const WeInvestigate = () => {
           <Row>
             <Col md={4} className="investigate-section">
               <div className="d-flex investigate-inner">
-                <IconSuccess />
+                <IconSuccess className="investigate-icon" />
                 <div>
                   <h3>
-                    99 <IconPercent />
+                    <span>99</span>
+                    <IconPercent />
                   </h3>
                   <p>Successful Cases</p>
                 </div>
@@ -32,10 +33,11 @@ const WeInvestigate = () => {
             </Col>
             <Col md={4} className="investigate-section">
               <div className="d-flex investigate-inner">
-                <IconFund />
+                <IconFund className="investigate-icon" />
                 <div>
                   <h3>
-                    $1M <IconPlus />
+                    <span>$1M</span>
+                    <IconPlus />
                   </h3>
                   <p>Funds Recovered</p>
                 </div>
@@ -43,10 +45,11 @@ const WeInvestigate = () => {
             </Col>
             <Col md={4} className="investigate-section">
               <div className="d-flex investigate-inner">
-                <IconHappy />
+                <IconHappy className="investigate-icon" />
                 <div>
                   <h3>
-                    1000 <IconPlus />
+                    <span>1000</span>
+                    <IconPlus />
                   </h3>
                   <p>Happy Sellers</p>
                 </div>

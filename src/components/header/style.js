@@ -24,8 +24,8 @@ const HeaderWrapper = styled.header`
       }
     }
     .header-menu {
-      margin-left: 124px;
-      margin-top: 2px;
+      margin-left: 160px;
+      margin-top: 1px;
       ${media.lg`
         margin-left: 0;
       `}
@@ -138,7 +138,7 @@ const HeaderWrapper = styled.header`
   .menu-items {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 34px;
     ${media.lg`
       gap: 20px;
     `}

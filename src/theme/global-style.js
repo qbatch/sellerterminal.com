@@ -56,7 +56,7 @@ const GlobalStyles = createGlobalStyle`
       color: ${({ theme }) => theme.colors.primaryColor};
       margin-bottom: 0;
     }
-    .pointer{
+    .cursor-pointer{
       cursor:pointer;
     }
     .section-heading {
@@ -92,13 +92,14 @@ const GlobalStyles = createGlobalStyle`
     .container.custom-container{
       @media screen and (min-width: 1400px){
         max-width: 1408px;
+        padding-left:0;
+        padding-right:0;
       }
     }
     .section-head {
     h4 {
       color: var(--Body-Text-Light, #95a9a9);
       font-size: 24px;
-      font-style: normal;
       font-weight: 600;
       line-height: 32px;
       margin-bottom: 8px;
@@ -106,11 +107,8 @@ const GlobalStyles = createGlobalStyle`
     h2 {
       color: var(--Body-Text-Medium, #576f6f);
       font-size: 48px;
-      font-style: normal;
       font-weight: 400;
       line-height: 56px;
-      max-width: 871px;
-      margin: 0 auto;
       margin-bottom: 32px;
       span {
         color: #008989;
@@ -119,6 +117,10 @@ const GlobalStyles = createGlobalStyle`
     }
     .btn {
     }
+  }
+  section.st-section{
+    padding-top:120px;
+    padding-bottom: 120px;
   }
     @media (max-width: 1200px) {
       h1{

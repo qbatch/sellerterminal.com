@@ -9,7 +9,7 @@ import MarketplaceWrapper from "./style";
 const Marketplace = () => {
   return (
     <>
-      <MarketplaceWrapper>
+      <MarketplaceWrapper className="st-section">
         <Container className="custom-container">
           <div className="section-head">
             <h4>Supported Marketplace</h4>
@@ -26,21 +26,9 @@ const Marketplace = () => {
             pauseOnHover={false}
             gradientColor="white"
             gradient={true}
-            speed={100}
+            speed={0}
             loop={0}
           >
-            <div className="marquee-item">
-              <StaticImage
-                src="../../../assets/images/marketplace/canada.png"
-                alt="brazil"
-              />
-            </div>
-            <div className="marquee-item">
-              <StaticImage
-                src="../../../assets/images/marketplace/usa.png"
-                alt="Brazil"
-              />
-            </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/brazil.png"
@@ -50,49 +38,61 @@ const Marketplace = () => {
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/mexico.png"
-                alt="Brazil"
+                alt="mexico"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/japan.png"
-                alt="Brazil"
+                alt="japan"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/india.png"
-                alt="Brazil"
+                alt="india"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/egypt.png"
-                alt="Brazil"
+                alt="egypt"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/sa.png"
-                alt="Brazil"
+                alt="sa"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/australia.png"
-                alt="Brazil"
+                alt="australia"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/singapore.png"
-                alt="Brazil"
+                alt="singapore"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/uae.png"
-                alt="Brazil"
+                alt="uae"
+              />
+            </div>
+            <div className="marquee-item">
+              <StaticImage
+                src="../../../assets/images/marketplace/canada.png"
+                alt="canada"
+              />
+            </div>
+            <div className="marquee-item">
+              <StaticImage
+                src="../../../assets/images/marketplace/usa.png"
+                alt="usa"
               />
             </div>
           </Marquee>
@@ -101,7 +101,7 @@ const Marketplace = () => {
             pauseOnHover={false}
             gradientColor="white"
             gradient={true}
-            speed={100}
+            speed={0}
             loop={0}
             className="marketplace-marq-sec"
           >

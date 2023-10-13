@@ -7,8 +7,6 @@ const BannerWrapper = styled.div`
   h3 {
     color: var(--Body-Text-Light, #95a9a9);
     text-align: center;
-    /* H4 */
-    font-family: Lato;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -38,7 +36,8 @@ const BannerWrapper = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
-    max-width: 723px;
+    max-width: 725px;
+    letter-spacing: -0.1px;
     margin: 0 auto;
     margin-bottom: 16px;
   }
@@ -54,6 +53,7 @@ const BannerWrapper = styled.div`
     max-width: 907px;
     margin: 0 auto;
     margin-bottom: 32px;
+    letter-spacing: 0.03px;
   }
   .btn {
     margin: 0 auto;
@@ -67,11 +67,15 @@ const BannerWrapper = styled.div`
     }
     .image-fixed-right {
       position: absolute;
-      right: 0;
-      top: 107px;
+      right: -81px;
+      top: 53px;
     }
     .image-banner {
-      margin-right: 155px;
+      max-width: 1450px;
+      margin: 0 auto;
+      margin-top: -60px;
+      margin-left: -132px;
+      margin-bottom: -105px;
     }
   }
 `;

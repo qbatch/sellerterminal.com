@@ -2,17 +2,23 @@ import styled from "styled-components";
 import { media } from "../../../theme/media-mixins";
 import Investigatebg from "/static/investigate-bg.png";
 
-const InvestigateWrapper = styled.div`
-  padding-top: 120px;
-  padding-bottom: 152px;
+const InvestigateWrapper = styled.section`
+  &.st-section {
+    padding-bottom: 152px;
+  }
   background-size: cover;
   background-image: url(${Investigatebg});
+  position: relative;
+  z-index: 1;
   .investigate-inner {
     gap: 32px;
     justify-content: center;
     position: relative;
     svg {
       margin-top: 9px;
+      &.investigate-icon {
+        width: 64px;
+      }
     }
     &:after {
       content: "";
@@ -41,6 +47,10 @@ const InvestigateWrapper = styled.div`
     line-height: 60px;
     text-align: center;
     margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
   }
   h3 {
     color: var(--White, #fff);
@@ -50,6 +60,9 @@ const InvestigateWrapper = styled.div`
     line-height: normal;
     margin-bottom: 4px;
     text-align: left;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
   }
   p {
     color: var(--Dividing-Line, #d2dbdb);
