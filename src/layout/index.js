@@ -6,22 +6,22 @@ import { ThemeProvider } from "styled-components";
 import Theme from "../theme/theme-variable";
 import GlobalStyle from "../theme/global-style";
 
-// import Header from "../PagesComponent/Header";
-// import Footer from "../PagesComponent/Footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={Theme}>
-      {/* <Header /> */}
+      <Header />
       <Helmet>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
           rel="stylesheet"
         />
       </Helmet>
       <GlobalStyle />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </ThemeProvider>
   );
 };

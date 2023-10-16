@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
         font-size:${({ theme }) => theme.fonts.baseFontSize};    
         font-weight:400;
         line-height:normal;
-        font-family: 'Inter Tight', sans-serif;
+        font-family: 'Lato', sans-serif!important;
         margin: 0;
         padding: 0;
         background-color: ${({ theme }) => theme.colors.backgroundColor};  
@@ -56,7 +56,7 @@ const GlobalStyles = createGlobalStyle`
       color: ${({ theme }) => theme.colors.primaryColor};
       margin-bottom: 0;
     }
-    .pointer{
+    .cursor-pointer{
       cursor:pointer;
     }
     .section-heading {
@@ -89,7 +89,39 @@ const GlobalStyles = createGlobalStyle`
     .header-drawer {
       overflow: auto;
     }
-
+    .container.custom-container{
+      @media screen and (min-width: 1400px){
+        max-width: 1408px;
+        padding-left:0;
+        padding-right:0;
+      }
+    }
+    .section-head {
+    h4 {
+      color: var(--Body-Text-Light, #95a9a9);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      color: var(--Body-Text-Medium, #576f6f);
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 56px;
+      margin-bottom: 32px;
+      span {
+        color: #008989;
+        font-weight: 700;
+      }
+    }
+    .btn {
+    }
+  }
+  section.st-section{
+    padding-top:120px;
+    padding-bottom: 120px;
+  }
     @media (max-width: 1200px) {
       h1{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH2};

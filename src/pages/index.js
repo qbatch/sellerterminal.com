@@ -1,15 +1,39 @@
 import * as React from "react";
-import { Row, Col, Container } from "react-bootstrap";
 // components for home page
 import Layout from "../layout";
+import Banner from "../components/pageComponents/banner";
+import WeInvestigate from "../components/pageComponents/weInvestigate";
+import Marketplace from "../components/pageComponents/supportedMarketplace";
+import Challenges from "../components/pageComponents/challenges";
+import About from "../components/pageComponents/aboutInvestment";
+import OurPromise from "../components/pageComponents/ourPromise";
+import TimeHold from "../components/pageComponents/ctaBlock";
+import BuySoftware from "../components/pageComponents/ctaBlock";
+import GettingRefund from "../components/pageComponents/gettingRefunds";
+import Faq from "../components/pageComponents/Faq";
+import WeRespond from "../components/pageComponents/weRespond";
 
 const IndexPage = () => (
   <Layout>
-    <Container>
-      <div className="p-4 text-center">
-        <h3>Landing page code here</h3>
-      </div>
-    </Container>
+    <Banner />
+    <WeInvestigate />
+    <Marketplace />
+    <Challenges />
+    <About />
+    <OurPromise />
+    <TimeHold
+      title="Time to Hold Amazon Accountable."
+      subtitle="Zero Hidden Charges. Risk-Free Audits"
+      btnText="Find Out Claimable Amount"
+    />
+    <GettingRefund />
+    <BuySoftware
+      className="buy-software"
+      title="Psst… Want to buy our software? Curious how?"
+      btnText="Hit The Button To Know More"
+    />
+    <Faq />
+    <WeRespond />
   </Layout>
 );
 
