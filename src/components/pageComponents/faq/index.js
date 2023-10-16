@@ -33,12 +33,6 @@ const FAQ = () => {
       title: "Why do you take a percentage of the reimbursed revenue?",
       content: "Lorem ipsum dolor sit emit",
     },
-
-    {
-      id: 6,
-      title: "What is CTO as a Service, and how can it benefit my business?",
-      content: "Lorem ipsum dolor sit emit",
-    },
   ];
   const handleOpen = (id) => {
     if (openItems === id) {
@@ -49,15 +43,6 @@ const FAQ = () => {
       setOpenItems(id);
     }
   };
-  // const handleOpen = (id) => {
-  //   setOpenItems((prevOpenItems) => {
-  //     if (prevOpenItems.includes(id)) {
-  //       return prevOpenItems.filter((itemId) => itemId !== id);
-  //     } else {
-  //       return [...prevOpenItems, id];
-  //     }
-  //   });
-  // };
   return (
     <>
       <FaqWrapper className="st-section">
@@ -72,8 +57,6 @@ const FAQ = () => {
                   title={faq.title}
                   onClick={() => handleOpen(faq.id)}
                   open={openItems === faq.id}
-                  // onClick={() => handleOpen(faq.id)}
-                  // open={openItems.includes(faq.id)}
                 >
                   {faq.content}
                 </Accordion>

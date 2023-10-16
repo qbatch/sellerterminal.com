@@ -28,6 +28,7 @@ const IndexPage = () => (
     />
     <GettingRefund />
     <BuySoftware
+      className="buy-software"
       title="Psst… Want to buy our software? Curious how?"
       btnText="Hit The Button To Know More"
     />

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const CollpaseWrapper = styled.div`
   margin-bottom: 24px;
-  padding: 16px;
+  padding: 15px 16px;
   border-radius: 8px;
   border: 1px solid var(--Dividing-Line, #d2dbdb);
   background: var(--White, #fff);

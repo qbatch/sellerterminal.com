@@ -3,6 +3,10 @@ import TimeHoldBg from "/static/hold-bg.png";
 
 const RespondWrapper = styled.section`
   background: var(--White, #fff);
+  overflow: hidden;
+  &.st-section {
+    padding-bottom: 76px;
+  }
   .section-head {
     text-align: left;
   }

@@ -6,10 +6,10 @@ import ReclaimImg from "../../../assets/images/reclaim-img.svg";
 import TimeWrapper from "./style";
 
 const Index = (props) => {
-  const { title, subtitle, btnText } = props;
+  const { title, subtitle, btnText, className } = props;
   return (
     <>
-      <TimeWrapper className="st-section">
+      <TimeWrapper className={`st-section ${className}`}>
         <Container className="custom-container">
           <div className="section-head">
             <h2>{title}</h2>

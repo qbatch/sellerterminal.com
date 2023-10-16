@@ -8,6 +8,12 @@ const FooterWrapper = styled.div`
   .footer-top {
     border-bottom: 1px solid #d2dbdb;
     padding-bottom: 24px;
+    .logo {
+      svg {
+        height: 49px;
+        width: 219px;
+      }
+    }
     .auth-buttons {
       display: flex;
       align-items: center;

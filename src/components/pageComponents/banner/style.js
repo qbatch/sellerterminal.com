@@ -4,6 +4,7 @@ import { media } from "../../../theme/media-mixins";
 const BannerWrapper = styled.div`
   padding-top: 56px;
   text-align: center;
+  overflow: hidden;
   h3 {
     color: var(--Body-Text-Light, #95a9a9);
     text-align: center;

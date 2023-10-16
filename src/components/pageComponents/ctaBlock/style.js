@@ -7,6 +7,11 @@ const TimeWrapper = styled.section`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top right;
+  &.buy-software {
+    padding-top: 148px;
+    padding-bottom: 148px;
+    background-position: 122px 0px;
+  }
 
   .section-head {
     text-align: left;
