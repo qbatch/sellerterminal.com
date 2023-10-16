@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../../theme/media-mixins";
 
 const ChallengesWrapper = styled.section`
   border-bottom: 1px solid #d2dbdb;
@@ -6,16 +7,15 @@ const ChallengesWrapper = styled.section`
     padding-top: 11px;
     h2 {
       margin-bottom: 16px;
+      @media screen and (min-width: 1440px) {
+        line-height: 56px;
+      }
       span {
         font-style: italic;
         letter-spacing: -1px;
       }
     }
     p {
-      color: var(--Body-Text, #658486);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
       margin-bottom: 24px;
     }
   }
@@ -29,8 +29,11 @@ const ChallengesWrapper = styled.section`
     display: flex;
     flex-wrap: wrap;
     gap: 0 80px;
+    ${media.xxl`
+       gap:0 2%;
+      `}
     li {
-      color: var(--Body-Text-Medium, #576f6f);
+      color: ${({ theme }) => theme.colors.textMedium};
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
@@ -39,7 +42,28 @@ const ChallengesWrapper = styled.section`
       min-width: 212px;
       max-width: 212px;
       padding-left: 2px;
+      ${media.xxl`
+        min-width:47%;
+        width: 47%;
+      `}
+      ${media.md`
+        font-size:13px;
+        line-height:normal;
+        width: 49%;
+      `}
+      ${media.xs`
+        font-size:12px;
+      `}
+      @media screen and (max-width:374px) {
+        width: 100%;
+      }
     }
+  }
+  .static-image {
+    ${media.sm`
+        width:100%;
+        margin-bottom:16px;
+      `}
   }
 `;
 

@@ -16,7 +16,7 @@ const Footer = () => {
     <FooterWrapper>
       <div className="footer-top">
         <Container className="custom-container">
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between footer-top-content">
             <div className="logo">
               <Link to="/">
                 <Logo />
@@ -32,10 +32,10 @@ const Footer = () => {
       <div className="footer-mid">
         <Container className="custom-container">
           <Row>
-            <Col md={4}>
-              <AmazonIcon />
+            <Col md={4} sm={6}>
+              <AmazonIcon className="footer-img" />
             </Col>
-            <Col md={2}>
+            <Col md={2} sm={3} xs={6}>
               <div className="footer-links d-flex justify-content-between">
                 <ul>
                   <li>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-            <Col md={2}>
+            <Col md={2} sm={3} xs={6}>
               <div className="footer-links d-flex justify-content-between">
                 <ul>
                   <li>
@@ -65,7 +65,7 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-            <Col md={4}>
+            <Col md={4} sm={6}>
               <div className="footer-social">
                 <p>Follow Us at</p>
                 <ul>
@@ -96,7 +96,9 @@ const Footer = () => {
         </Container>
       </div>
       <div className="footer-bottom">
-        <p>Copyright © 2023. SellerTerminal. All rights reserved.</p>
+        <Container>
+          <p>Copyright © 2023. SellerTerminal. All rights reserved.</p>
+        </Container>
       </div>
     </FooterWrapper>
   );

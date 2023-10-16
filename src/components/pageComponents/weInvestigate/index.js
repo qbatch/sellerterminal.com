@@ -15,43 +15,43 @@ const WeInvestigate = () => {
     <>
       <InvestigateWrapper className="st-section">
         <Container className="custom-container">
-          <h2>
+          <h2 className="light">
             We Investigate <Arrow /> We File Cases <Arrow /> We Get You Paid
           </h2>
-          <Row>
-            <Col md={4} className="investigate-section">
+          <Row className="investigate-row">
+            <Col sm={6} lg={4} className="investigate-section">
               <div className="d-flex investigate-inner">
                 <IconSuccess className="investigate-icon" />
                 <div>
-                  <h3>
+                  <h1>
                     <span>99</span>
                     <IconPercent />
-                  </h3>
-                  <p>Successful Cases</p>
+                  </h1>
+                  <h4>Successful Cases</h4>
                 </div>
               </div>
             </Col>
-            <Col md={4} className="investigate-section">
+            <Col sm={6} lg={4} className="investigate-section">
               <div className="d-flex investigate-inner">
                 <IconFund className="investigate-icon" />
                 <div>
-                  <h3>
+                  <h1>
                     <span>$1M</span>
                     <IconPlus />
-                  </h3>
-                  <p>Funds Recovered</p>
+                  </h1>
+                  <h4>Funds Recovered</h4>
                 </div>
               </div>
             </Col>
-            <Col md={4} className="investigate-section">
+            <Col sm={6} lg={4} className="investigate-section">
               <div className="d-flex investigate-inner">
                 <IconHappy className="investigate-icon" />
                 <div>
-                  <h3>
+                  <h1>
                     <span>1000</span>
                     <IconPlus />
-                  </h3>
-                  <p>Happy Sellers</p>
+                  </h1>
+                  <h4>Happy Sellers</h4>
                 </div>
               </div>
             </Col>

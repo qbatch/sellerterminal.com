@@ -5,6 +5,9 @@ import Investigatebg from "/static/investigate-bg.png";
 const InvestigateWrapper = styled.section`
   &.st-section {
     padding-bottom: 152px;
+    ${media.md`
+       padding-bottom:75px;
+      `};
   }
   background-size: cover;
   background-image: url(${Investigatebg});
@@ -14,6 +17,9 @@ const InvestigateWrapper = styled.section`
     gap: 32px;
     justify-content: center;
     position: relative;
+    ${media.md`
+      justify-content:left;
+    `};
     svg {
       margin-top: 9px;
       &.investigate-icon {
@@ -28,6 +34,9 @@ const InvestigateWrapper = styled.section`
       position: absolute;
       right: 0;
       top: 29px;
+      @media screen and (max-width: 1340px) {
+        right: -15px;
+      }
     }
   }
   .investigate-section {
@@ -38,40 +47,67 @@ const InvestigateWrapper = styled.section`
         }
       }
     }
+    .investigate-inner {
+      ${media.md`
+        &:after{
+          display:none;
+        }
+      `};
+    }
+    ${media.md`
+      padding-bottom:24px;
+      &:last-of-type{
+        padding-bottom:0;
+      }
+    `};
+  }
+  .investigate-row {
+    ${media.md`
+    max-width:650px;
+    margin:0 auto;
+    `};
+    ${media.xs`
+    max-width:300px;
+    margin:0 auto;
+    `};
   }
   h2 {
-    color: var(--BG, #f0f2f2);
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 60px;
     text-align: center;
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
     gap: 24px;
-    align-items: center;
-  }
-  h3 {
-    color: var(--White, #fff);
-    font-size: 68px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    align-items: center;
+    flex-wrap: wrap;
+    ${media.md`
+    gap:0 4px;
+    margin-bottom:35px;
+    svg{
+      width: 30px;
+    }
+    `};
+  }
+  h1 {
+    color: ${({ theme }) => theme.colors.whiteColor};
+    font-weight: 700;
     margin-bottom: 4px;
     text-align: left;
     display: flex;
     align-items: baseline;
     gap: 4px;
+    span {
+      color: ${({ theme }) => theme.colors.whiteColor};
+    }
+    ${media.sm`
+      svg{
+        width: 22px;
+        height: 22px;
+      }
+    `};
   }
-  p {
-    color: var(--Dividing-Line, #d2dbdb);
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    text-align: left;
+  h4 {
+    color: ${({ theme }) => theme.colors.dividingColor};
     margin-bottom: 0;
   }
 `;

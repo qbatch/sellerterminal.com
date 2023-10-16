@@ -1,6 +1,6 @@
 const fsxl = "96px";
 const fsh1 = "68px";
-const fsh2 = "40px";
+const fsh2 = "48px";
 const fsh3 = "32px";
 const fslg = "24px";
 const fssm = "20px";
@@ -12,20 +12,20 @@ const theme = {
   name: "theme",
   colors: {
     primaryColor: "#008989", // primary color for all components
-    secondaryColor: "#002548",
+    secondaryColor: "#2b3030",
     backgroundColor: "#F9FAFB",
-    bodyText: "#667176",
-    bodyTextVariant: "#2D2F31",
+    bodyText: "#658486",
+    bodyTextVariant: "#f0f2f2",
     labelColor: "#979797",
     borderColor: "#2E3846",
     dangerColor: "#ED1C24",
     gardientColor: "#2D2F31",
     onGradient: "#F6F7FA",
     dividerColor: "#D2D9DC",
-    textMedium: "#5F737C",
+    textMedium: "#576F6F",
     whiteColor: "#FFF",
-    bodyLight: "#7C8EA1",
-    dividingColor: "#D2D9DC",
+    bodyLight: "#95A9A9",
+    dividingColor: "#D2DBDB",
     disableColor: "#889095",
   },
   fonts: {

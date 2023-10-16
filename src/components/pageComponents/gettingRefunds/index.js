@@ -99,8 +99,10 @@ const GettingRefund = () => {
                       step.reverse ? "refund-content-ba" : ""
                     }`}
                   >
-                    <h3>{step.title}</h3>
-                    <p>{step.description}</p>
+                    <div className="refund-text">
+                      <h3>{step.title}</h3>
+                      <p>{step.description}</p>
+                    </div>
                   </div>
                 </Col>
               </Row>

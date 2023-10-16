@@ -11,7 +11,7 @@ const OurPromise = () => {
       <PromiseWrapper className="st-section">
         <Container className="custom-container">
           <Row>
-            <Col md={6}>
+            <Col lg={6}>
               <div className="section-head">
                 <h4>Our Promise</h4>
                 <h2>
@@ -26,7 +26,7 @@ const OurPromise = () => {
                 <p>Get Special Discounts</p>
               </div>
             </Col>
-            <Col md={6}>
+            <Col lg={6}>
               <div className="promise-reclaim">
                 <h3>Let’s Reclaim Your Money</h3>
                 <div className="reclaim-main">

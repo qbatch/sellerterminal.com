@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from "../../collapse";
-import Button from "../../button";
 
 import FaqWrapper from "./style";
 const FAQ = () => {

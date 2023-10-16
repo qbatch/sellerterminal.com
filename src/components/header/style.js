@@ -18,14 +18,14 @@ const HeaderWrapper = styled.header`
     .logo {
       svg {
         min-width: 70px;
-        ${media.xs`
-          width: 70px;
-        `}
       }
     }
     .header-menu {
       margin-left: 160px;
       margin-top: 1px;
+      ${media.xxl`
+        margin-left:64px;
+      `}
       ${media.lg`
         margin-left: 0;
       `}
@@ -36,6 +36,9 @@ const HeaderWrapper = styled.header`
         display: flex;
         align-items: center;
         margin-bottom: 0;
+        ${media.xxl`
+        padding-left:0;
+      `}
         li {
           padding-left: 28px;
           padding-right: 28px;
@@ -46,7 +49,8 @@ const HeaderWrapper = styled.header`
             padding-right: 0;
           }
           ${media.lg`
-            padding-left: 20px;
+            padding-left: 18px;
+            padding-right:18px;
           `}
           a {
             color: ${({ theme }) => theme.colors.textMedium};
@@ -146,6 +150,9 @@ const HeaderWrapper = styled.header`
       width: 32px;
       height: 32px;
       position: relative;
+      @media screen and (min-width: 992px) {
+        display: none;
+      }
       cursor: pointer;
       span {
         display: block;

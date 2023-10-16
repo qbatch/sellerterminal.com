@@ -1,24 +1,21 @@
 import styled from "styled-components";
-import TimeHoldBg from "/static/hold-bg.png";
+import { media } from "../../../theme/media-mixins";
 
 const FaqWrapper = styled.section`
-  background: var(--White, #fff);
-  border-bottom: 1px solid var(--Dividing-Line, #d2dbdb);
+  background: ${({ theme }) => theme.colors.whiteColor};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.dividingColor};
   .section-head {
     text-align: center;
     margin-bottom: 58px;
     h2 {
-      margin-bottom: 16px;
+      font-weight: 700;
+      @media screen and (min-width: 1440px) {
+        line-height: 56px;
+      }
     }
-    .btn {
-      margin-top: 32px;
-      margin-bottom: 0;
-    }
-    p {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 32px;
-    }
+    ${media.md`
+      margin-bottom:35px;
+      `};
   }
   .faq-section {
     max-width: 930px;

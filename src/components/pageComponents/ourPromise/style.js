@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import IconStar from "/static/star.svg";
+import { media } from "../../../theme/media-mixins";
 
 const PromiseWrapper = styled.section`
   border-bottom: 1px solid #d2dbdb;
   .section-head {
     text-align: left;
     margin-bottom: 80px;
+    ${media.md`
+      margin-bottom:42px;
+      `}
     h4 {
       margin-bottom: 10px;
     }
@@ -13,6 +17,9 @@ const PromiseWrapper = styled.section`
       margin-bottom: 33px;
       max-width: 532px;
       letter-spacing: 0.3px;
+      @media screen and (min-width: 1440px) {
+        line-height: 56px;
+      }
       span {
         letter-spacing: -0.4px;
       }
@@ -21,7 +28,7 @@ const PromiseWrapper = styled.section`
       margin-bottom: 8px;
     }
     p {
-      color: var(--Body-Text-Medium, #576f6f);
+      color: ${({ theme }) => theme.colors.textMedium};
       font-size: 14px;
       font-weight: 500;
       line-height: normal;
@@ -30,14 +37,12 @@ const PromiseWrapper = styled.section`
   .promise-reclaim {
     background-color: #006363;
     border-radius: 16px;
-    min-height: 406px;
     padding-top: 40px;
     padding-left: 40px;
     padding-bottom: 40px;
     padding-right: 47px;
     h3 {
-      color: var(--White, #fff);
-      font-size: 32px;
+      color: ${({ theme }) => theme.colors.whiteColor};
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -50,8 +55,14 @@ const PromiseWrapper = styled.section`
     }
     .reclaim-left {
       padding-top: 24px;
+      ${media.md`
+          padding-top:16px;
+        `}
       ul {
         padding-left: 0;
+        ${media.md`
+          margin-bottom:0;
+        `}
         li {
           background-image: url(${IconStar});
           background-size: 32px;
@@ -62,6 +73,28 @@ const PromiseWrapper = styled.section`
           font-weight: 600;
           line-height: 32px;
           margin-bottom: 24px;
+          @media screen and (max-width: 1200px) {
+            font-size: 20px;
+            line-height: normal;
+          }
+          @media screen and (max-width: 991px) {
+            font-size: 18px;
+            margin-bottom: 16px;
+            background-size: 20px;
+            padding-left: 30px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+            margin-bottom: 8px;
+            background-size: 18px;
+            padding-left: 24px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
           &:last-of-type {
             margin-bottom: 0;
           }
@@ -69,8 +102,28 @@ const PromiseWrapper = styled.section`
       }
       .btn {
         margin-top: 56px;
+        ${media.md`
+          margin-top:24px;
+        `}
       }
     }
+    .reclaim-right {
+      ${media.md`
+      padding-top:0px;
+      svg {
+          height:150px;
+      }
+      `}
+      @media screen and (max-width:415px) {
+        display: none;
+      }
+    }
+    ${media.md`
+      padding:24px;
+      .reclaim-main{
+        justify-content:space-between;
+      }
+    `}
   }
 `;
 

@@ -57,17 +57,17 @@ const Index = () => {
               </ul>
             </nav>
             <div className="menu-items">
-              <Link to="/sign-up">Sign Up</Link>
+              <Link className="responsive-none" to="/sign-up">
+                Sign Up
+              </Link>
               <Button
+                className="responsive-none"
                 onClick={() => navigate("/contact")}
                 text="Get Your First $500 Free"
                 arrow="true"
                 variant="primary"
               />
-              <div
-                className="burger-icon d-none"
-                onClick={() => setOpenDrawer(true)}
-              >
+              <div className="burger-icon" onClick={() => setOpenDrawer(true)}>
                 {[1, 2, 3].map((key) => (
                   <span key={key}></span>
                 ))}

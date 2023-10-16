@@ -12,8 +12,8 @@ const Index = (props) => {
       <TimeWrapper className={`st-section ${className}`}>
         <Container className="custom-container">
           <div className="section-head">
-            <h2>{title}</h2>
-            {subtitle && <p>{subtitle}</p>}
+            <h1 className="light">{title}</h1>
+            {subtitle && <h4>{subtitle}</h4>}
             <Button variant="outline-secondary" arrow text={btnText} />
           </div>
         </Container>

@@ -12,13 +12,14 @@ const Challenges = () => {
       <ChallengesWrapper className="st-section">
         <Container className="custom-container">
           <Row className="justify-content-betweeen">
-            <Col md={6}>
+            <Col xl={6} lg={6} md={6}>
               <StaticImage
+                className="static-image"
                 src="../../../assets/images/challenge-img.png"
                 alt="challenge"
               />
             </Col>
-            <Col md={{ span: 5, offset: 1 }}>
+            <Col xl={{ span: 5, offset: 1 }} lg={6} md={6}>
               <div className="section-head">
                 <h4>Your Challenges</h4>
                 <h2>

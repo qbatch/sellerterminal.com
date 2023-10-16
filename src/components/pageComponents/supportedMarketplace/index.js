@@ -26,7 +26,7 @@ const Marketplace = () => {
             pauseOnHover={false}
             gradientColor="white"
             gradient={true}
-            speed={0}
+            speed={50}
             loop={0}
           >
             <div className="marquee-item">
@@ -101,7 +101,7 @@ const Marketplace = () => {
             pauseOnHover={false}
             gradientColor="white"
             gradient={true}
-            speed={0}
+            speed={50}
             loop={0}
             className="marketplace-marq-sec"
           >

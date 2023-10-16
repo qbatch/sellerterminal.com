@@ -28,7 +28,7 @@ const About = () => {
             </p>
           </div>
           <Row>
-            <Col md={3}>
+            <Col md={3} sm={6} xs={6} className="about-section-col">
               <div className="about-section">
                 <Obligation />
                 <p>
@@ -36,7 +36,7 @@ const About = () => {
                 </p>
               </div>
             </Col>
-            <Col md={3}>
+            <Col md={3} sm={6} xs={6} className="about-section-col">
               <div className="about-section">
                 <Recovery />
                 <p>
@@ -45,7 +45,7 @@ const About = () => {
                 </p>
               </div>
             </Col>
-            <Col md={3}>
+            <Col md={3} sm={6} xs={6} className="about-section-col">
               <div className="about-section">
                 <Traceable />
                 <p>
@@ -54,7 +54,7 @@ const About = () => {
                 </p>
               </div>
             </Col>
-            <Col md={3}>
+            <Col md={3} sm={6} xs={6} className="about-section-col">
               <div className="about-section">
                 <Money />
                 <p>

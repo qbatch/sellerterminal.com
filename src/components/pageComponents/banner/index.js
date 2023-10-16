@@ -12,7 +12,7 @@ const Banner = () => {
       <BannerWrapper>
         <Container className="custom-container">
           <div className="banner-main">
-            <h3>Uh-huh! </h3>
+            <h4 className="light">Uh-huh! </h4>
             <h1>
               No More <span>Losing Money</span>
             </h1>
