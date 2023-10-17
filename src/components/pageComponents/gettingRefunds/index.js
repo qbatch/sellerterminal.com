@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "../../button";
+
 import SignupImage from "../../../assets/images/signup-img.svg";
 import ConnectAccount from "../../../assets/images/connect-account.svg";
 import RecoveryAgent from "../../../assets/images/recovery-agent.svg";
@@ -61,6 +61,7 @@ const GettingRefund = () => {
       reverse: true,
     },
   ];
+
   return (
     <>
       <RefundWrapper className="st-section">

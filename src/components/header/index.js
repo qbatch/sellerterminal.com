@@ -1,36 +1,14 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby";
 import { Link } from "gatsby";
+
 import { Container } from "react-bootstrap";
 import Button from "../button/index";
 import Drawer from "../headerDrawer";
-
 import Logo from "../../assets/images/st-logo.svg";
 
+import { headerMenu } from "../../constants";
 import HeaderWrapper from "./style";
-
-const headerMenu = [
-  {
-    name: "About",
-    to: "/",
-  },
-  {
-    name: "How we work",
-    to: "/",
-  },
-  {
-    name: "Pricing",
-    to: "/",
-  },
-  {
-    name: "FAQs",
-    to: "/",
-  },
-  {
-    name: "Support",
-    to: "/",
-  },
-];
 
 const Index = () => {
   const [openDrawer, setOpenDrawer] = useState(false);

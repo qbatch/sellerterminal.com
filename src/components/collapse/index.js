@@ -1,4 +1,5 @@
 import React from "react";
+
 import Collapse from "react-bootstrap/Collapse";
 import IconPlus from "../../assets/images/icons/icon-plus-accordion.svg";
 import IconMinus from "../../assets/images/icons/icon-minus-accordion.svg";

@@ -1,12 +1,13 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+
 import Button from "../../button";
-import ReclaimImg from "../../../assets/images/reclaim-img.svg";
 
 import TimeWrapper from "./style";
 
 const Index = (props) => {
   const { title, subtitle, btnText, className } = props;
+
   return (
     <>
       <TimeWrapper className={`st-section ${className}`}>

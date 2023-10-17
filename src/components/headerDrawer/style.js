@@ -18,6 +18,9 @@ const DrawerWrapper = styled.div`
   }
   .menu-main {
     padding-left: 24px;
+    @media screen and (max-width: 350px) {
+      padding-left: 16px;
+    }
     ul {
       padding-left: 0;
       width: 70%;
@@ -46,17 +49,32 @@ const DrawerWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 16px;
+    @media screen and (max-width: 350px) {
+      gap: 7px;
+      padding-left: 16px;
+    }
     a {
       text-decoration: none;
       display: inline-block;
       font-size: 18px;
       color: #008989;
+      @media screen and (max-width: 350px) {
+        font-size: 16px;
+      }
     }
     .btn {
+      @media screen and (max-width: 350px) {
+        gap: 8px;
+      }
     }
   }
   .header-drawer-content {
     height: calc(100vh - 70px);
+  }
+  .header-drawer {
+    @media screen and (max-width: 410px) {
+      width: 350px !important;
+    }
   }
   @media (max-width: 1314px) {
     .menu-main {

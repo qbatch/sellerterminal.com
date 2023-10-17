@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "../../button";
 import { StaticImage } from "gatsby-plugin-image";
-// import bannerImg from "../../../assets/images/banner-img.png";
 
+import Button from "../../button";
+
+import { challengeList } from "../../../constants";
 import ChallengesWrapper from "./style";
 
 const Challenges = () => {
@@ -35,17 +36,9 @@ const Challenges = () => {
                 </p>
                 <div className="challenge-list d-flex">
                   <ul>
-                    <li>FBA overcharged fees</li>
-                    <li>Amazon FBA Refunds</li>
-                    <li>Changes Size & Dimension</li>
-                    <li>Customer Returns</li>
-                    <li>Order Quantity Issues</li>
-                    <li>Overchanges FBA Fees</li>
-                    <li>Lost Inventory</li>
-                    <li>FBA Removals</li>
-                    <li>Damaged Inventory</li>
-                    <li>Missing Inbound Inventory</li>
-                    <li>Missing Inbound Inventory</li>
+                    {challengeList.map((item, index) => (
+                      <li>{item}</li>
+                    ))}
                   </ul>
                 </div>
                 <Button

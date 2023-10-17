@@ -11,7 +11,7 @@ const CollpaseWrapper = styled.div`
     margin-bottom: 0px;
   }
   &:has(.show) {
-    border: 1px solid #008989;
+    border: 1px solid ${({ theme }) => theme.colors.primaryColor};
     .collpase-select {
       .title {
         color: ${({ theme }) => theme.colors.textMedium};
@@ -34,7 +34,6 @@ const CollpaseWrapper = styled.div`
       `};
       ${media.xs`
         font-size:16px;
-        line-height:normal;
       `};
     }
     svg {

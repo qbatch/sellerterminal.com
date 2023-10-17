@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+
 import Button from "../../button";
-// import bannerImg from "../../../assets/images/banner-img.png";
 
 import BannerWrapper from "./style";
 
@@ -46,8 +46,6 @@ const Banner = () => {
               alt="banner image"
               className="image-fixed-right"
             />
-            {/* <img src="/banner-coin-img.png" alt="coin image" />
-            <img src={bannerImg} alt="banner image" /> */}
           </div>
         </Container>
       </BannerWrapper>

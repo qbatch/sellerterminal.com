@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import TimeHoldBg from "/static/hold-bg.png";
 import { media } from "../../../theme/media-mixins";
 
 const RefundWrapper = styled.section`
@@ -69,28 +68,28 @@ const RefundWrapper = styled.section`
     }
     .refund-image {
       border-radius: 12px;
-      background: var(--Grey-Light, #f3f5f7);
+      background: #f3f5f7;
       min-height: 303px;
       display: flex;
       align-items: center;
       justify-content: center;
       ${media.sm`
           margin-bottom:16px;
-        `}
+      `}
       ${media.xs`
       padding-left:40px;
       padding-right:40px;
       min-height:200px;
-          svg{
-            width: 100%;
-            height:auto;
-          }
-        `}
+        svg{
+          width: 100%;
+          height:auto;
+        }
+      `}
     }
     .refund-text {
       ${media.sm`
           margin-bottom:42px;
-        `}
+      `}
     }
     .refund-row {
       position: relative;
@@ -105,7 +104,7 @@ const RefundWrapper = styled.section`
         align-items: center;
         justify-content: center;
         border-radius: 64px;
-        color: var(--Body-Text-Light, #95a9a9);
+        color: ${({ theme }) => theme.colors.bodyLight};
         text-align: center;
         font-size: 32px;
         font-weight: 600;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "../../button";
-import { StaticImage } from "gatsby-plugin-image";
+
 import Obligation from "../../../assets/images/no-obligation.svg";
 import Recovery from "../../../assets/images/recovery-estimate.svg";
 import Traceable from "../../../assets/images/traceable.svg";
@@ -9,6 +8,43 @@ import Money from "../../../assets/images/money.svg";
 
 import AboutWrapper from "./style";
 
+const aboutList = [
+  {
+    icon: <Obligation />,
+    content: (
+      <>
+        Free, No-obligation <br /> Audit
+      </>
+    ),
+  },
+  {
+    icon: <Recovery />,
+    content: (
+      <>
+        Recovery Estimate in
+        <br /> 8-10 hrs
+      </>
+    ),
+  },
+  {
+    icon: <Traceable />,
+    content: (
+      <>
+        100% Traceable Funds
+        <br /> Transfer
+      </>
+    ),
+  },
+  {
+    icon: <Money />,
+    content: (
+      <>
+        We Trace Money
+        <br /> Others Skip
+      </>
+    ),
+  },
+];
 const About = () => {
   return (
     <>
@@ -28,41 +64,20 @@ const About = () => {
             </p>
           </div>
           <Row>
-            <Col md={3} sm={6} xs={6} className="about-section-col">
-              <div className="about-section">
-                <Obligation />
-                <p>
-                  Free, No-obligation <br /> Audit
-                </p>
-              </div>
-            </Col>
-            <Col md={3} sm={6} xs={6} className="about-section-col">
-              <div className="about-section">
-                <Recovery />
-                <p>
-                  Recovery Estimate in
-                  <br /> 8-10 hrs
-                </p>
-              </div>
-            </Col>
-            <Col md={3} sm={6} xs={6} className="about-section-col">
-              <div className="about-section">
-                <Traceable />
-                <p>
-                  100% Traceable Funds
-                  <br /> Transfer
-                </p>
-              </div>
-            </Col>
-            <Col md={3} sm={6} xs={6} className="about-section-col">
-              <div className="about-section">
-                <Money />
-                <p>
-                  We Trace Money
-                  <br /> Others Skip
-                </p>
-              </div>
-            </Col>
+            {aboutList.map((item, index) => (
+              <Col
+                key={index}
+                md={3}
+                sm={6}
+                xs={6}
+                className="about-section-col"
+              >
+                <div className="about-section">
+                  {item.icon}
+                  <p>{item.content}</p>
+                </div>
+              </Col>
+            ))}
           </Row>
         </Container>
       </AboutWrapper>

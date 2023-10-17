@@ -1,44 +1,17 @@
 import React, { useState } from "react";
 import Drawer from "react-modern-drawer";
-import Button from "../button/index";
-import "react-modern-drawer/dist/index.css";
 import { navigate } from "gatsby";
 import { Link } from "gatsby";
+import "react-modern-drawer/dist/index.css";
+
+import Button from "../button/index";
 import CrossIcon from "../../assets/images/icons/drawer-cross.svg";
-
-import { NavDropdown, Row, Col, Dropdown } from "react-bootstrap";
-
-import { Container } from "react-bootstrap";
+import { headerMenu } from "../../constants";
 
 import DrawerWrapper from "./style";
 
-const headerMenu = [
-  {
-    name: "About",
-    to: "/",
-  },
-  {
-    name: "How we work",
-    to: "/",
-  },
-  {
-    name: "Pricing",
-    to: "/",
-  },
-  {
-    name: "FAQs",
-    to: "/",
-  },
-  {
-    name: "Support",
-    to: "/",
-  },
-];
-
 const Index = (props) => {
   const { openDrawer, setOpenDrawer } = props;
-
-  const [activeState, setActiveState] = useState("services");
 
   return (
     <Drawer

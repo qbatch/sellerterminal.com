@@ -71,7 +71,6 @@ const ButtonWrapper = styled(Button)`
   &.btn-outline-primary {
     color: ${({ theme }) => theme.colors.primaryColor};
     background-color: transparent;
-    /* border: 1px solid ${({ theme }) => theme.colors.primaryColor}; */
     border: 1px solid #dadfe3;
     display: flex;
     align-items: center;
@@ -152,9 +151,6 @@ const ButtonWrapper = styled(Button)`
       border: 1px solid ${({ theme }) => theme.colors.primaryColor};
       color: ${({ theme }) => theme.colors.whiteColor};
       background-color: ${({ theme }) => theme.colors.primaryColor};
-      &::after {
-        width: 0;
-      }
       .button-icon {
         path {
           &.svg-fill-primary {

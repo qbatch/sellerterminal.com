@@ -66,10 +66,18 @@ const BannerWrapper = styled.div`
           margin-top:-30px;
       `}
       ${media.sm`
-          margin-left:-20px;
           margin-top:0px;
           margin-bottom: -55px;
       `}
+      ${media.sm`
+          margin-bottom: -40px;
+      `}
+      @media screen and (max-width:500px) {
+        margin-bottom: -30px;
+      }
+      @media screen and (max-width: 400px) {
+        margin-bottom: -23px;
+      }
     }
   }
 `;
