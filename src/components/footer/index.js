@@ -1,22 +1,27 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+
 import { Link } from "gatsby";
-import Logo from "../../assets/images/st-logo.svg";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+
 import Button from "../button";
+import Logo from "../../assets/images/st-logo.svg";
 import AmazonIcon from "../../assets/images/amazon-seller.svg";
 import IconFacebook from "../../assets/images/icons/icon-fb.svg";
 import IconInstagram from "../../assets/images/icons/icon-instagram.svg";
 import IconLinkedin from "../../assets/images/icons/icon-linkedin.svg";
 import IconYoutube from "../../assets/images/icons/icon-ytb.svg";
+
+import { footerlinksPrimary } from "../../constants";
 import FooterWrapper from "./style";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Footer = () => {
   return (
     <FooterWrapper>
+      {/* <ScrollAnimation animateIn="fadeInUp" animateOnce> */}
       <div className="footer-top">
         <Container className="custom-container">
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between footer-top-content">
             <div className="logo">
               <Link to="/">
                 <Logo />
@@ -32,40 +37,36 @@ const Footer = () => {
       <div className="footer-mid">
         <Container className="custom-container">
           <Row>
-            <Col md={4}>
-              <AmazonIcon />
+            <Col md={4} sm={6}>
+              <AmazonIcon className="footer-img" />
             </Col>
-            <Col md={2}>
+            <Col md={2} sm={3} xs={6}>
               <div className="footer-links d-flex justify-content-between">
                 <ul>
-                  <li>
-                    <Link to="/">About</Link>
-                  </li>
-                  <li>
-                    <Link to="/">How we work</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Pricing</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Discover Phase</Link>
-                  </li>
+                  {footerlinksPrimary.slice(0, 4).map((menu, ind) => (
+                    <li key={ind}>
+                      <Link to={menu.to} activeClassName="active">
+                        <span>{menu.name}</span>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Col>
-            <Col md={2}>
+            <Col md={2} sm={3} xs={6}>
               <div className="footer-links d-flex justify-content-between">
                 <ul>
-                  <li>
-                    <Link to="/">Support</Link>
-                  </li>
-                  <li>
-                    <Link to="/">FAQ’s</Link>
-                  </li>
+                  {footerlinksPrimary.slice(4).map((menu, ind) => (
+                    <li key={ind}>
+                      <Link to={menu.to} activeClassName="active">
+                        <span>{menu.name}</span>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Col>
-            <Col md={4}>
+            <Col md={4} sm={6}>
               <div className="footer-social">
                 <p>Follow Us at</p>
                 <ul>
@@ -96,8 +97,11 @@ const Footer = () => {
         </Container>
       </div>
       <div className="footer-bottom">
-        <p>Copyright © 2023. SellerTerminal. All rights reserved.</p>
+        <Container>
+          <p>Copyright © 2023. SellerTerminal. All rights reserved.</p>
+        </Container>
       </div>
+      {/* </ScrollAnimation> */}
     </FooterWrapper>
   );
 };

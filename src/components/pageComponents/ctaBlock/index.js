@@ -1,20 +1,24 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import ScrollAnimation from "react-animate-on-scroll";
+
 import Button from "../../button";
-import ReclaimImg from "../../../assets/images/reclaim-img.svg";
 
 import TimeWrapper from "./style";
 
 const Index = (props) => {
   const { title, subtitle, btnText, className } = props;
+
   return (
     <>
       <TimeWrapper className={`st-section ${className}`}>
         <Container className="custom-container">
           <div className="section-head">
-            <h2>{title}</h2>
-            {subtitle && <p>{subtitle}</p>}
-            <Button variant="outline-secondary" arrow text={btnText} />
+            <ScrollAnimation animateIn="fadeIn">
+              <h1 className="light">{title}</h1>
+              {subtitle && <h4>{subtitle}</h4>}
+              <Button variant="outline-secondary" arrow text={btnText} />
+            </ScrollAnimation>
           </div>
         </Container>
       </TimeWrapper>

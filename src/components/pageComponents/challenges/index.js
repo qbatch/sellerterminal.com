@@ -1,9 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "../../button";
 import { StaticImage } from "gatsby-plugin-image";
-// import bannerImg from "../../../assets/images/banner-img.png";
+import ScrollAnimation from "react-animate-on-scroll";
 
+import Button from "../../button";
+
+import { challengeList } from "../../../constants";
 import ChallengesWrapper from "./style";
 
 const Challenges = () => {
@@ -12,46 +14,49 @@ const Challenges = () => {
       <ChallengesWrapper className="st-section">
         <Container className="custom-container">
           <Row className="justify-content-betweeen">
-            <Col md={6}>
-              <StaticImage
-                src="../../../assets/images/challenge-img.png"
-                alt="challenge"
-              />
-            </Col>
-            <Col md={{ span: 5, offset: 1 }}>
-              <div className="section-head">
-                <h4>Your Challenges</h4>
-                <h2>
-                  Amazon is Your Source of Income{" "}
-                  <span>(but, it gets difficult sometimes)</span>
-                </h2>
-                <p>
-                  Contacting Amazon seller support is difficult when claiming
-                  refunds. Constant fact-checking across millions of records but
-                  still receiving ambiguous responses is exhausting. In the
-                  process, you may be losing 3 - 4 % of your revenue per month
-                  due to:
-                </p>
-                <div className="challenge-list d-flex">
-                  <ul>
-                    <li>FBA overcharged fees</li>
-                    <li>Amazon FBA Refunds</li>
-                    <li>Changes Size & Dimension</li>
-                    <li>Customer Returns</li>
-                    <li>Order Quantity Issues</li>
-                    <li>Overchanges FBA Fees</li>
-                    <li>Lost Inventory</li>
-                    <li>FBA Removals</li>
-                    <li>Damaged Inventory</li>
-                    <li>Missing Inbound Inventory</li>
-                    <li>Missing Inbound Inventory</li>
-                  </ul>
-                </div>
-                <Button
-                  variant="outline-primary"
-                  arrow
-                  text="Claim Your Refunds For Free"
+            <Col xl={6} lg={6} md={6}>
+              <ScrollAnimation animateIn="fadeIn">
+                <StaticImage
+                  className="static-image"
+                  src="../../../assets/images/challenge-img.png"
+                  alt="challenge"
                 />
+              </ScrollAnimation>
+            </Col>
+            <Col xl={{ span: 5, offset: 1 }} lg={6} md={6}>
+              <div className="section-head">
+                <ScrollAnimation animateIn="fadeIn">
+                  <h4>Your Challenges</h4>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" delay="1s">
+                  <h2>
+                    Amazon is Your Source of Income{" "}
+                    <span>(but, it gets difficult sometimes)</span>
+                  </h2>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" delay="2s">
+                  <p>
+                    Contacting Amazon seller support is difficult when claiming
+                    refunds. Constant fact-checking across millions of records
+                    but still receiving ambiguous responses is exhausting. In
+                    the process, you may be losing 3 - 4 % of your revenue per
+                    month due to:
+                  </p>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" delay="3s">
+                  <div className="challenge-list d-flex">
+                    <ul>
+                      {challengeList.map((item, index) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Button
+                    variant="outline-primary"
+                    arrow
+                    text="Claim Your Refunds For Free"
+                  />
+                </ScrollAnimation>
               </div>
             </Col>
           </Row>

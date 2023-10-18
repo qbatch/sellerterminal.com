@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Button from "../../button";
 import { StaticImage } from "gatsby-plugin-image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import Marquee from "react-fast-marquee";
 import MarketplaceWrapper from "./style";
@@ -9,15 +10,19 @@ import MarketplaceWrapper from "./style";
 const Marketplace = () => {
   return (
     <>
-      <MarketplaceWrapper className="st-section">
+      <MarketplaceWrapper className="st-section" id="support-section">
         <Container className="custom-container">
           <div className="section-head">
-            <h4>Supported Marketplace</h4>
-            <h2>
-              We Offer Multi-Marketplace Support For{" "}
-              <span>Amazon Sellers Globally</span>
-            </h2>
-            <Button variant="outline-primary" arrow text="Sign Up Now" />
+            <ScrollAnimation animateIn="fadeIn">
+              <h4>Supported Marketplace</h4>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" delay="1s">
+              <h2>
+                We Offer Multi-Marketplace Support For{" "}
+                <span>Amazon Sellers Globally</span>
+              </h2>
+              <Button variant="outline-primary" arrow text="Sign Up Now" />
+            </ScrollAnimation>
           </div>
         </Container>
         <div className="marketplace-content">
@@ -26,7 +31,7 @@ const Marketplace = () => {
             pauseOnHover={false}
             gradientColor="white"
             gradient={true}
-            speed={0}
+            speed={50}
             loop={0}
           >
             <div className="marquee-item">
@@ -101,7 +106,7 @@ const Marketplace = () => {
             pauseOnHover={false}
             gradientColor="white"
             gradient={true}
-            speed={0}
+            speed={50}
             loop={0}
             className="marketplace-marq-sec"
           >

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { InlineWidget } from "react-calendly";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import RespondWrapper from "./style";
 const WeRespond = () => {
@@ -64,29 +65,39 @@ const WeRespond = () => {
       <RespondWrapper className="st-section">
         <Container className="custom-container">
           <Row>
-            <Col md={4}>
-              <div className="section-head">
-                <h4>Calendly Scheduler</h4>
-                <h2>
-                  We Respond Fast.{" "}
-                  <span>Share Your Problem And We’ll Help!</span>
-                </h2>
-              </div>
+            <Col lg={3}>
+              <ScrollAnimation animateIn="fadeIn">
+                <div className="section-head">
+                  <h4>Calendly Scheduler</h4>
+                  <h2>
+                    We Respond Fast.{" "}
+                    <span>Share Your Problem And We’ll Help!</span>
+                  </h2>
+                </div>
+              </ScrollAnimation>
             </Col>
-            <Col md={8}>
-              <div className="calendly-container">
-                <InlineWidget
-                  url="https://calendly.com/aliimran2007i/introductory-call?hide_gdpr_banner=1"
-                  styles={{
-                    height: "700px",
-                    width: "100%",
-                    marginTop: "-66px",
-                    marginLeft: "5%",
-                    paddingRight: "0",
-                    justifyContent: "end",
-                  }}
-                />
-              </div>
+            <Col lg={9}>
+              <ScrollAnimation animateIn="fadeIn">
+                <div className="calendly-container">
+                  <InlineWidget
+                    url="https://calendly.com/aliimran2007i/introductory-call?hide_gdpr_banner=1"
+                    styles={{
+                      height: "700px",
+                      width: "100%",
+                      marginTop: "-66px",
+                      marginLeft: "5%",
+                      paddingRight: "0",
+                      justifyContent: "end",
+                    }}
+                    pageSettings={{
+                      backgroundColor: "ffffff",
+                      hideEventTypeDetails: false,
+                      hideLandingPageDetails: false,
+                      primaryColor: "008989",
+                    }}
+                  />
+                </div>
+              </ScrollAnimation>
               {/* <div id={calendarDivId}>
                 <div
                   className="calendly-inline-widget"

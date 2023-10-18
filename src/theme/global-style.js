@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { media } from "./media-mixins";
 
 const GlobalStyles = createGlobalStyle`
     body{
@@ -13,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     }
     h1,h2,h3,h4,h5,h6{
         font-weight:700;
-        color:${({ theme }) => theme.colors.bodyTextVariant}
+        color:${({ theme }) => theme.colors.textMedium}
     }
     a{
         color:${({ theme }) => theme.colors.primaryColor};
@@ -26,19 +27,41 @@ const GlobalStyles = createGlobalStyle`
       }
     h1{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH1};
+        font-weight:500;
+        line-height: normal;
+        span{
+          font-weight:700;
+          color:${({ theme }) => theme.colors.primaryColor};
+        }
+        &.light{
+          color:${({ theme }) => theme.colors.bodyTextVariant};
+          span{
+            color:${({ theme }) => theme.colors.bodyTextVariant};
+          }
+        }
     }
     h2{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH2};
+        line-height:60px;
+        &.light{
+          color:${({ theme }) => theme.colors.bodyTextVariant};
+        }
     }
     h3{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH3}
     }
     h4{
-        font-size:${({ theme }) => theme.fonts.baseFontSizeLg};     
+        font-size:${({ theme }) => theme.fonts.baseFontSizeLg};  
+        font-weight: 600;
+        line-height: 32px;   
+        &.light{
+            color: ${({ theme }) => theme.colors.bodyLight};
+        }
     }
     p{
-       font-size:${({ theme }) => theme.fonts.baseFontSizeSm};
-       color: ${({ theme }) => theme.colors.textMedium};    
+       font-size:${({ theme }) => theme.fonts.baseFontSize};
+       color: ${({ theme }) => theme.colors.bodyText};    
+       line-height:24px;
     }
     label,caption{
         font-size:${({ theme }) => theme.fonts.baseFontSize};      
@@ -90,26 +113,31 @@ const GlobalStyles = createGlobalStyle`
       overflow: auto;
     }
     .container.custom-container{
-      @media screen and (min-width: 1400px){
+      max-width: 100%;
+      padding-left:50px;
+      padding-right:50px;
+      @media screen and (min-width: 1440px){
         max-width: 1408px;
         padding-left:0;
         padding-right:0;
       }
+      ${media.lg`
+      padding-left: 20px;
+      padding-right: 20px;
+        `}
     }
     .section-head {
     h4 {
-      color: var(--Body-Text-Light, #95a9a9);
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 32px;
+      color: ${({ theme }) => theme.colors.bodyLight};;
       margin-bottom: 8px;
     }
     h2 {
-      color: var(--Body-Text-Medium, #576f6f);
-      font-size: 48px;
+      color: ${({ theme }) => theme.colors.textMedium};;
       font-weight: 400;
-      line-height: 56px;
       margin-bottom: 32px;
+      ${media.md`
+        margin-bottom:16px;
+      `}
       span {
         color: #008989;
         font-weight: 700;
@@ -121,6 +149,15 @@ const GlobalStyles = createGlobalStyle`
   section.st-section{
     padding-top:120px;
     padding-bottom: 120px;
+    ${media.md`
+      padding-top:75px;
+      padding-bottom:75px;
+    `}
+  }
+  .responsive-none{
+    ${media.md`
+      display:none!important;
+    `}
   }
     @media (max-width: 1200px) {
       h1{
@@ -128,6 +165,7 @@ const GlobalStyles = createGlobalStyle`
       }
       h2{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH3};
+        line-height:40px;
       }
     }
     @media (max-width: 768px) {
@@ -136,6 +174,7 @@ const GlobalStyles = createGlobalStyle`
       }
       h2{
         font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
+        line-height:normal;
       }
       h4{
         font-size:${({ theme }) => theme.fonts.baseFontSizeSm};     
@@ -163,9 +202,30 @@ const GlobalStyles = createGlobalStyle`
       h3{
         font-size:${({ theme }) => theme.fonts.baseFontSizeSm}
       }
+      .header-drawer{
+        width:100%!important;
+      }
+    }
+    @media screen and (max-width:400px){
+      h2{
+        font-size:18px;
+      }
     }
     .fs-24{
       font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
     }
+    @keyframes pulseR {
+	0% {
+		transform: scale(0.95) rotate(2deg);
+	}
+
+	70% {
+		transform: scale(1) rotate(-2deg);
+	}
+
+	100% {
+		transform: scale(0.95) rotate(2deg);
+	}
+}
 `;
 export default GlobalStyles;

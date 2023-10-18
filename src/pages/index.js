@@ -1,5 +1,6 @@
 import * as React from "react";
 // components for home page
+import "animate.css/animate.min.css";
 import Layout from "../layout";
 import Banner from "../components/pageComponents/banner";
 import WeInvestigate from "../components/pageComponents/weInvestigate";

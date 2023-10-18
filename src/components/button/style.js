@@ -68,10 +68,57 @@ const ButtonWrapper = styled(Button)`
       }
     }
   }
+  &.btn-secondary {
+    border: 1px solid ${({ theme }) => theme.colors.whiteColor};
+    color: ${({ theme }) => theme.colors.primaryColor};
+    background-color: ${({ theme }) => theme.colors.whiteColor};
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .button-icon {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      margin-top: -4px;
+      svg {
+        path {
+          &.svg-fill-primary {
+            fill: ${({ theme }) => theme.colors.primaryColor};
+          }
+          &.svg-fill-secondary {
+            fill: ${({ theme }) => theme.colors.whiteColor};
+          }
+          &.svg-stroke {
+            stroke: ${({ theme }) => theme.colors.primaryColor};
+          }
+        }
+      }
+    }
+    &:hover {
+      color: ${({ theme }) => theme.colors.primaryColor};
+      background-color: ${({ theme }) => theme.colors.whiteColor};
+      border: 1px solid ${({ theme }) => theme.colors.whiteColor};
+      .button-icon {
+        path {
+          &.svg-fill-primary {
+            fill: ${({ theme }) => theme.colors.primaryColor};
+          }
+          &.svg-fill-secondary {
+            fill: ${({ theme }) => theme.colors.whiteColor};
+          }
+          &.svg-stroke {
+            stroke: ${({ theme }) => theme.colors.primaryColor};
+          }
+        }
+        svg {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
   &.btn-outline-primary {
     color: ${({ theme }) => theme.colors.primaryColor};
     background-color: transparent;
-    /* border: 1px solid ${({ theme }) => theme.colors.primaryColor}; */
     border: 1px solid #dadfe3;
     display: flex;
     align-items: center;
@@ -152,9 +199,6 @@ const ButtonWrapper = styled(Button)`
       border: 1px solid ${({ theme }) => theme.colors.primaryColor};
       color: ${({ theme }) => theme.colors.whiteColor};
       background-color: ${({ theme }) => theme.colors.primaryColor};
-      &::after {
-        width: 0;
-      }
       .button-icon {
         path {
           &.svg-fill-primary {
@@ -174,6 +218,14 @@ const ButtonWrapper = styled(Button)`
     }
   }
   &.btn-text {
+    text-align: center;
+    justify-content: center !important;
+    &:hover {
+      border: 0px;
+    }
+    &.text-white {
+      color: ${({ theme }) => theme.colors.whiteColor};
+    }
   }
 
   &.secondary-btn {

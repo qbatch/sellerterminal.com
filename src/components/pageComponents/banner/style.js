@@ -5,52 +5,19 @@ const BannerWrapper = styled.div`
   padding-top: 56px;
   text-align: center;
   overflow: hidden;
-  h3 {
-    color: var(--Body-Text-Light, #95a9a9);
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
-  }
   h1 {
-    color: var(--Body-Text-Medium, #576f6f);
-    text-align: center;
-    /* H1 Medium */
-    font-family: Lato;
-    font-size: 68px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
     margin-bottom: 24px;
-    span {
-      color: var(--heading-button, #008989);
-      font-weight: 700;
-    }
   }
   h4 {
-    color: var(--Body-Text-Medium, #576f6f);
-    text-align: center;
-    /* H4 */
-    font-family: Lato;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
     max-width: 725px;
     letter-spacing: -0.1px;
     margin: 0 auto;
     margin-bottom: 16px;
+    &.light {
+      margin-bottom: 8px;
+    }
   }
   p {
-    color: var(--Body-Text, #658486);
-    text-align: center;
-    /* Body/Paragraph 01 */
-    font-family: Lato;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
     max-width: 907px;
     margin: 0 auto;
     margin-bottom: 32px;
@@ -58,6 +25,7 @@ const BannerWrapper = styled.div`
   }
   .btn {
     margin: 0 auto;
+    z-index: 1;
   }
   .banner-main {
     position: relative;
@@ -65,11 +33,37 @@ const BannerWrapper = styled.div`
       position: absolute;
       left: 0;
       top: 55px;
+      @media screen and (max-width: 1400px) {
+        top: 55px;
+        width: 150px;
+      }
+      ${media.lg`
+      width: 122px;
+    top: 36%;
+    display: none;
+      `}
     }
     .image-fixed-right {
       position: absolute;
       right: -81px;
       top: 53px;
+      ${media.lg`
+        /* display:none; */
+    right: -21px;
+    top: 43%;
+    width: 269px
+      `}
+      ${media.sm`
+      top: 52%;
+      `}
+      ${media.xs`
+      top: 57%;
+      width: 200px;
+      `}
+      @media screen and (max-width:400px) {
+        top: 66%;
+        right: -40px;
+      }
     }
     .image-banner {
       max-width: 1450px;
@@ -77,7 +71,34 @@ const BannerWrapper = styled.div`
       margin-top: -60px;
       margin-left: -132px;
       margin-bottom: -105px;
+      @media screen and (max-width: 1400px) {
+        margin-left: -90px;
+      }
+      ${media.lg`
+          margin-left:-64px;
+      `}
+      ${media.md`
+          margin-left:-20px;
+          margin-top:-30px;
+      `}
+      ${media.sm`
+          margin-top:0px;
+          margin-bottom: -55px;
+      `}
+      ${media.sm`
+          margin-bottom: -40px;
+      `}
+      @media screen and (max-width:500px) {
+        margin-bottom: -30px;
+      }
+      @media screen and (max-width: 400px) {
+        margin-bottom: -23px;
+      }
     }
+  }
+  .btn-animation {
+    position: relative;
+    z-index: 1;
   }
 `;
 
