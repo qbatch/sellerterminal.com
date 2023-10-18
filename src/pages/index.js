@@ -1,7 +1,8 @@
 import * as React from "react";
-// components for home page
 import "animate.css/animate.min.css";
+
 import Layout from "../layout";
+import SEO from "../components/Seo";
 import Banner from "../components/pageComponents/banner";
 import WeInvestigate from "../components/pageComponents/weInvestigate";
 import Marketplace from "../components/pageComponents/supportedMarketplace";
@@ -38,6 +39,6 @@ const IndexPage = () => (
   </Layout>
 );
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <SEO title="Seller Terminal"></SEO>;
 
 export default IndexPage;

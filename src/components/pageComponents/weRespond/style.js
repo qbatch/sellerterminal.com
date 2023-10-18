@@ -13,8 +13,6 @@ const RespondWrapper = styled.section`
       margin-bottom:42px;
     `}
   }
-  .calendly-inline-widget iframe {
-  }
   .calendly-inline-widget iframe .xahN8AEzyAvQtVj17TPv {
     padding-right: 0 !important;
     justify-content: end !important;

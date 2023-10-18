@@ -18,7 +18,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 const Footer = () => {
   return (
     <FooterWrapper>
-      {/* <ScrollAnimation animateIn="fadeInUp" animateOnce> */}
       <div className="footer-top">
         <Container className="custom-container">
           <div className="d-flex align-items-center justify-content-between footer-top-content">
@@ -101,7 +100,6 @@ const Footer = () => {
           <p>Copyright © 2023. SellerTerminal. All rights reserved.</p>
         </Container>
       </div>
-      {/* </ScrollAnimation> */}
     </FooterWrapper>
   );
 };

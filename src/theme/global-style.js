@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
         padding:0;
         list-style:none;
       }
-    h1{
+    h1, .h1-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH1};
         font-weight:500;
         line-height: normal;
@@ -40,20 +40,21 @@ const GlobalStyles = createGlobalStyle`
           }
         }
     }
-    h2{
+    h2, .h2-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH2};
         line-height:60px;
         &.light{
           color:${({ theme }) => theme.colors.bodyTextVariant};
         }
     }
-    h3{
+    h3, .h3-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH3}
     }
-    h4{
+    h4, .h4-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeLg};  
         font-weight: 600;
         line-height: 32px;   
+        display: block;
         &.light{
             color: ${({ theme }) => theme.colors.bodyLight};
         }
@@ -83,7 +84,7 @@ const GlobalStyles = createGlobalStyle`
       cursor:pointer;
     }
     .section-heading {
-      h1 {
+      h1, .h1-style {
         color: ${({ theme }) => theme.colors.primaryColor};
         margin-bottom: 16px;
       }
@@ -127,11 +128,11 @@ const GlobalStyles = createGlobalStyle`
         `}
     }
     .section-head {
-    h4 {
+    h4, .h4-style {
       color: ${({ theme }) => theme.colors.bodyLight};;
       margin-bottom: 8px;
     }
-    h2 {
+    h2, .h2-style {
       color: ${({ theme }) => theme.colors.textMedium};;
       font-weight: 400;
       margin-bottom: 32px;
@@ -160,46 +161,46 @@ const GlobalStyles = createGlobalStyle`
     `}
   }
     @media (max-width: 1200px) {
-      h1{
+      h1, .h1-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH2};
       }
-      h2{
+      h2, .h2-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH3};
         line-height:40px;
       }
     }
     @media (max-width: 768px) {
-      h1{
+      h1, .h1-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeH3};
       }
-      h2{
+      h2, .h2-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
         line-height:normal;
       }
-      h4{
+      h4, .h4-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeSm};     
       }
       p{
        font-size:${({ theme }) => theme.fonts.baseFontSize};       
       }
-      h3{
+      h3, .h3-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeLg}
       }
     }
     @media (max-width: 480px) {
-      h1{
+      h1, .h1-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
       }
-      h2{
+      h2, .h2-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeSm};
       }
-      h4{
+      h4, .h4-style{
         font-size:${({ theme }) => theme.fonts.baseFontSize};     
       }
       p{
        font-size:${({ theme }) => theme.fonts.baseFontSizeMediumSmal};       
       }
-      h3{
+      h3, .h3-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeSm}
       }
       .header-drawer{
@@ -207,7 +208,7 @@ const GlobalStyles = createGlobalStyle`
       }
     }
     @media screen and (max-width:400px){
-      h2{
+      h2, .h2-style{
         font-size:18px;
       }
     }

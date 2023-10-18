@@ -5,7 +5,8 @@ const ChallengesWrapper = styled.section`
   border-bottom: 1px solid #d2dbdb;
   .section-head {
     padding-top: 11px;
-    h2 {
+    h2,
+    .h2-style {
       margin-bottom: 16px;
       @media screen and (min-width: 1440px) {
         line-height: 56px;

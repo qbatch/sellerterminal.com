@@ -27,7 +27,7 @@ const WeInvestigate = () => {
     <>
       <InvestigateWrapper className="st-section">
         <Container className="custom-container">
-          <h2 className="light">
+          <h2 className="light h2-style">
             We Investigate <Arrow /> We File Cases <Arrow /> We Get You Paid
           </h2>
           <Row className="investigate-row justify-content-center">
@@ -41,15 +41,15 @@ const WeInvestigate = () => {
                     <div className="d-flex investigate-inner">
                       <IconSuccess className="investigate-icon" />
                       <div>
-                        <h1>
+                        <div className="h1-style">
                           {startCountUp && isVisible && (
                             <CountUp start={0} end={99} duration={2}>
                               99
                             </CountUp>
                           )}
                           <IconPercent />
-                        </h1>
-                        <h4>Successful Cases</h4>
+                        </div>
+                        <h3 className="h4-style">Successful Cases</h3>
                       </div>
                     </div>
                   )}
@@ -66,7 +66,7 @@ const WeInvestigate = () => {
                     <div className="d-flex investigate-inner">
                       <IconFund className="investigate-icon" />
                       <div>
-                        <h1>
+                        <div className="h1-style">
                           {startCountUp && isVisible && (
                             <CountUp
                               start={1}
@@ -79,8 +79,8 @@ const WeInvestigate = () => {
                             </CountUp>
                           )}
                           <IconPlus />
-                        </h1>
-                        <h4>Funds Recovered</h4>
+                        </div>
+                        <h3 className="h4-style">Funds Recovered</h3>
                       </div>
                     </div>
                   )}
@@ -97,7 +97,7 @@ const WeInvestigate = () => {
                     <div className="d-flex investigate-inner">
                       <IconHappy className="investigate-icon" />
                       <div>
-                        <h1>
+                        <div className="h1-style">
                           {startCountUp && isVisible && (
                             <CountUp
                               start={1}
@@ -109,8 +109,8 @@ const WeInvestigate = () => {
                             </CountUp>
                           )}
                           <IconPlus />
-                        </h1>
-                        <h4>Happy Sellers</h4>
+                        </div>
+                        <h3 className="h4-style">Happy Sellers</h3>
                       </div>
                     </div>
                   )}

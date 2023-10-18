@@ -88,6 +88,7 @@ const InvestigateWrapper = styled.section`
     }
     `};
   }
+  .h1-style,
   h1 {
     color: ${({ theme }) => theme.colors.whiteColor};
     font-weight: 700;
@@ -106,7 +107,8 @@ const InvestigateWrapper = styled.section`
       }
     `};
   }
-  h4 {
+  h4,
+  .h4-style {
     color: ${({ theme }) => theme.colors.dividingColor};
     margin-bottom: 0;
   }

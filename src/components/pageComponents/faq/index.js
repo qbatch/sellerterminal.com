@@ -23,7 +23,7 @@ const FAQ = () => {
         <Container className="custom-container">
           <ScrollAnimation animateIn="fadeIn">
             <div className="section-head">
-              <h2>Frequently Asked Questions</h2>
+              <h2 className="h2-style">Frequently Asked Questions</h2>
             </div>
           </ScrollAnimation>
           <div className="faq-section">

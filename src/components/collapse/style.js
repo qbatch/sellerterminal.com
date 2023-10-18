@@ -19,7 +19,8 @@ const CollpaseWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .title {
+    .title,
+    .h4-style {
       color: #5e718d;
       font-size: 20px;
       font-weight: 500;

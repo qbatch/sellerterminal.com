@@ -65,12 +65,13 @@ const GettingRefund = () => {
 
   return (
     <>
-      <RefundWrapper className="st-section" id="work-section">
+      <RefundWrapper className="st-section">
+        <div id="work-section"></div>
         <Container className="custom-container">
           <ScrollAnimation animateIn="fadeIn">
             <div className="section-head">
-              <h4>How we work</h4>
-              <h2>
+              <span className="h4-style">How we work</span>
+              <h2 className="h2-style">
                 Getting Refunds With <span>Seller Terminal is Easy</span>
               </h2>
               <p>
@@ -105,7 +106,7 @@ const GettingRefund = () => {
                       }`}
                     >
                       <div className="refund-text">
-                        <h3>{step.title}</h3>
+                        <h3 className="h3-style">{step.title}</h3>
                         <p>{step.description}</p>
                       </div>
                     </div>
