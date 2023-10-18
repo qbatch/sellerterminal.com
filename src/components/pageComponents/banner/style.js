@@ -8,7 +8,8 @@ const BannerWrapper = styled.div`
   h1 {
     margin-bottom: 24px;
   }
-  h4 {
+  h4,
+  .h4-style {
     max-width: 725px;
     letter-spacing: -0.1px;
     margin: 0 auto;

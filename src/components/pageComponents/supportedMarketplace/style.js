@@ -9,10 +9,12 @@ const MarketplaceWrapper = styled.section`
     gap: 32px;
     justify-content: center;
     position: relative;
-    h4 {
+    h4,
+    .h4-style {
       text-align: center;
     }
-    h2 {
+    h2,
+    .h2-style {
       text-align: center;
       max-width: 871px;
       margin: 0 auto;

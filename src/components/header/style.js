@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { media } from "../../theme/media-mixins";
 
 const HeaderWrapper = styled.header`
-  /* height: 81px; */
   background-color: ${({ theme }) => theme.colors.backgroundColor};
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -55,7 +54,8 @@ const HeaderWrapper = styled.header`
           a {
             color: ${({ theme }) => theme.colors.textMedium};
             font-weight: ${({ theme }) => theme.fontWeight.normal};
-            &:hover {
+            &:hover,
+            &.active {
               color: ${({ theme }) => theme.colors.primaryColor};
               font-weight: ${({ theme }) => theme.fontWeight.medium};
             }

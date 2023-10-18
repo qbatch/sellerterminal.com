@@ -53,10 +53,10 @@ const About = () => {
         <Container className="custom-container">
           <div className="section-head">
             <ScrollAnimation animateIn="fadeIn">
-              <h4>About Us</h4>
+              <span className="h4-style">About Us</span>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" delay="1s">
-              <h2>
+              <h2 className="h2-style">
                 All we’ve ever known is <span>“Return on Investment”</span>
               </h2>
             </ScrollAnimation>

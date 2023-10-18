@@ -15,13 +15,14 @@ const AboutWrapper = styled.section`
     ${media.md`
         margin-bottom:35px;
       `}
-    h4 {
+    h4, .h4-style {
       margin-bottom: 12px;
       ${media.md`
         margin-bottom:8px;
       `}
     }
-    h2 {
+    h2,
+    .h2-style {
       @media screen and (min-width: 1440px) {
         line-height: 56px;
       }

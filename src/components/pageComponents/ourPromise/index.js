@@ -16,10 +16,10 @@ const OurPromise = () => {
             <Col lg={6}>
               <div className="section-head">
                 <ScrollAnimation animateIn="fadeIn">
-                  <h4>Our Promise</h4>
+                  <span className="h4-style">Our Promise</span>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="fadeIn" delay="1s">
-                  <h2>
+                  <h2 className="h2-style">
                     Don’t Pay Unless You {""}
                     <span>Receive Your Refunds!</span>
                   </h2>
@@ -37,7 +37,7 @@ const OurPromise = () => {
             <Col lg={6}>
               <ScrollAnimation animateIn="fadeIn" delay="1s">
                 <div className="promise-reclaim">
-                  <h3>Let’s Reclaim Your Money</h3>
+                  <h3 className="h3-style">Let’s Reclaim Your Money</h3>
                   <div className="reclaim-main">
                     <div className="reclaim-left">
                       <ul>

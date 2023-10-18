@@ -19,17 +19,18 @@ const Challenges = () => {
                 <StaticImage
                   className="static-image"
                   src="../../../assets/images/challenge-img.png"
-                  alt="challenge"
+                  alt="source of income challenge"
+                  title="source of income challenge"
                 />
               </ScrollAnimation>
             </Col>
             <Col xl={{ span: 5, offset: 1 }} lg={6} md={6}>
               <div className="section-head">
                 <ScrollAnimation animateIn="fadeIn">
-                  <h4>Your Challenges</h4>
+                  <span className="h4-style">Your Challenges</span>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="fadeIn" delay="1s">
-                  <h2>
+                  <h2 className="h2-style">
                     Amazon is Your Source of Income{" "}
                     <span>(but, it gets difficult sometimes)</span>
                   </h2>

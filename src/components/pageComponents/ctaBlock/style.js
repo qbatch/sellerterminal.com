@@ -26,7 +26,8 @@ const TimeWrapper = styled.section`
   .section-head {
     text-align: left;
     margin-bottom: 0;
-    h1 {
+    h1,
+    .h1-style {
       color: ${({ theme }) => theme.colors.whiteColor};
       max-width: 869px;
       margin-bottom: 24px;
@@ -39,7 +40,8 @@ const TimeWrapper = styled.section`
       margin-top: 32px;
       margin-bottom: 0;
     }
-    h4 {
+    h4,
+    .h4-style {
       color: ${({ theme }) => theme.colors.bodyTextVariant};
     }
   }

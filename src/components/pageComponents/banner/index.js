@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -14,18 +14,18 @@ const Banner = () => {
         <Container className="custom-container">
           <div className="banner-main">
             <ScrollAnimation animateIn="fadeIn" animateOnce delay={500}>
-              <h4 className="light">Uh-huh! </h4>
+              <span className="light h4-style">Uh-huh! </span>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" animateOnce delay={1000}>
-              <h1>
+              <h1 className="h1-style">
                 No More <span>Losing Money</span>
               </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" animateOnce delay={1500}>
-              <h4>
+              <h2 className="h4-style">
                 Get your hard-earned money back totally and safely with our
                 trusted reimbursement specialists
-              </h4>
+              </h2>
             </ScrollAnimation>
             <ScrollAnimation
               animateIn="fadeIn"
@@ -48,7 +48,8 @@ const Banner = () => {
             <ScrollAnimation animateIn="fadeInUp" animateOnce delay={2000}>
               <StaticImage
                 src="../../../assets/images/banner-img.png"
-                alt="banner image"
+                alt="No More Losing Money"
+                title="No More Losing Money"
                 className="image-banner"
               />
             </ScrollAnimation>
@@ -56,7 +57,8 @@ const Banner = () => {
               <ScrollAnimation animateIn="fadeInLeft" animateOnce delay={2000}>
                 <StaticImage
                   src="../../../assets/images/banner-coin-img.png"
-                  alt="banner image"
+                  alt="money back"
+                  title="money back"
                 />
               </ScrollAnimation>
             </div>
@@ -64,7 +66,8 @@ const Banner = () => {
               <ScrollAnimation animateIn="fadeInRight" animateOnce delay={2000}>
                 <StaticImage
                   src="../../../assets/images/banner-recovery-img.png"
-                  alt="banner image"
+                  alt="total recovery amount"
+                  title="total recovery amount"
                 />
               </ScrollAnimation>
             </div>

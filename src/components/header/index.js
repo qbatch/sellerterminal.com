@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { navigate } from "gatsby";
 import { Link } from "gatsby";
 
@@ -10,15 +10,48 @@ import Logo from "../../assets/images/st-logo.svg";
 import { headerMenu } from "../../constants";
 import HeaderWrapper from "./style";
 
-const Index = () => {
+const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+  const [activeSection, setActiveSection] = useState(null);
+  const sectionRefs = useRef({});
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
   };
 
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    headerMenu.forEach((menu) => {
+      const section = document.querySelector(menu.to);
+      if (section) {
+        sectionRefs.current[menu.to] = section;
+        const observer = new IntersectionObserver(
+          (entries) => observerCallback(entries, observer),
+          options
+        );
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      // Clean up observers
+      headerMenu.forEach((menu) => {
+        const observer = new IntersectionObserver(observerCallback, options);
+        if (observer) {
+          observer.disconnect();
+        }
+      });
+    };
+  }, []);
   return (
     <>
       <HeaderWrapper>
@@ -34,9 +67,11 @@ const Index = () => {
                 {headerMenu.map((menu, ind) => (
                   <li key={ind}>
                     <Link
-                      onClick={() => scrollToSection(menu.sectionId)}
+                      //  onClick={() => scrollToSection(menu.sectionId)}
                       to={menu.to}
-                      activeClassName="active"
+                      className={
+                        menu.to === `#${activeSection}` ? "active" : ""
+                      }
                     >
                       <span>{menu.name}</span>
                     </Link>
@@ -69,4 +104,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Header;

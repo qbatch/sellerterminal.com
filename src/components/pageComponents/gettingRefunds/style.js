@@ -4,6 +4,11 @@ import { media } from "../../../theme/media-mixins";
 const RefundWrapper = styled.section`
   &.st-section {
     padding-bottom: 119px;
+    position: relative;
+    #work-section {
+      position: absolute;
+      top: 0;
+    }
     ${media.md`
       padding-bottom:75px;
     `}
@@ -11,7 +16,8 @@ const RefundWrapper = styled.section`
   .section-head {
     text-align: center;
     margin-bottom: 58px;
-    h2 {
+    h2,
+    .h2-style {
       margin-bottom: 16px;
       padding-left: 7px;
       span {
@@ -42,7 +48,8 @@ const RefundWrapper = styled.section`
     .refund-section-content {
       max-width: 454px;
       margin: 0 auto;
-      h3 {
+      h3,
+      .h3-style {
         color: ${({ theme }) => theme.colors.secondaryColor};
         letter-spacing: 0.64px;
         margin-bottom: 12px;

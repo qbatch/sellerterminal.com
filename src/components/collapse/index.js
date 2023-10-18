@@ -17,7 +17,7 @@ function Accordion(props) {
       <CollpaseWrapper>
         <>
           <div className="collpase-select d-flex justify-content-between">
-            <h4 className="title">{title}</h4>
+            <h3 className="title h4-style">{title}</h3>
             {open ? openIcon : closeIcon}
           </div>
         </>

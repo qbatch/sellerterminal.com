@@ -15,8 +15,8 @@ const Index = (props) => {
         <Container className="custom-container">
           <div className="section-head">
             <ScrollAnimation animateIn="fadeIn">
-              <h1 className="light">{title}</h1>
-              {subtitle && <h4>{subtitle}</h4>}
+              <h2 className="light h1-style">{title}</h2>
+              {subtitle && <h3 className="h4-style">{subtitle}</h3>}
               <Button variant="outline-secondary" arrow text={btnText} />
             </ScrollAnimation>
           </div>

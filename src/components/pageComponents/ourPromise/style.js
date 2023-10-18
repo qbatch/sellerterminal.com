@@ -10,10 +10,11 @@ const PromiseWrapper = styled.section`
     ${media.md`
       margin-bottom:42px;
       `}
-    h4 {
+    h4, .h4-style {
       margin-bottom: 10px;
     }
-    h2 {
+    h2,
+    .h2-style {
       margin-bottom: 33px;
       max-width: 532px;
       letter-spacing: 0.3px;
@@ -41,7 +42,8 @@ const PromiseWrapper = styled.section`
     padding-left: 40px;
     padding-bottom: 40px;
     padding-right: 47px;
-    h3 {
+    h3,
+    .h3-style {
       color: ${({ theme }) => theme.colors.whiteColor};
       font-style: normal;
       font-weight: 700;

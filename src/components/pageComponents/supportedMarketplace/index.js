@@ -10,14 +10,14 @@ import MarketplaceWrapper from "./style";
 const Marketplace = () => {
   return (
     <>
-      <MarketplaceWrapper className="st-section" id="support-section">
+      <MarketplaceWrapper className="st-section">
         <Container className="custom-container">
           <div className="section-head">
             <ScrollAnimation animateIn="fadeIn">
-              <h4>Supported Marketplace</h4>
+              <span className="h4-style">Supported Marketplace</span>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeIn" delay="1s">
-              <h2>
+              <h2 className="h2-style">
                 We Offer Multi-Marketplace Support For{" "}
                 <span>Amazon Sellers Globally</span>
               </h2>
@@ -38,66 +38,77 @@ const Marketplace = () => {
               <StaticImage
                 src="../../../assets/images/marketplace/brazil.png"
                 alt="Brazil"
+                title="Brazil"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/mexico.png"
                 alt="mexico"
+                title="mexico"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/japan.png"
                 alt="japan"
+                title="japan"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/india.png"
                 alt="india"
+                title="india"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/egypt.png"
                 alt="egypt"
+                title="egypt"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/sa.png"
-                alt="sa"
+                alt="saudi arabia"
+                title="saudi arabia"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/australia.png"
                 alt="australia"
+                title="australia"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/singapore.png"
                 alt="singapore"
+                title="singapore"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/uae.png"
                 alt="uae"
+                title="uae"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/canada.png"
                 alt="canada"
+                title="canada"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/usa.png"
                 alt="usa"
+                title="usa"
               />
             </div>
           </Marquee>
@@ -113,61 +124,71 @@ const Marketplace = () => {
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/sweden.png"
-                alt="Brazil"
+                alt="sweden"
+                title="sweden"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/uk.png"
-                alt="Brazil"
+                alt="uk"
+                title="uk"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/poland.png"
-                alt="Brazil"
+                alt="poland"
+                title="poland"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/netherlands.png"
-                alt="Brazil"
+                alt="netherlands"
+                title="netherlands"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/france.png"
-                alt="Brazil"
+                alt="france"
+                title="france"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/spain.png"
-                alt="Brazil"
+                alt="spain"
+                title="spain"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/turkey.png"
-                alt="Brazil"
+                alt="turkey"
+                title="turkey"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/belgium.png"
-                alt="Brazil"
+                alt="belgium"
+                title="belgium"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/germany.png"
-                alt="Brazil"
+                alt="germany"
+                title="germany"
               />
             </div>
             <div className="marquee-item">
               <StaticImage
                 src="../../../assets/images/marketplace/italy.png"
-                alt="Brazil"
+                alt="italy"
+                title="italy"
               />
             </div>
           </Marquee>
