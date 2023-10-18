@@ -1,23 +1,23 @@
 const headerMenu = [
   {
     name: "About",
-    to: "/",
+    to: "#about-section",
   },
   {
     name: "How we work",
-    to: "/",
+    to: "#work-section",
   },
   {
     name: "Pricing",
-    to: "/",
+    to: "#pricing-section",
   },
   {
     name: "FAQs",
-    to: "/",
+    to: "#faq-section",
   },
   {
     name: "Support",
-    to: "/",
+    to: "#support-section",
   },
 ];
 const footerlinksPrimary = [

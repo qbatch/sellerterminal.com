@@ -7,9 +7,6 @@ const CollpaseWrapper = styled.div`
   border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.dividingColor};
   background: ${({ theme }) => theme.colors.whiteColor};
-  &:last-child {
-    margin-bottom: 0px;
-  }
   &:has(.show) {
     border: 1px solid ${({ theme }) => theme.colors.primaryColor};
     .collpase-select {

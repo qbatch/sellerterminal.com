@@ -20,6 +20,7 @@ const FaqWrapper = styled.section`
   .faq-section {
     max-width: 930px;
     margin: 0 auto;
+    margin-bottom: -24px;
   }
 `;
 

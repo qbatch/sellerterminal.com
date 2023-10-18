@@ -12,6 +12,12 @@ import HeaderWrapper from "./style";
 
 const Index = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -27,7 +33,11 @@ const Index = () => {
               <ul>
                 {headerMenu.map((menu, ind) => (
                   <li key={ind}>
-                    <Link to={menu.to} activeClassName="active">
+                    <Link
+                      onClick={() => scrollToSection(menu.sectionId)}
+                      to={menu.to}
+                      activeClassName="active"
+                    >
                       <span>{menu.name}</span>
                     </Link>
                   </li>
@@ -35,8 +45,8 @@ const Index = () => {
               </ul>
             </nav>
             <div className="menu-items">
-              <Link className="responsive-none" to="/sign-up">
-                Sign Up
+              <Link className="responsive-none" to="/sign-in">
+                Sign In
               </Link>
               <Button
                 className="responsive-none"

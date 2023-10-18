@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import Accordion from "../../collapse";
 import { frequentquestion } from "../../../constants";
@@ -18,11 +19,13 @@ const FAQ = () => {
 
   return (
     <>
-      <FaqWrapper className="st-section">
+      <FaqWrapper className="st-section" id="faq-section">
         <Container className="custom-container">
-          <div className="section-head">
-            <h2>Frequently Asked Questions</h2>
-          </div>
+          <ScrollAnimation animateIn="fadeIn">
+            <div className="section-head">
+              <h2>Frequently Asked Questions</h2>
+            </div>
+          </ScrollAnimation>
           <div className="faq-section">
             {frequentquestion.map((faq, index) => {
               return (

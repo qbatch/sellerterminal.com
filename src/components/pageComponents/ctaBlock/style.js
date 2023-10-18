@@ -14,7 +14,9 @@ const TimeWrapper = styled.section`
   &.buy-software {
     padding-top: 148px;
     padding-bottom: 148px;
-    background-position: 122px 0px;
+    @media screen and (max-width: 1725px) {
+      background-position: 122px 0px;
+    }
     ${media.md`
       padding-top:75px;
       padding-bottom:75px;

@@ -108,6 +108,9 @@ const PromiseWrapper = styled.section`
       }
     }
     .reclaim-right {
+      svg {
+        animation: pulseR 2s infinite;
+      }
       ${media.md`
       padding-top:0px;
       svg {

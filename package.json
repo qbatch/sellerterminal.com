@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "babel-plugin-styled-components": "^2.1.4",
     "bootstrap": "^5.3.2",
     "file-loader": "^6.2.0",
@@ -26,12 +27,15 @@
     "gatsby-source-filesystem": "^5.12.0",
     "gatsby-transformer-sharp": "^5.12.1",
     "react": "^18.2.0",
+    "react-animate-on-scroll": "^2.1.7",
     "react-bootstrap": "^2.9.0",
     "react-calendly": "^4.2.0",
+    "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.1",
     "react-helmet": "^6.1.0",
     "react-modern-drawer": "^1.2.2",
+    "react-visibility-sensor": "^5.1.1",
     "styled-components": "^6.0.8"
   }
 }

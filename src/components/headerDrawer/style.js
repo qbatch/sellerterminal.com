@@ -4,9 +4,9 @@ import { media } from "../../theme/media-mixins";
 const DrawerWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.whiteColor};
   color: #fff;
-  padding: 40px 0 15px;
+  padding: 70px 0 15px;
   box-sizing: border-box;
-  background-image: url("/drawer-bg.svg");
+  background: rgba(2, 99, 99, 1);
   background-size: cover;
   position: relative;
   min-height: 100vh;
@@ -17,17 +17,34 @@ const DrawerWrapper = styled.div`
     cursor: pointer;
   }
   .menu-main {
-    padding-left: 24px;
+    padding: 0px 24px;
+    margin-bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .drawer-logo {
+      text-align: center;
+      margin-bottom: 48px;
+      @media screen and (max-height: 575px) {
+        margin-bottom: 32px;
+      }
+    }
     @media screen and (max-width: 350px) {
-      padding-left: 16px;
+      padding-left: 0px 16px;
     }
     ul {
       padding-left: 0;
-      width: 70%;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0;
       li {
         font-size: 24px;
-        margin-bottom: 16px;
-        color: #576f6f;
+        margin-bottom: 24px;
+        @media screen and (max-height: 575px) {
+          margin-bottom: 16px;
+        }
+        color: ${({ theme }) => theme.colors.whiteColor};
         ${media.sm`
           font-size:20px;
         `}
@@ -38,38 +55,48 @@ const DrawerWrapper = styled.div`
           text-decoration: none;
           color: inherit;
         }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
   }
 
   .bottom-content {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
     padding-top: 0;
-    padding-left: 24px;
+    padding: 0 0px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 16px;
+    margin-top: 48px;
+    @media screen and (max-height: 575px) {
+      margin-top: 32px;
+    }
     @media screen and (max-width: 350px) {
       gap: 7px;
-      padding-left: 16px;
+      padding: 0 0px;
     }
     a {
       text-decoration: none;
       display: inline-block;
       font-size: 18px;
-      color: #008989;
+      color: #ffffff;
       @media screen and (max-width: 350px) {
         font-size: 16px;
       }
     }
     .btn {
+      width: 100%;
+      justify-content: space-between;
       @media screen and (max-width: 350px) {
         gap: 8px;
       }
     }
   }
   .header-drawer-content {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 95px);
+    overflow: auto;
   }
   .header-drawer {
     @media screen and (max-width: 410px) {
@@ -86,8 +113,7 @@ const DrawerWrapper = styled.div`
        gap: 17px;
       `}
       ${media.sm`
-       height: auto;
-       margin-bottom: 20px;
+       height: 100%;
        flex-direction: column;
        gap: 5px;
       `}

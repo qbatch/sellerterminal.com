@@ -91,58 +91,64 @@ const RefundWrapper = styled.section`
           margin-bottom:42px;
       `}
     }
-    .refund-row {
-      position: relative;
-      &:before {
-        content: attr(data-value);
-        width: 64px;
-        height: 64px;
-        border: 1px solid #d2dbdb;
-        position: absolute;
-        left: 47.7%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 64px;
-        color: ${({ theme }) => theme.colors.bodyLight};
-        text-align: center;
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 40px; /* 125% */
-        letter-spacing: 0.64px;
-        margin-top: -5px;
-        ${media.xl`
+    .refund-row-main {
+      .refund-row {
+        position: relative;
+        &:before {
+          content: attr(data-value);
+          width: 64px;
+          height: 64px;
+          border: 1px solid #d2dbdb;
+          position: absolute;
+          left: 47.7%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 64px;
+          color: ${({ theme }) => theme.colors.bodyLight};
+          text-align: center;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 40px; /* 125% */
+          letter-spacing: 0.64px;
+          margin-top: -5px;
+          ${media.xl`
           margin-left: -3px;
         `}
-        ${media.lg`
+          ${media.lg`
           display:none;
         `}
-      }
-      &:after {
-        content: "";
-        width: 2px;
-        height: 241px;
-        background-color: #d2dbdb;
-        left: 50%;
-        position: absolute;
-        bottom: -118px;
-        ${media.lg`
+        }
+        &:after {
+          content: "";
+          width: 2px;
+          height: 241px;
+          background-color: #d2dbdb;
+          left: 50%;
+          position: absolute;
+          bottom: -118px;
+          ${media.lg`
           display:none;
         `}
+        }
       }
       &:last-of-type {
-        &:after {
-          display: none;
-        }
-        .refund-text {
-          ${media.sm`
+        .refund-row {
+          &:after {
+            display: none;
+          }
+          .refund-text {
+            ${media.sm`
           margin-bottom:0;
         `}
+          }
         }
       }
       &:first-of-type {
-        &:before {
-          margin-top: -5px;
+        .refund-row {
+          &:before {
+            margin-top: -5px;
+          }
         }
       }
     }

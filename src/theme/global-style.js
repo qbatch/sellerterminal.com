@@ -202,6 +202,9 @@ const GlobalStyles = createGlobalStyle`
       h3{
         font-size:${({ theme }) => theme.fonts.baseFontSizeSm}
       }
+      .header-drawer{
+        width:100%!important;
+      }
     }
     @media screen and (max-width:400px){
       h2{
@@ -211,5 +214,18 @@ const GlobalStyles = createGlobalStyle`
     .fs-24{
       font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
     }
+    @keyframes pulseR {
+	0% {
+		transform: scale(0.95) rotate(2deg);
+	}
+
+	70% {
+		transform: scale(1) rotate(-2deg);
+	}
+
+	100% {
+		transform: scale(0.95) rotate(2deg);
+	}
+}
 `;
 export default GlobalStyles;

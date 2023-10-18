@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import Button from "../../button";
 
@@ -13,9 +14,11 @@ const Index = (props) => {
       <TimeWrapper className={`st-section ${className}`}>
         <Container className="custom-container">
           <div className="section-head">
-            <h1 className="light">{title}</h1>
-            {subtitle && <h4>{subtitle}</h4>}
-            <Button variant="outline-secondary" arrow text={btnText} />
+            <ScrollAnimation animateIn="fadeIn">
+              <h1 className="light">{title}</h1>
+              {subtitle && <h4>{subtitle}</h4>}
+              <Button variant="outline-secondary" arrow text={btnText} />
+            </ScrollAnimation>
           </div>
         </Container>
       </TimeWrapper>

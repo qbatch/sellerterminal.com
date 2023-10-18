@@ -3,6 +3,7 @@ import { media } from "../../../theme/media-mixins";
 
 const AboutWrapper = styled.section`
   border-bottom: 1px solid #d2dbdb;
+  overflow: hidden;
   &.st-section {
     ${media.md`
         padding-bottom:51px;

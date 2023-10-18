@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import SignupImage from "../../../assets/images/signup-img.svg";
 import ConnectAccount from "../../../assets/images/connect-account.svg";
@@ -64,49 +65,53 @@ const GettingRefund = () => {
 
   return (
     <>
-      <RefundWrapper className="st-section">
+      <RefundWrapper className="st-section" id="work-section">
         <Container className="custom-container">
-          <div className="section-head">
-            <h4>How we work</h4>
-            <h2>
-              Getting Refunds With <span>Seller Terminal is Easy</span>
-            </h2>
-            <p>
-              Process to recover your lost revenue from Amazon is a cakewalk
-              now:
-            </p>
-          </div>
+          <ScrollAnimation animateIn="fadeIn">
+            <div className="section-head">
+              <h4>How we work</h4>
+              <h2>
+                Getting Refunds With <span>Seller Terminal is Easy</span>
+              </h2>
+              <p>
+                Process to recover your lost revenue from Amazon is a cakewalk
+                now:
+              </p>
+            </div>
+          </ScrollAnimation>
           <div className="refund-content">
             {stepsData.map((step, index) => (
-              <Row
-                key={step.id}
-                data-value={step.id}
-                className={`align-items-center ${
-                  step.reverse ? "flex-md-row-reverse" : ""
-                } refund-row`}
-              >
-                <Col md={6}>
-                  <div
-                    className={`refund-section-content ${
-                      !step.reverse ? "refund-content-ba" : ""
-                    }`}
-                  >
-                    <div className="refund-image">{step.image}</div>
-                  </div>
-                </Col>
-                <Col md={6}>
-                  <div
-                    className={`refund-section-content ${
-                      step.reverse ? "refund-content-ba" : ""
-                    }`}
-                  >
-                    <div className="refund-text">
-                      <h3>{step.title}</h3>
-                      <p>{step.description}</p>
+              <ScrollAnimation animateIn="fadeIn" className="refund-row-main">
+                <Row
+                  key={step.id}
+                  data-value={step.id}
+                  className={`align-items-center ${
+                    step.reverse ? "flex-md-row-reverse" : ""
+                  } refund-row`}
+                >
+                  <Col md={6}>
+                    <div
+                      className={`refund-section-content ${
+                        !step.reverse ? "refund-content-ba" : ""
+                      }`}
+                    >
+                      <div className="refund-image">{step.image}</div>
                     </div>
-                  </div>
-                </Col>
-              </Row>
+                  </Col>
+                  <Col md={6}>
+                    <div
+                      className={`refund-section-content ${
+                        step.reverse ? "refund-content-ba" : ""
+                      }`}
+                    >
+                      <div className="refund-text">
+                        <h3>{step.title}</h3>
+                        <p>{step.description}</p>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </ScrollAnimation>
             ))}
           </div>
         </Container>

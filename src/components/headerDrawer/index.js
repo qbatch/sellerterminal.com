@@ -6,6 +6,7 @@ import "react-modern-drawer/dist/index.css";
 
 import Button from "../button/index";
 import CrossIcon from "../../assets/images/icons/drawer-cross.svg";
+import LogoWhite from "../../assets/images/st-logo-white.svg";
 import { headerMenu } from "../../constants";
 
 import DrawerWrapper from "./style";
@@ -26,6 +27,9 @@ const Index = (props) => {
             <CrossIcon />
           </div>
           <div className="menu-main">
+            <div className="drawer-logo">
+              <LogoWhite />
+            </div>
             <ul>
               {headerMenu.map((menu, ind) => (
                 <li key={ind}>
@@ -35,15 +39,20 @@ const Index = (props) => {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="bottom-content">
-            <Link to="/sign-up">Sign Up</Link>
-            <Button
-              onClick={() => navigate("/contact")}
-              text="Get Your First $500 Free"
-              arrow="true"
-              variant="primary"
-            />
+            <div className="bottom-content">
+              <Button
+                onClick={() => navigate("/")}
+                text="Sign In"
+                variant="text"
+                className="text-white"
+              />
+              <Button
+                onClick={() => navigate("/")}
+                text="Get Your First $500 Free"
+                arrow="true"
+                variant="secondary"
+              />
+            </div>
           </div>
         </div>
       </DrawerWrapper>

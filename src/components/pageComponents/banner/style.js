@@ -38,7 +38,9 @@ const BannerWrapper = styled.div`
         width: 150px;
       }
       ${media.lg`
-          display:none;
+      width: 122px;
+    top: 36%;
+    display: none;
       `}
     }
     .image-fixed-right {
@@ -46,8 +48,22 @@ const BannerWrapper = styled.div`
       right: -81px;
       top: 53px;
       ${media.lg`
-        display:none;
+        /* display:none; */
+    right: -21px;
+    top: 43%;
+    width: 269px
       `}
+      ${media.sm`
+      top: 52%;
+      `}
+      ${media.xs`
+      top: 57%;
+      width: 200px;
+      `}
+      @media screen and (max-width:400px) {
+        top: 66%;
+        right: -40px;
+      }
     }
     .image-banner {
       max-width: 1450px;
@@ -79,6 +95,10 @@ const BannerWrapper = styled.div`
         margin-bottom: -23px;
       }
     }
+  }
+  .btn-animation {
+    position: relative;
+    z-index: 1;
   }
 `;
 

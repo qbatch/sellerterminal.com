@@ -6,6 +6,7 @@ const FooterWrapper = styled.div`
   background-size: cover;
   background-image: url(${Footerbg});
   padding-top: 64px;
+  overflow: hidden;
   @media screen and (max-width: 375px) {
     padding-top: 30px;
   }
