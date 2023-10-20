@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import IconStar from "/static/star.svg";
 import { media } from "../../../theme/media-mixins";
 
 const PromiseWrapper = styled.section`
@@ -66,7 +65,7 @@ const PromiseWrapper = styled.section`
           margin-bottom:0;
         `}
         li {
-          background-image: url(${IconStar});
+          background-image: url("/star.svg");
           background-size: 32px;
           padding-left: 48px;
           background-repeat: no-repeat;

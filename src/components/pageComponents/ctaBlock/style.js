@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import TimeHoldBg from "/static/hold-bg.png";
 import { media } from "../../../theme/media-mixins";
 
 const TimeWrapper = styled.section`
   background-color: #026363;
-  background-image: url(${TimeHoldBg});
+  background-image: url("/hold-bg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top right;

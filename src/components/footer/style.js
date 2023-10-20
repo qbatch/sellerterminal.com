@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import Footerbg from "/static/footer-bg.png";
 import { media } from "../../theme/media-mixins";
 
 const FooterWrapper = styled.div`
   background-size: cover;
-  background-image: url(${Footerbg});
+  background-image: url("/footer-bg.png");
   padding-top: 64px;
   overflow: hidden;
   @media screen and (max-width: 375px) {

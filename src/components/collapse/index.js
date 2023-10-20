@@ -13,21 +13,21 @@ function Accordion(props) {
   const closeIcon = <IconPlus className="cursor-pointer" onClick={onClick} />;
 
   return (
-    <ScrollAnimation animateIn="fadeIn">
-      <CollpaseWrapper>
-        <>
-          <div className="collpase-select d-flex justify-content-between">
-            <h3 className="title h4-style">{title}</h3>
-            {open ? openIcon : closeIcon}
-          </div>
-        </>
-        <Collapse in={open}>
-          <div id="collapse-text" className="collapse-content">
-            {children}
-          </div>
-        </Collapse>
-      </CollpaseWrapper>
-    </ScrollAnimation>
+    // <ScrollAnimation animateIn="fadeIn">
+    <CollpaseWrapper>
+      <>
+        <div className="collpase-select d-flex justify-content-between">
+          <h3 className="title h4-style">{title}</h3>
+          {open ? openIcon : closeIcon}
+        </div>
+      </>
+      <Collapse in={open}>
+        <div id="collapse-text" className="collapse-content">
+          {children}
+        </div>
+      </Collapse>
+    </CollpaseWrapper>
+    // </ScrollAnimation>
   );
 }
 

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { media } from "../../../theme/media-mixins";
-import Investigatebg from "/static/investigate-bg.png";
 
 const InvestigateWrapper = styled.section`
   &.st-section {
@@ -10,7 +9,7 @@ const InvestigateWrapper = styled.section`
       `};
   }
   background-size: cover;
-  background-image: url(${Investigatebg});
+  background-image: url("/investigate-bg.png");
   position: relative;
   z-index: 1;
   .investigate-inner {
