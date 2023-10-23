@@ -23,7 +23,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "img",
-        path: "./src/assets/images/",
+        path: `${__dirname}/src/assets/images`,
       },
       __key: "img",
     },
@@ -31,7 +31,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/,
+          include: /svgs/,
         },
       },
     },

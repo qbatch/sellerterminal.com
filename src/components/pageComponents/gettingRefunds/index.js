@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import SignupImage from "../../../assets/images/signup-img.svg";
-import ConnectAccount from "../../../assets/images/connect-account.svg";
-import RecoveryAgent from "../../../assets/images/recovery-agent.svg";
-import ReviewInventory from "../../../assets/images/review-inventory.svg";
-import FileCase from "../../../assets/images/file-case.svg";
-import GetMoney from "../../../assets/images/getmoney.svg";
+import SignupImage from "../../../assets/svgs/signup-img.svg";
+import ConnectAccount from "../../../assets/svgs/connect-account.svg";
+import RecoveryAgent from "../../../assets/svgs/recovery-agent.svg";
+import ReviewInventory from "../../../assets/svgs/review-inventory.svg";
+import FileCase from "../../../assets/svgs/file-case.svg";
+import GetMoney from "../../../assets/svgs/getmoney.svg";
 
 import RefundWrapper from "./style";
 

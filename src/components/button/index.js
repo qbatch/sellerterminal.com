@@ -1,7 +1,7 @@
 import React from "react";
 
-import ArrowRight from "../../assets/images/icons/arrow-right.svg";
-import Arrow from "../../assets/images/icons/arrow-simple.svg";
+import ArrowRight from "../../assets/svgs/icons/arrow-right.svg";
+import Arrow from "../../assets/svgs/icons/arrow-simple.svg";
 
 import ButtonWrapper from "./style";
 

@@ -2,8 +2,8 @@ import React from "react";
 import Collapse from "react-bootstrap/Collapse";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import IconPlus from "../../assets/images/icons/icon-plus-accordion.svg";
-import IconMinus from "../../assets/images/icons/icon-minus-accordion.svg";
+import IconPlus from "../../assets/svgs/icons/icon-plus-accordion.svg";
+import IconMinus from "../../assets/svgs/icons/icon-minus-accordion.svg";
 
 import CollpaseWrapper from "./style";
 

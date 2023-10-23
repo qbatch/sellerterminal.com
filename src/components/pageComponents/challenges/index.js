@@ -29,13 +29,13 @@ const Challenges = () => {
                 <ScrollAnimation animateIn="fadeIn">
                   <span className="h4-style">Your Challenges</span>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn="fadeIn" delay="1s">
+                <ScrollAnimation animateIn="fadeIn">
                   <h2 className="h2-style">
                     Amazon is Your Source of Income{" "}
                     <span>(but, it gets difficult sometimes)</span>
                   </h2>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn="fadeIn" delay="2s">
+                <ScrollAnimation animateIn="fadeIn">
                   <p>
                     Contacting Amazon seller support is difficult when claiming
                     refunds. Constant fact-checking across millions of records
@@ -44,7 +44,7 @@ const Challenges = () => {
                     month due to:
                   </p>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn="fadeIn" delay="3s">
+                <ScrollAnimation animateIn="fadeIn">
                   <div className="challenge-list d-flex">
                     <ul>
                       {challengeList.map((item, index) => (

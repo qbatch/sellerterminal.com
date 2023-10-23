@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Drawer from "react-modern-drawer";
 import { navigate } from "gatsby";
 import { Link } from "gatsby";
 import "react-modern-drawer/dist/index.css";
 
 import Button from "../button/index";
-import CrossIcon from "../../assets/images/icons/drawer-cross.svg";
-import LogoWhite from "../../assets/images/st-logo-white.svg";
+import CrossIcon from "../../assets/svgs/icons/drawer-cross.svg";
+import LogoWhite from "../../assets/svgs/st-logo-white.svg";
 import { headerMenu } from "../../constants";
 
 import DrawerWrapper from "./style";

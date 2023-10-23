@@ -16,7 +16,7 @@ const Marketplace = () => {
             <ScrollAnimation animateIn="fadeIn">
               <span className="h4-style">Supported Marketplace</span>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeIn" delay="1s">
+            <ScrollAnimation animateIn="fadeIn">
               <h2 className="h2-style">
                 We Offer Multi-Marketplace Support For{" "}
                 <span>Amazon Sellers Globally</span>

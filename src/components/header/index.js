@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { Container } from "react-bootstrap";
 import Button from "../button/index";
 import Drawer from "../headerDrawer";
-import Logo from "../../assets/images/st-logo.svg";
+import Logo from "../../assets/svgs/st-logo.svg";
 
 import { headerMenu } from "../../constants";
 import HeaderWrapper from "./style";
@@ -67,7 +67,6 @@ const Header = () => {
                 {headerMenu.map((menu, ind) => (
                   <li key={ind}>
                     <Link
-                      //  onClick={() => scrollToSection(menu.sectionId)}
                       to={menu.to}
                       className={
                         menu.to === `#${activeSection}` ? "active" : ""
