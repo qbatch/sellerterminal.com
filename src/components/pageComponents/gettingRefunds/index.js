@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
+import { StaticImage } from "gatsby-plugin-image";
 
 import SignupImage from "../../../assets/svgs/signup-img.svg";
 import ConnectAccount from "../../../assets/svgs/connect-account.svg";
@@ -18,7 +19,13 @@ const GettingRefund = () => {
       title: "SignUp",
       description:
         "Get started with a zero-cost, no-obligation audit, and get a report on available refunds.",
-      image: <SignupImage />,
+      image: (
+        <StaticImage
+          src="../../../assets/images/signup-img.png"
+          width={231}
+          height={251}
+        />
+      ),
       reverse: false,
     },
     {
@@ -26,7 +33,13 @@ const GettingRefund = () => {
       title: "Connect Your Account",
       description:
         "We get access to your account to import and audit your FBA Transactions.",
-      image: <ConnectAccount />,
+      image: (
+        <StaticImage
+          src="../../../assets/images/connect-account.png"
+          width={270}
+          height={271}
+        />
+      ),
       reverse: true,
     },
     {
@@ -42,7 +55,12 @@ const GettingRefund = () => {
       title: "We Review Your Inventory",
       description:
         "Seller Terminal reviews products, inventory, orders, and returns that are eligible for reimbursement claims.",
-      image: <ReviewInventory />,
+      image: (
+        <StaticImage
+          src="../../../assets/images/review-inventory.png"
+          height={241}
+        />
+      ),
       reverse: true,
     },
     {
@@ -50,7 +68,9 @@ const GettingRefund = () => {
       title: "We File Your Case",
       description:
         "You receive a report that provides a detailed review of the money returns against each case.",
-      image: <FileCase />,
+      image: (
+        <StaticImage src="../../../assets/images/file-case.png" height={200} />
+      ),
       reverse: false,
     },
     {
@@ -58,7 +78,9 @@ const GettingRefund = () => {
       title: "You Get Your Money",
       description:
         "You get your Amazon reimbursement in your seller accounts directly. Easy peasy!",
-      image: <GetMoney />,
+      image: (
+        <StaticImage src="../../../assets/images/getmoney.png" width={302} />
+      ),
       reverse: true,
     },
   ];

@@ -1,10 +1,10 @@
 import React from "react";
 import { navigate } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
+import { StaticImage } from "gatsby-plugin-image";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import Button from "../../button";
-import ReclaimImg from "../../../assets/svgs/reclaim-img.svg";
 
 import PromiseWrapper from "./style";
 
@@ -61,7 +61,12 @@ const OurPromise = () => {
                       />
                     </div>
                     <div className="reclaim-right">
-                      <ReclaimImg />
+                      {/* <ReclaimImg /> */}
+                      <StaticImage
+                        src="../../../assets/images/reclaim-img.png"
+                        alt="reclaim your money"
+                        title="reclaim your money"
+                      />
                     </div>
                   </div>
                 </div>
