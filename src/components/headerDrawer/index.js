@@ -41,13 +41,17 @@ const Index = (props) => {
             </ul>
             <div className="bottom-content">
               <Button
-                onClick={() => navigate("/")}
+                onClick={() =>
+                  navigate("https://app.sellerterminal.com/auth/sign-in")
+                }
                 text="Sign In"
                 variant="text"
                 className="text-white"
               />
               <Button
-                onClick={() => navigate("/")}
+                onClick={() =>
+                  navigate("https://app.sellerterminal.com/auth/sign-up")
+                }
                 text="Get Your First $500 Free"
                 arrow="true"
                 variant="secondary"

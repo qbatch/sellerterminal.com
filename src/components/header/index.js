@@ -79,12 +79,17 @@ const Header = () => {
               </ul>
             </nav>
             <div className="menu-items">
-              <Link className="responsive-none" to="/sign-in">
+              <Link
+                className="responsive-none"
+                to="https://app.sellerterminal.com/auth/sign-in"
+              >
                 Sign In
               </Link>
               <Button
                 className="responsive-none"
-                onClick={() => navigate("/contact")}
+                onClick={() =>
+                  navigate("https://app.sellerterminal.com/auth/sign-up")
+                }
                 text="Get Your First $500 Free"
                 arrow="true"
                 variant="primary"

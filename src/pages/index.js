@@ -1,5 +1,4 @@
 import * as React from "react";
-// import "animate.css/animate.min.css";
 import "/static/animate.css";
 
 import Layout from "../layout";

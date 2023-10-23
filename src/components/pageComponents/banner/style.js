@@ -28,6 +28,10 @@ const BannerWrapper = styled.div`
     margin: 0 auto;
     z-index: 1;
   }
+  .banner-text {
+    position: relative;
+    z-index: 1;
+  }
   .banner-main {
     position: relative;
     .image-fixed-left {

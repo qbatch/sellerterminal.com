@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import { Container } from "react-bootstrap";
 import Button from "../../button";
 import { StaticImage } from "gatsby-plugin-image";
@@ -21,7 +22,14 @@ const Marketplace = () => {
                 We Offer Multi-Marketplace Support For{" "}
                 <span>Amazon Sellers Globally</span>
               </h2>
-              <Button variant="outline-primary" arrow text="Sign Up Now" />
+              <Button
+                variant="outline-primary"
+                onClick={() =>
+                  navigate("https://app.sellerterminal.com/auth/sign-up")
+                }
+                arrow
+                text="Sign Up Now"
+              />
             </ScrollAnimation>
           </div>
         </Container>

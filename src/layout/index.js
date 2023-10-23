@@ -14,11 +14,11 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={Theme}>
       <Header />
       <Helmet>
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="/static/animate.css" data-nomodule />
       </Helmet>
       <GlobalStyle />
       {children}
