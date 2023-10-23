@@ -25,7 +25,7 @@ const WeRespond = () => {
               <div className="calendly-container">
                 <InlineWidget
                   // add this to link for ?hide_gdpr_banner=1
-                  url="https://calendly.com/sellertermial/onboarding"
+                  url="https://calendly.com/sellerterminal/onboarding?hide_gdpr_banner=1"
                   styles={{
                     height: "700px",
                     width: "100%",
