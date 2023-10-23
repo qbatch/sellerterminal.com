@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import { navigate } from "gatsby";
 
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -23,7 +24,12 @@ const Banner = () => {
                 No More <span>Losing Money</span>
               </h1>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeIn" delay={1500} animateOnce>
+            <ScrollAnimation
+              animateIn="fadeIn"
+              delay={1500}
+              animateOnce
+              className="banner-text"
+            >
               <h2 className="h4-style">
                 Get your hard-earned money back totally and safely with our
                 trusted reimbursement specialists
@@ -36,6 +42,9 @@ const Banner = () => {
               </p>
               <Button
                 variant="outline-primary"
+                onClick={() =>
+                  navigate("https://app.sellerterminal.com/auth/sign-up")
+                }
                 arrow
                 text="Get Your Free Audit"
               />

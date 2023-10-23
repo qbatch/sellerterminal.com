@@ -24,7 +24,8 @@ const WeRespond = () => {
             <ScrollAnimation animateIn="fadeIn">
               <div className="calendly-container">
                 <InlineWidget
-                  url="https://calendly.com/sellertermial/onboarding?hide_gdpr_banner=1"
+                  // add this to link for ?hide_gdpr_banner=1
+                  url="https://calendly.com/sellertermial/onboarding"
                   styles={{
                     height: "700px",
                     width: "100%",

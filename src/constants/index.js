@@ -24,32 +24,32 @@ const footerlinksPrimary = [
   {
     id: 1,
     name: "About",
-    to: "/",
+    to: "#about-section",
   },
   {
     id: 2,
     name: "How we work",
-    to: "/",
+    to: "#work-section",
   },
   {
     id: 3,
     name: "Pricing",
-    to: "/",
+    to: "#pricing-section",
   },
   {
     id: 4,
     name: "Discover Phase",
-    to: "/",
+    to: "#faq-section",
   },
   {
     id: 5,
     name: "Support",
-    to: "/",
+    to: "#support-section",
   },
   {
     id: 6,
     name: "FAQ’s",
-    to: "/",
+    to: "#faq-section",
   },
 ];
 const challengeList = [

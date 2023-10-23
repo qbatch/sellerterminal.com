@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState, useEffect, useRef } from "react";
+import { navigate } from "gatsby";
 import { Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -26,8 +26,17 @@ const Footer = () => {
               </Link>
             </div>
             <div className="auth-buttons">
-              <Link to="/">Sign In</Link>
-              <Button variant="primary" arrowSimple text="Sign Up" />
+              <Link to="https://app.sellerterminal.com/auth/sign-in">
+                Sign In
+              </Link>
+              <Button
+                onClick={() =>
+                  navigate("https://app.sellerterminal.com/auth/sign-up")
+                }
+                variant="primary"
+                arrowSimple
+                text="Sign Up"
+              />
             </div>
           </div>
         </Container>

@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -55,6 +56,9 @@ const Challenges = () => {
                   <Button
                     variant="outline-primary"
                     arrow
+                    onClick={() =>
+                      navigate("https://app.sellerterminal.com/auth/sign-up")
+                    }
                     text="Claim Your Refunds For Free"
                   />
                 </ScrollAnimation>

@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -28,6 +29,9 @@ const OurPromise = () => {
                   <Button
                     variant="outline-primary"
                     arrow
+                    onClick={() =>
+                      navigate("https://app.sellerterminal.com/auth/sign-up")
+                    }
                     text="$3M+ in annual revenue?"
                   />
                   <p>Get Special Discounts</p>
@@ -48,6 +52,11 @@ const OurPromise = () => {
                       <Button
                         variant="outline-secondary"
                         arrow
+                        onClick={() =>
+                          navigate(
+                            "https://app.sellerterminal.com/auth/sign-up"
+                          )
+                        }
                         text="Let’s Reclaim Your Money"
                       />
                     </div>
