@@ -4,11 +4,10 @@
 module.exports = {
   siteMetadata: {
     robots: `index, follow`,
-    title: `Hire Skilled Dedicated Developers | Qbatch`,
-    description: `We are busy building empires for our dear clients globally. Hire our skilled software developers for error-free code, and on-time project delivery.`,
-    keywords: `hire best dedicated developers, hire dedicated software development team, dedicated mobile app development team`,
-    // siteUrl: `https://eclectic-palmier-c4e68a.netlify.app/`,
-    siteUrl: `https://st-landingpage.com/`,
+    title: `Seller Terminal - Your Amazon Reimubursemnets Case Advocate!`,
+    description: `Join 1000+ sellers, brand owners, and warehouses who recovered their money with our reimbursement recovery services. Get your first $500 for free, risk-free!`,
+    keywords: `Amazon Seller Reimbursement Services, Automated Amazon Seller Reporting, FBA overcharged fees, Amazon FBA audit, FBA auditor, Amazon seller refunds, Lost inventory reimbursement`,
+    siteUrl: `https://sellerterminal.com/`,
     httpEquiv: `en-us`,
   },
   flags: {
