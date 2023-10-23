@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import Obligation from "../../../assets/images/no-obligation.svg";
-import Recovery from "../../../assets/images/recovery-estimate.svg";
-import Traceable from "../../../assets/images/traceable.svg";
-import Money from "../../../assets/images/money.svg";
+import Obligation from "../../../assets/svgs/no-obligation.svg";
+import Recovery from "../../../assets/svgs/recovery-estimate.svg";
+import Traceable from "../../../assets/svgs/traceable.svg";
+import Money from "../../../assets/svgs/money.svg";
 
 import AboutWrapper from "./style";
 
@@ -55,12 +55,12 @@ const About = () => {
             <ScrollAnimation animateIn="fadeIn">
               <span className="h4-style">About Us</span>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeIn" delay="1s">
+            <ScrollAnimation animateIn="fadeIn">
               <h2 className="h2-style">
                 All we’ve ever known is <span>“Return on Investment”</span>
               </h2>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeIn" delay="2s">
+            <ScrollAnimation animateIn="fadeIn">
               <p>
                 Seller Terminal offers Amazon Reimbursement service that tracks
                 fees, orders, inventory, returns, and possible discrepancies

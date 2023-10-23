@@ -4,12 +4,12 @@ import ScrollAnimation from "react-animate-on-scroll";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
-import Arrow from "../../../assets/images/icons/investigate-arrow.svg";
-import IconSuccess from "../../../assets/images/icons/icon-success.svg";
-import IconFund from "../../../assets/images/icons/icon-fund.svg";
-import IconHappy from "../../../assets/images/icons/icon-happy.svg";
-import IconPercent from "../../../assets/images/icons/icon-percent.svg";
-import IconPlus from "../../../assets/images/icons/icon-plus.svg";
+import Arrow from "../../../assets/svgs/icons/investigate-arrow.svg";
+import IconSuccess from "../../../assets/svgs/icons/icon-success.svg";
+import IconFund from "../../../assets/svgs/icons/icon-fund.svg";
+import IconHappy from "../../../assets/svgs/icons/icon-happy.svg";
+import IconPercent from "../../../assets/svgs/icons/icon-percent.svg";
+import IconPlus from "../../../assets/svgs/icons/icon-plus.svg";
 
 import InvestigateWrapper from "./style";
 

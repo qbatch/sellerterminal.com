@@ -3,7 +3,7 @@ import * as React from "react";
 import "/static/animate.css";
 
 import Layout from "../layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Banner from "../components/pageComponents/banner";
 import WeInvestigate from "../components/pageComponents/weInvestigate";
 import Marketplace from "../components/pageComponents/supportedMarketplace";
@@ -40,6 +40,6 @@ const IndexPage = () => (
   </Layout>
 );
 
-export const Head = () => <SEO title="Seller Terminal"></SEO>;
+export const Head = () => <Seo title="Seller Terminal"></Seo>;
 
 export default IndexPage;
