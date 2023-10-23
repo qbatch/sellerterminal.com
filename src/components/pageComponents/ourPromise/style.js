@@ -109,12 +109,13 @@ const PromiseWrapper = styled.section`
       }
     }
     .reclaim-right {
-      svg {
+      img {
         animation: pulseR 2s infinite;
+        max-height: 224px;
       }
       ${media.md`
       padding-top:0px;
-      svg {
+      img {
           height:150px;
       }
       `}
