@@ -13,16 +13,16 @@ const Marketplace = () => {
       <MarketplaceWrapper className="st-section">
         <Container className="custom-container">
           <div className="section-head">
-            {/* <ScrollAnimation animateIn="fadeIn"> */}
-            <span className="h4-style">Supported Marketplace</span>
-            {/* </ScrollAnimation> */}
-            {/* <ScrollAnimation animateIn="fadeIn" delay="1s"> */}
-            <h2 className="h2-style">
-              We Offer Multi-Marketplace Support For{" "}
-              <span>Amazon Sellers Globally</span>
-            </h2>
-            <Button variant="outline-primary" arrow text="Sign Up Now" />
-            {/* </ScrollAnimation> */}
+            <ScrollAnimation animateIn="fadeIn">
+              <span className="h4-style">Supported Marketplace</span>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" delay="1s">
+              <h2 className="h2-style">
+                We Offer Multi-Marketplace Support For{" "}
+                <span>Amazon Sellers Globally</span>
+              </h2>
+              <Button variant="outline-primary" arrow text="Sign Up Now" />
+            </ScrollAnimation>
           </div>
         </Container>
         <div className="marketplace-content">

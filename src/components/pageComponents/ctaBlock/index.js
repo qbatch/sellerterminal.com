@@ -14,11 +14,11 @@ const Index = (props) => {
       <TimeWrapper className={`st-section ${className}`}>
         <Container className="custom-container">
           <div className="section-head">
-            {/* <ScrollAnimation animateIn="fadeIn"> */}
-            <h2 className="light h1-style">{title}</h2>
-            {subtitle && <h3 className="h4-style">{subtitle}</h3>}
-            <Button variant="outline-secondary" arrow text={btnText} />
-            {/* </ScrollAnimation> */}
+            <ScrollAnimation animateIn="fadeIn">
+              <h2 className="light h1-style">{title}</h2>
+              {subtitle && <h3 className="h4-style">{subtitle}</h3>}
+              <Button variant="outline-secondary" arrow text={btnText} />
+            </ScrollAnimation>
           </div>
         </Container>
       </TimeWrapper>

@@ -52,23 +52,23 @@ const About = () => {
       <AboutWrapper className="st-section" id="about-section">
         <Container className="custom-container">
           <div className="section-head">
-            {/* <ScrollAnimation animateIn="fadeIn"> */}
-            <span className="h4-style">About Us</span>
-            {/* </ScrollAnimation> */}
-            {/* <ScrollAnimation animateIn="fadeIn" delay="1s"> */}
-            <h2 className="h2-style">
-              All we’ve ever known is <span>“Return on Investment”</span>
-            </h2>
-            {/* </ScrollAnimation> */}
-            {/* <ScrollAnimation animateIn="fadeIn" delay="2s"> */}
-            <p>
-              Seller Terminal offers Amazon Reimbursement service that tracks
-              fees, orders, inventory, returns, and possible discrepancies under
-              Amazon’s terms of Service. Our multi-faceted software reviews and
-              audits your account while our recovery team files the case
-              assuring returns in your bank account. 
-            </p>
-            {/* </ScrollAnimation> */}
+            <ScrollAnimation animateIn="fadeIn">
+              <span className="h4-style">About Us</span>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" delay="1s">
+              <h2 className="h2-style">
+                All we’ve ever known is <span>“Return on Investment”</span>
+              </h2>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" delay="2s">
+              <p>
+                Seller Terminal offers Amazon Reimbursement service that tracks
+                fees, orders, inventory, returns, and possible discrepancies
+                under Amazon’s terms of Service. Our multi-faceted software
+                reviews and audits your account while our recovery team files
+                the case assuring returns in your bank account. 
+              </p>
+            </ScrollAnimation>
           </div>
           <Row>
             {aboutList.map((item, index) => (
@@ -80,12 +80,12 @@ const About = () => {
                 className="about-section-col"
               >
                 <div className="about-section">
-                  {/* <ScrollAnimation animateIn="rotateIn"> */}
-                  {item.icon}
-                  {/* </ScrollAnimation> */}
-                  {/* <ScrollAnimation animateIn="fadeInUp"> */}
-                  <p>{item.content}</p>
-                  {/* </ScrollAnimation> */}
+                  <ScrollAnimation animateIn="rotateIn">
+                    {item.icon}
+                  </ScrollAnimation>
+                  <ScrollAnimation animateIn="fadeInUp">
+                    <p>{item.content}</p>
+                  </ScrollAnimation>
                 </div>
               </Col>
             ))}

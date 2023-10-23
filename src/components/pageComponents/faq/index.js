@@ -21,11 +21,11 @@ const FAQ = () => {
     <>
       <FaqWrapper className="st-section" id="faq-section">
         <Container className="custom-container">
-          {/* <ScrollAnimation animateIn="fadeIn"> */}
-          <div className="section-head">
-            <h2 className="h2-style">Frequently Asked Questions</h2>
-          </div>
-          {/* </ScrollAnimation> */}
+          <ScrollAnimation animateIn="fadeIn">
+            <div className="section-head">
+              <h2 className="h2-style">Frequently Asked Questions</h2>
+            </div>
+          </ScrollAnimation>
           <div className="faq-section">
             {frequentquestion.map((faq, index) => {
               return (

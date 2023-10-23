@@ -15,49 +15,49 @@ const Challenges = () => {
         <Container className="custom-container">
           <Row className="justify-content-betweeen">
             <Col xl={6} lg={6} md={6}>
-              {/* <ScrollAnimation animateIn="fadeIn"> */}
-              <img
-                className="static-image"
-                src="/challenge-img.png"
-                alt="source of income challenge"
-                title="source of income challenge"
-              />
-              {/* </ScrollAnimation> */}
+              <ScrollAnimation animateIn="fadeIn">
+                <img
+                  className="static-image"
+                  src="/challenge-img.png"
+                  alt="source of income challenge"
+                  title="source of income challenge"
+                />
+              </ScrollAnimation>
             </Col>
             <Col xl={{ span: 5, offset: 1 }} lg={6} md={6}>
               <div className="section-head">
-                {/* <ScrollAnimation animateIn="fadeIn"> */}
-                <span className="h4-style">Your Challenges</span>
-                {/* </ScrollAnimation> */}
-                {/* <ScrollAnimation animateIn="fadeIn" delay="1s"> */}
-                <h2 className="h2-style">
-                  Amazon is Your Source of Income{" "}
-                  <span>(but, it gets difficult sometimes)</span>
-                </h2>
-                {/* </ScrollAnimation> */}
-                {/* <ScrollAnimation animateIn="fadeIn" delay="2s"> */}
-                <p>
-                  Contacting Amazon seller support is difficult when claiming
-                  refunds. Constant fact-checking across millions of records but
-                  still receiving ambiguous responses is exhausting. In the
-                  process, you may be losing 3 - 4 % of your revenue per month
-                  due to:
-                </p>
-                {/* </ScrollAnimation> */}
-                {/* <ScrollAnimation animateIn="fadeIn" delay="3s"> */}
-                <div className="challenge-list d-flex">
-                  <ul>
-                    {challengeList.map((item, index) => (
-                      <li>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <Button
-                  variant="outline-primary"
-                  arrow
-                  text="Claim Your Refunds For Free"
-                />
-                {/* </ScrollAnimation> */}
+                <ScrollAnimation animateIn="fadeIn">
+                  <span className="h4-style">Your Challenges</span>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" delay="1s">
+                  <h2 className="h2-style">
+                    Amazon is Your Source of Income{" "}
+                    <span>(but, it gets difficult sometimes)</span>
+                  </h2>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" delay="2s">
+                  <p>
+                    Contacting Amazon seller support is difficult when claiming
+                    refunds. Constant fact-checking across millions of records
+                    but still receiving ambiguous responses is exhausting. In
+                    the process, you may be losing 3 - 4 % of your revenue per
+                    month due to:
+                  </p>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" delay="3s">
+                  <div className="challenge-list d-flex">
+                    <ul>
+                      {challengeList.map((item, index) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Button
+                    variant="outline-primary"
+                    arrow
+                    text="Claim Your Refunds For Free"
+                  />
+                </ScrollAnimation>
               </div>
             </Col>
           </Row>
