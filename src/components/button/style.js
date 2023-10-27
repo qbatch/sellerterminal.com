@@ -119,7 +119,7 @@ const ButtonWrapper = styled(Button)`
   &.btn-outline-primary {
     color: ${({ theme }) => theme.colors.primaryColor};
     background-color: transparent;
-    border: 1px solid #dadfe3;
+    border: 1px solid ${({ theme }) => theme.colors.primaryColor};
     display: flex;
     align-items: center;
     gap: 16px;
@@ -136,7 +136,7 @@ const ButtonWrapper = styled(Button)`
           fill: ${({ theme }) => theme.colors.textMedium};
         }
         &.svg-stroke {
-          stroke: #d2d9dc;
+          stroke: ${({ theme }) => theme.colors.primaryColor};
         }
       }
       svg {
