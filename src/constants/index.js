@@ -75,18 +75,6 @@ const frequentquestion = [
   },
   {
     id: 2,
-    title: "Why do you take a percentage of the reimbursed revenue?",
-    content:
-      "Our FBA auditors perform the daunting task of recovering lost revenue and making sure you receive every penny back in your bank account, therefore, deserve to be rewarded in the form of compensation.",
-  },
-  {
-    id: 3,
-    title: "How long does Amazon reimbursement take?",
-    content:
-      "The Amazon refund process may take up to 5 to 7 business days on your original payment method. If you are an Amazon third-party seller who does not see “Refunded” in the refund status and the time limit has been exceeded,  you can simply contact our Amazon refunds manager for further assistance.",
-  },
-  {
-    id: 4,
     title: "What types of cases do you cover for FBA sellers?",
     content: (
       <div>
@@ -102,10 +90,22 @@ const frequentquestion = [
     ),
   },
   {
-    id: 5,
+    id: 3,
     title: "Will Amazon automatically refund the lost package?",
     content:
       "No, Amazon does not automatically refund the lost package as it cannot track the package. Instead, it considers the order “late” and/or “undelivered”. Your lost package is however eligible for reimbursement via the “request a refund” option. The amount is then auto-refunded as Amazon takes full responsibility for order fulfillment issues. ",
+  },
+  {
+    id: 4,
+    title: "How long does Amazon reimbursement take?",
+    content:
+      "The Amazon refund process may take up to 5 to 7 business days on your original payment method. If you are an Amazon third-party seller who does not see “Refunded” in the refund status and the time limit has been exceeded,  you can simply contact our Amazon refunds manager for further assistance.",
+  },
+  {
+    id: 5,
+    title: "Why do you take a percentage of the reimbursed revenue?",
+    content:
+      "Our FBA auditors perform the daunting task of recovering lost revenue and making sure you receive every penny back in your bank account, therefore, deserve to be rewarded in the form of compensation.",
   },
 ];
 
