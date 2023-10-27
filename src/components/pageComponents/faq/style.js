@@ -21,6 +21,16 @@ const FaqWrapper = styled.section`
     max-width: 930px;
     margin: 0 auto;
     margin-bottom: -24px;
+    ul {
+      padding-left: 20px;
+      padding-top: 8px;
+      li {
+        color: #658486;
+        margin-bottom: 8px;
+        list-style: disc;
+        padding-left: 2px;
+      }
+    }
   }
 `;
 
