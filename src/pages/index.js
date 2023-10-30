@@ -39,6 +39,8 @@ const IndexPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo title="Seller Terminal"></Seo>;
+export const Head = () => (
+  <Seo title="Seller Terminal - Your Amazon Reimubursemnets Case Advocate!"></Seo>
+);
 
 export default IndexPage;

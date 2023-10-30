@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     robots: `index, follow`,
     title: `Seller Terminal - Your Amazon Reimubursemnets Case Advocate!`,
-    description: `Join 1000+ sellers, brand owners, and warehouses who recovered their money with our reimbursement recovery services. Get your first $500 for free, risk-free!`,
+    description: `Join 1000+ sellers, brand owners, and warehouses who recovered their money with our reimbursement recovery services. Get your first $500 for free.`,
     keywords: `Amazon Seller Reimbursement Services, Automated Amazon Seller Reporting, FBA overcharged fees, Amazon FBA audit, FBA auditor, Amazon seller refunds, Lost inventory reimbursement`,
     siteUrl: `https://sellerterminal.com/`,
     httpEquiv: `en-us`,
