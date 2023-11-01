@@ -14,20 +14,6 @@ module.exports = {
     DEV_SSR: true,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Seller Terminal - Your Amazon Reimubursemnets Case Advocate!`,
-        short_name: `Seller Terminal`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`,
-        icon: `${__dirname}/static/favicon.png`,
-        include_favicon: false
-      }
-    },
-    `gatsby-plugin-offline`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
