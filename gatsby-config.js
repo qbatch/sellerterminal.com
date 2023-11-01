@@ -1,15 +1,16 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-module.exports = {
-  siteMetadata: {
+const siteMetadata = {
     robots: `index, follow`,
     title: `Seller Terminal - Your Amazon Reimubursemnets Case Advocate!`,
     description: `Join 1000+ sellers, brand owners, and warehouses who recovered their money with our reimbursement recovery services. Get your first $500 for free.`,
     keywords: `Amazon Seller Reimbursement Services, Automated Amazon Seller Reporting, FBA overcharged fees, Amazon FBA audit, FBA auditor, Amazon seller refunds, Lost inventory reimbursement`,
     siteUrl: `https://sellerterminal.com/`,
     httpEquiv: `en-us`,
-  },
+}
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
+module.exports = {
+  siteMetadata,
   flags: {
     DEV_SSR: true,
   },
@@ -25,6 +26,14 @@ module.exports = {
         display: `standalone`,
         icon: `${__dirname}/static/favicon.png`,
         include_favicon: false
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: `${siteMetadata.siteUrl}`,
+        sitemap:`${siteMetadata.siteUrl}/sitemap/sitemap-index.xml`,
+        policy: [{userAgent: '*', allow: '/'}],
       }
     },
     `gatsby-plugin-offline`,
