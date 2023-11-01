@@ -3,8 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import { StaticImage } from "gatsby-plugin-image";
 
-import RecoveryAgent from "../../../assets/svgs/recovery-agent.svg";
-
 import RefundWrapper from "./style";
 
 const GettingRefund = () => {
