@@ -15,21 +15,22 @@ const Banner = () => {
       <BannerWrapper id="banner">
         <Container className="custom-container">
           <div className="banner-main">
-            <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce>
+            {/* <ScrollAnimation animateIn="fadeIn" animateOnce> */}
               <span className="light h4-style">Uh-huh! </span>
-            </ScrollAnimation>
+            {/* </ScrollAnimation> */}
 
-            <ScrollAnimation animateIn="fadeIn" delay={1000} animateOnce>
+            {/* <ScrollAnimation animateIn="fadeIn" delay={100} animateOnce> */}
               <h1 className="h1-style">
                 No More <span>Losing Money</span>
               </h1>
-            </ScrollAnimation>
-            <ScrollAnimation
+            {/* </ScrollAnimation> */}
+            {/* <ScrollAnimation
               animateIn="fadeIn"
-              delay={1500}
+              delay={300}
               animateOnce
               className="banner-text"
-            >
+            > */}
+              <div className="banner-text">
               <h2 className="h4-style">
                 Get your hard-earned money back totally and safely with our
                 trusted reimbursement specialists
@@ -48,32 +49,33 @@ const Banner = () => {
                 arrow
                 text="Get Your Free Audit"
               />
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" delay={2000} animateOnce>
+              </div>
+            {/* </ScrollAnimation> */}
+            {/* <ScrollAnimation animateIn="fadeInUp" delay={500} animateOnce> */}
               <StaticImage
                 className="image-banner"
                 src="../../../assets/images/banner-img.png"
                 alt="No More Losing Money"
                 title="No More Losing Money"
               />
-            </ScrollAnimation>
+            {/* </ScrollAnimation> */}
             <div className="image-fixed-left">
-              <ScrollAnimation animateIn="fadeInLeft" delay={2000} animateOnce>
+              {/* <ScrollAnimation animateIn="fadeInLeft" delay={500} animateOnce> */}
                 <StaticImage
                   src="../../../assets/images/banner-coin-img.png"
                   alt="money back"
                   title="money back"
                 />
-              </ScrollAnimation>
+              {/* </ScrollAnimation> */}
             </div>
             <div className="image-fixed-right">
-              <ScrollAnimation animateIn="fadeInRight" delay={2000} animateOnce>
+              {/* <ScrollAnimation animateIn="fadeInRight" delay={500} animateOnce> */}
                 <StaticImage
                   src="../../../assets/images/banner-recovery-img.png"
                   alt="total recovery amount"
                   title="total recovery amount"
                 />
-              </ScrollAnimation>
+              {/* </ScrollAnimation> */}
             </div>
           </div>
         </Container>

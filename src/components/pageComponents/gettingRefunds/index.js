@@ -42,7 +42,10 @@ const GettingRefund = () => {
       title: "We Assign Recovery Agent",
       description:
         "You add our dedicated recovery agent to your accounts to file the case on your behalf.",
-      image: <RecoveryAgent />,
+      image: <StaticImage
+      src="../../../assets/images/recovery-agent.png"
+      height={187}
+    />,
       reverse: false,
     },
     {
