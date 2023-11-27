@@ -8,8 +8,8 @@ import Logo from "../../assets/svgs/st-logo.svg";
 import AmazonIcon from "../../assets/svgs/amazon-seller.svg";
 import IconFacebook from "../../assets/svgs/icons/icon-fb.svg";
 import IconInstagram from "../../assets/svgs/icons/icon-instagram.svg";
-import IconLinkedin from "../../assets/svgs/icons/icon-linkedin.svg";
 import IconYoutube from "../../assets/svgs/icons/icon-ytb.svg";
+import IconTwitter from "../../assets/svgs/icons/icon-twitter.svg";
 
 import { footerlinksPrimary } from "../../constants";
 import FooterWrapper from "./style";
@@ -88,8 +88,11 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
-                      <IconLinkedin />
+                    <Link
+                      target="_blank"
+                      to="https://twitter.com/sellerterminal"
+                    >
+                      <IconTwitter />
                     </Link>
                   </li>
                   <li>
