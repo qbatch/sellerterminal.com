@@ -58,20 +58,15 @@ const Header = () => {
         <Container className="custom-container">
           <div className="header-main">
             <div className="logo">
-              <Link to="/">
-                <Logo />
-              </Link>
+              {/* <Link to="/"> */}
+              <img src="./seller-terminal-logo.svg" alt="seller-terminal-logo" />
+              {/* </Link> */}
             </div>
             <nav className="header-menu">
               <ul>
                 {headerMenu.map((menu, ind) => (
                   <li key={ind}>
-                    <Link
-                      to={menu.to}
-                      className={
-                        menu.to === `#${activeSection}` ? "active" : ""
-                      }
-                    >
+                    <Link to={menu.to} className={menu.to === `#${activeSection}` ? 'active' : ''}>
                       <span>{menu.name}</span>
                     </Link>
                   </li>
@@ -79,17 +74,12 @@ const Header = () => {
               </ul>
             </nav>
             <div className="menu-items">
-              <Link
-                className="responsive-none"
-                to="https://app.sellerterminal.com/auth/sign-in"
-              >
+              <Link className="responsive-none" to="https://app.sellerterminal.com/auth/sign-in">
                 Sign In
               </Link>
               <Button
                 className="responsive-none"
-                onClick={() =>
-                  navigate("https://app.sellerterminal.com/auth/sign-up")
-                }
+                onClick={() => navigate('https://app.sellerterminal.com/auth/sign-up')}
                 text="Get Your First $500 Free"
                 arrow="true"
                 variant="primary"
@@ -105,7 +95,7 @@ const Header = () => {
       </HeaderWrapper>
       <Drawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
     </>
-  );
+  )
 };
 
 export default Header;
