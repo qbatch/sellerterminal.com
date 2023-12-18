@@ -57,7 +57,7 @@ const Header = () => {
       <HeaderWrapper>
         <Container className="custom-container">
           <div className="header-main">
-            <div className="logo">
+            <div className="seller-terminal-logo">
               {/* <Link to="/"> */}
               <img src="./seller-terminal-logo.svg" alt="seller-terminal-logo" />
               {/* </Link> */}
