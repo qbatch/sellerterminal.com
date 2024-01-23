@@ -1,20 +1,46 @@
-import React, { useState, useEffect, useRef } from "react";
-import { navigate } from "gatsby";
-import { Link } from "gatsby";
-import { Container, Row, Col } from "react-bootstrap";
-
-import Button from "../button";
-import Logo from "../../assets/svgs/st-logo.svg";
-import AmazonIcon from "../../assets/svgs/amazon-seller.svg";
-import IconFacebook from "../../assets/svgs/icons/icon-fb.svg";
-import IconInstagram from "../../assets/svgs/icons/icon-instagram.svg";
-import IconYoutube from "../../assets/svgs/icons/icon-ytb.svg";
-import IconTwitter from "../../assets/svgs/icons/icon-twitter.svg";
-
-import { footerlinksPrimary } from "../../constants";
-import FooterWrapper from "./style";
+import React from 'react'
+import { navigate } from 'gatsby'
+import { Link } from 'gatsby'
+import { Container, Row, Col } from 'react-bootstrap'
+import Button from '../button'
+import Logo from '../../assets/svgs/st-logo.svg'
+import AmazonIcon from '../../assets/svgs/amazon-seller.svg'
+import Facebook from '../../assets/svgs/icons/icon-fb.svg'
+import Instagram from '../../assets/svgs/icons/icon-instagram.svg'
+import Youtube from '../../assets/svgs/icons/icon-ytb.svg'
+import Twitter from '../../assets/svgs/icons/icon-twitter.svg'
+import Linkedin from '../../assets/svgs/icons/icon-linkedin.svg'
+import Pintrest from '../../assets/svgs/icons/icon-pintrest.svg'
+import { footerlinksPrimary } from '../../constants'
+import FooterWrapper from './style'
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      title: 'Facebook',
+      logo: Facebook,
+    },
+    {
+      title: 'Instagram',
+      logo: Instagram,
+    },
+    {
+      title: 'Youtube',
+      logo: Youtube,
+    },
+    {
+      title: 'Twitter',
+      logo: Twitter,
+    },
+    {
+      title: 'Linkedin',
+      logo: Linkedin,
+    },
+    {
+      title: 'Pintrest',
+      logo: Pintrest,
+    },
+  ]
   return (
     <FooterWrapper>
       <div className="footer-top">
@@ -26,13 +52,9 @@ const Footer = () => {
               </Link>
             </div>
             <div className="auth-buttons">
-              <Link to="https://app.sellerterminal.com/auth/sign-in">
-                Sign In
-              </Link>
+              <Link to="https://app.sellerterminal.com/auth/sign-in">Sign In</Link>
               <Button
-                onClick={() =>
-                  navigate("https://app.sellerterminal.com/auth/sign-up")
-                }
+                onClick={() => navigate('https://app.sellerterminal.com/auth/sign-up')}
                 variant="primary"
                 arrowSimple
                 text="Sign Up"
@@ -77,29 +99,19 @@ const Footer = () => {
               <div className="footer-social">
                 <p>Follow Us at</p>
                 <ul>
-                  <li>
-                    <Link to="/">
-                      <IconFacebook />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/">
-                      <IconInstagram />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      to="https://twitter.com/sellerterminal"
-                    >
-                      <IconTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/">
-                      <IconYoutube />
-                    </Link>
-                  </li>
+                  {socialLinks.map((link, i) => {
+                    const { title } = link
+                    return (
+                      <li key={i}>
+                        <Link
+                          target="_blank"
+                          to={`https://www.${title}.com${title === 'Linkedin' ? '/company' : ''}/sellerterminal/`}
+                        >
+                          <link.logo />
+                        </Link>
+                      </li>
+                    )
+                  })}
                 </ul>
               </div>
             </Col>
@@ -112,6 +124,6 @@ const Footer = () => {
         </Container>
       </div>
     </FooterWrapper>
-  );
-};
-export default Footer;
+  )
+}
+export default Footer
