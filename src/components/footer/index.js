@@ -10,35 +10,35 @@ import Instagram from '../../assets/svgs/icons/icon-instagram.svg'
 import Youtube from '../../assets/svgs/icons/icon-ytb.svg'
 import Twitter from '../../assets/svgs/icons/icon-twitter.svg'
 import Linkedin from '../../assets/svgs/icons/icon-linkedin.svg'
-import Pintrest from '../../assets/svgs/icons/icon-pintrest.svg'
+import Pinterest from '../../assets/svgs/icons/icon-pintrest.svg'
 import { footerlinksPrimary } from '../../constants'
 import FooterWrapper from './style'
 
 const Footer = () => {
   const socialLinks = [
     {
-      title: 'Facebook',
+      title: 'facebook',
       logo: Facebook,
     },
     {
-      title: 'Instagram',
+      title: 'instagram',
       logo: Instagram,
     },
     {
-      title: 'Youtube',
+      title: 'youtube',
       logo: Youtube,
     },
     {
-      title: 'Twitter',
+      title: 'twitter',
       logo: Twitter,
     },
     {
-      title: 'Linkedin',
+      title: 'linkedin',
       logo: Linkedin,
     },
     {
-      title: 'Pintrest',
-      logo: Pintrest,
+      title: 'pinterest',
+      logo: Pinterest,
     },
   ]
   return (
@@ -105,7 +105,9 @@ const Footer = () => {
                       <li key={i}>
                         <Link
                           target="_blank"
-                          to={`https://www.${title}.com${title === 'Linkedin' ? '/company' : ''}/sellerterminal/`}
+                          to={`https://www.${title}.com${title === 'linkedin' ? '/company' : ''}/${
+                            title === 'youtube' ? '@' : ''
+                          }sellerterminal/`}
                         >
                           <link.logo />
                         </Link>
