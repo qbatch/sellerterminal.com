@@ -1,13 +1,13 @@
 {
-  "name": "seller-terminal-lpg",
-  "version": "1.0.0",
+  "name": "sellerterminal.com",
+  "version": "0.1.0",
   "private": true,
-  "description": "seller-terminal-lpg",
-  "author": "imran-ali-qbatch",
+  "description": "Join 1000+ sellers, brand owners, and warehouses who recovered their money with our reimbursement recovery services.",
   "keywords": [
     "gatsby"
   ],
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -41,5 +41,8 @@
     "react-modern-drawer": "^1.2.2",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^6.0.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
