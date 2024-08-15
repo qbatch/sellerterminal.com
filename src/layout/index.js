@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
-import "animate.css/animate.compat.css"
+import "/static/animate.css";
 
 import { ThemeProvider } from "styled-components";
 import Theme from "../theme/theme-variable";

@@ -213,7 +213,8 @@ const FooterWrapper = styled.div`
         border: none;
         background-color: transparent;
         color: ${({ theme }) => theme.colors.bodyTextVariant};
-        width: 226px;
+        width: 100%;
+        height: 100%;
         ${media.sm`
           width: 100%;
           height: 100%;
@@ -226,12 +227,12 @@ const FooterWrapper = styled.div`
         }
       }
       button {
-        padding: 14px 30px;
+        padding: 14px 16px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         ${media.sm`
-          width: 100%;
           padding: 8px 12px;
-          display: flex;
-          justify-content: center;
         `}
       }
     }

@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `eller Terminal - Your Amazon Reimubursemnets Case Advocate!`,
+        name: `Seller Terminal - Your Amazon Reimubursemnets Case Advocate!`,
         short_name: `Seller Terminal`,
         start_url: `/`,
         background_color: `#f7f0eb`,

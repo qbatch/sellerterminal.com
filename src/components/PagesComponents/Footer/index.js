@@ -92,12 +92,12 @@ const Footer = () => {
               <div className='newsletter'>
                 <p>SUBSCRIBE TO OUR NEWSLETTER</p>
                 <span>The latest news, articles, and resources, sent to your inbox weekly.</span>
-                <div className='nl-input d-md-flex d-block align-items-center gap-2'>
+                <div className='nl-input'>
                   <Row>
-                    <Col xs={8}>
+                    <Col xs={8} lg={7}>
                       <input placeholder='Enter your email' />
                     </Col>
-                    <Col xs={4}>
+                    <Col xs={4} lg={5}>
                       <Button text='Subscribe' variant="primary" />
                     </Col>
                   </Row>
