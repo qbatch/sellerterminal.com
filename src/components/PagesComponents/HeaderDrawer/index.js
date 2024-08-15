@@ -33,7 +33,7 @@ const Index = (props) => {
             </div>
             <ul>
               {headerMenu.map((menu, ind) => (
-                <li key={ind}>
+                <li key={ind} onClick={() => setOpenDrawer(false)}>
                   <Link to={menu.to} activeClassName="active">
                     <span>{menu.name}</span>
                   </Link>

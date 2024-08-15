@@ -136,6 +136,11 @@ const FooterWrapper = styled.div`
       }
     }
     .copy-right {
+      ${media.md`
+        p {
+          padding-bottom: 24px;
+        }
+      `}
       ${media.xs`
         p {
           font-size: ${({ theme }) => theme.fonts.baseFontSizeXs};
@@ -145,7 +150,6 @@ const FooterWrapper = styled.div`
     }
     .footer-social {
       ${media.md`
-        padding-bottom: 16px;
         justify-content: center;
       `}
       p {
