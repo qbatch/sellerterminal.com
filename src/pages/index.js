@@ -1,17 +1,16 @@
-import React, {lazy} from "react";
+import React from "react";
 
 import Layout from "../layout";
-
-const  Banner = lazy(()=> import('../components/PagesComponents/Banner'));
-const  ReimbursedAmount = lazy(()=> import('../components/PagesComponents/ReimbursedAmount'));
-const  MultiMarketplace = lazy(()=> import('../components/PagesComponents/MultiMarketplace'));
-const  FbaFees = lazy(()=> import('../components/PagesComponents/FbaFees'));
-const  ReceiveYourRefund = lazy(()=> import('../components/PagesComponents/ReceiveYourRefund'));
-const  ReturnOnInvestment = lazy(()=> import('../components/PagesComponents/ReturnOnInvestment'));
-const  SoftwarePartner = lazy(()=> import('../components/PagesComponents/SoftwarePartner'));
-const  Transparancy = lazy(()=> import('../components/PagesComponents/Transparancy'));
-const  EasyRefungProcess = lazy(()=> import('../components/PagesComponents/EasyRefundProcess'));
-const  Faqs = lazy(()=> import('../components/PagesComponents/Faqs'));
+import Banner from '../components/PagesComponents/Banner';
+import ReimbursedAmount from '../components/PagesComponents/ReimbursedAmount';
+import MultiMarketplace from '../components/PagesComponents/MultiMarketplace';
+import FbaFees from '../components/PagesComponents/FbaFees';
+import ReceiveYourRefund from '../components/PagesComponents/ReceiveYourRefund';
+import ReturnOnInvestment from '../components/PagesComponents/ReturnOnInvestment';
+import SoftwarePartner from '../components/PagesComponents/SoftwarePartner';
+import Transparancy from '../components/PagesComponents/Transparancy';
+import EasyRefungProcess from '../components/PagesComponents/EasyRefundProcess';
+import Faqs from '../components/PagesComponents/Faqs';
 
 const IndexPage = () => {
   return (
