@@ -19,7 +19,7 @@ const Index = () => {
     autoplay: true,
     lazyLoad: true,
     speed: 600,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: (oldIndex, newIndex) => {
@@ -27,9 +27,16 @@ const Index = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(easyRefundData);
-  }, []);
+  const mobileSettings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    lazyLoad: true,
+    speed: 600,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   const handleRefundBoxClick = (index) => {
     setCurrentSlide(index);
@@ -71,7 +78,7 @@ const Index = () => {
           </div>
         </ScrollAnimation>
         <div className='d-block d-md-none'>
-          <Slider ref={sliderRef} {...settings}>
+          <Slider {...mobileSettings}>
             {easyRefundData.map((item, ind) => (
               <Card className='mobile-refund'>
                 <Card.Img variant="top" src={item.img} loading='lazy' />
