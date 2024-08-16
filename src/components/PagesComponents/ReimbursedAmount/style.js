@@ -40,7 +40,7 @@ const ReimbursedWrapper = styled.div`
       ${media.xs`
         margin-bottom: 24px;
         h2 {
-          font-size: ${({ theme }) => theme.fonts.baseFontSizeXs};
+          font-size: 11px;
           line-height: 14px;
         }
       `}

@@ -10,6 +10,9 @@ const CollpaseWrapper = styled.div`
   &:has(.show) {
     background: ${({ theme }) => theme.colors.bgColor};
     box-shadow: 0px 10px 10px -3.75px #0C15270D;
+    ${media.sm`
+      box-shadow: 0px 10px 10px -3.5px #00000040;
+    `};
     .collpase-select {
       .title {
         color: ${({ theme }) => theme.colors.secondaryColor};
@@ -19,7 +22,8 @@ const CollpaseWrapper = styled.div`
   .collpase-select {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 12px;
     .title,
     .h4-style {
       color: ${({ theme }) => theme.colors.secondaryColor};
@@ -38,6 +42,7 @@ const CollpaseWrapper = styled.div`
     svg {
       min-width: 16px;
       min-height: 16px;
+      margin-top: 4px;
     }
   }
   .collapse-content {

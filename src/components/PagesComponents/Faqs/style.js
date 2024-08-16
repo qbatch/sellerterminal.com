@@ -14,6 +14,13 @@ const FaqWrapper = styled.section`
     ${media.sm`
       margin-bottom: 36px;
     `}
+    ${media.xs`
+      display: flex;
+      justify-content: center;
+      h2 {
+        max-width: 320px;
+      }
+    `}
   }
   .faq-section {
     max-width: 930px;

@@ -19,8 +19,8 @@ const MarketplaceWrapper = styled.div`
     }
   }
   .marketplace-heading {
-    margin-top: 70px;
-    padding-left: 33px;
+    margin-top: 16px;
+    padding-left: 32px;
     ${media.md`
       margin-top: 0;
       padding-left: 0;

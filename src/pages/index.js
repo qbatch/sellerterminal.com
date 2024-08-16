@@ -1,6 +1,8 @@
 import React from "react";
+import "/static/animate.css";
 
 import Layout from "../layout";
+import Seo from '../components/Seo';
 import Banner from '../components/PagesComponents/Banner';
 import ReimbursedAmount from '../components/PagesComponents/ReimbursedAmount';
 import MultiMarketplace from '../components/PagesComponents/MultiMarketplace';
@@ -29,6 +31,10 @@ const IndexPage = () => {
       <Faqs />
     </Layout>
   )
-}
+};
+
+export const Head = () => (
+  <Seo title="Seller Terminal - Your Amazon Reimubursemnets Case Advocate!"></Seo>
+);
 
 export default IndexPage;

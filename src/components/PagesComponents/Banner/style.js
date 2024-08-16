@@ -24,7 +24,10 @@ const BannerWrapper = styled.div`
 
   .banner-heading {
     margin-top: 50px;
-    margin-right: 86px;
+    margin-right: 60px;
+    ${media.xxl`
+      margin-right: 86px;
+    `}
     ${media.lg`
       margin-top: 24px;
     `}

@@ -70,7 +70,7 @@ const FooterWrapper = styled.div`
         li {
           color: ${({ theme }) => theme.colors.whiteColor};
           line-height: 24px;
-          margin-bottom: 12px;
+          margin-bottom: 32px;
           &:last-of-type {
             margin-bottom: 0;
           }

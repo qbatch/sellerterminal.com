@@ -1,7 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
-import "/static/animate.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import { ThemeProvider } from "styled-components";
 import Theme from "../theme/theme-variable";
@@ -16,10 +15,6 @@ const Layout = ({ children }) => {
       <Header />
       <Helmet>
         <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
-          rel="stylesheet"
-        />
         {/* Google Tag Manager */}
         <script>
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

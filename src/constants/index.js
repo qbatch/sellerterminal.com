@@ -38,16 +38,16 @@ const testimonialData = [
   },
   {
     feedback: `"I was skeptical at first, but Seller Terminal's free audit revealed so many missed reimbursements. They recovered funds I didn't even know were owed to me. Their team is thorough and professional." Emily`,
-    clientName: 'Bob Steele',
-    designation: '8-Figure Amazon Seller',
+    clientName: 'Steve',
+    designation: 'Brand Owner',
     amount: '$70k+',
     cases: '3k',
     clientImg: '/st-avatar.svg'
   },
   {
     feedback: `“I can't believe how much money I was losing before using Seller Terminal. Their system caught every error and discrepancy. My personal recovery agent was incredibly helpful and responsive."`,
-    clientName: 'Bob Steele',
-    designation: '8-Figure Amazon Seller',
+    clientName: 'David Klein',
+    designation: 'E-commerce Business Owner',
     amount: '$90k+',
     cases: '5k',
     clientImg: '/st-avatar.svg'

@@ -265,5 +265,8 @@ const GlobalStyles = createGlobalStyle`
   .slick-arrow {
     display: none !important;
   }
+  .slick-dots li button:hover {
+    opacity: 0;
+  }
 `;
 export default GlobalStyles;
