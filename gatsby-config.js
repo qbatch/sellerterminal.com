@@ -21,10 +21,12 @@ module.exports = {
         path: `${__dirname}/src/assets/svgs`,
       },
     },
+    'gatsby-plugin-sitemap',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-styled-components",
     `gatsby-plugin-offline`,
+    'gatsby-plugin-preload-fonts',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

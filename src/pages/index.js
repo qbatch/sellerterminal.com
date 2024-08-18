@@ -1,5 +1,5 @@
 import React from "react";
-import "/static/animate.css";
+// import "/static/animate.css";
 
 import Layout from "../layout";
 import Seo from '../components/Seo';

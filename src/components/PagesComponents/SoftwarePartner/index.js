@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <SoftwarePartnerWrapper>
       <Container className='custom-container'>
-        <ScrollAnimation animateIn="fadeIn">
+        {/* <ScrollAnimation animateIn="fadeIn"> */}
           <div className='partner-box'>
             <img src='/software-partner.svg' alt='software-partner' title='software-partner' loading='lazy' />
             <div>
@@ -16,7 +16,7 @@ const Index = () => {
               <p>Stay fully compliant with Amazon’s Terms of Service, achieving peace of mind in all reimbursement processes.</p>
             </div>
           </div>
-        </ScrollAnimation>
+        {/* </ScrollAnimation> */}
       </Container>
     </SoftwarePartnerWrapper>
   )

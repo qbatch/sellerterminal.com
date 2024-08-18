@@ -59,16 +59,16 @@ const Index = () => {
   return (
     <FbaFeesWrapper>
       <Container className='custom-container'>
-        <ScrollAnimation animateIn="fadeIn">
+        {/* <ScrollAnimation animateIn="fadeIn"> */}
           <div className='fba-heading'>
             <h2>FBA Fees Got You Down? <br /> “<span>We Get Your Money Back</span>”</h2>
           </div>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" delay={300}>
+        {/* </ScrollAnimation> */}
+        {/* <ScrollAnimation animateIn="fadeIn" delay={300}> */}
           <div className='fba-tabs'>
             <Tabs tabsData={tabsData} defaultActiveKey='refund' />
           </div>
-        </ScrollAnimation>
+        {/* </ScrollAnimation> */}
       </Container>
       <div className='mobile-collapse'>
         {fbaFeesData.map((item, ind) => (

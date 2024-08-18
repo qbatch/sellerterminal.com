@@ -46,7 +46,7 @@ const Index = () => {
   return (
     <EasyRefundWrapper id='work-section'>
       <Container className='custom-container'>
-        <ScrollAnimation animateIn="fadeIn">
+        {/* <ScrollAnimation animateIn="fadeIn"> */}
           <h2>Easy Refund <span>Process</span></h2>
           <div className='refund-bg d-none d-md-block'>
             <Row>
@@ -76,7 +76,7 @@ const Index = () => {
               </Col>
             </Row>
           </div>
-        </ScrollAnimation>
+        {/* </ScrollAnimation> */}
         <div className='d-block d-md-none'>
           <Slider {...mobileSettings}>
             {easyRefundData.map((item, ind) => (
