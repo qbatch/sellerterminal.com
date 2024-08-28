@@ -118,7 +118,7 @@ const Footer = () => {
           </Col>
           <Col lg={6} className='bottom-border d-flex align-items-center justify-content-center order-3 order-lg-2'>
             <div className='bottom-padding text-center copy-right'>
-              <p>Copyright © 2023. SellerTerminal. All rights reserved.</p>
+              <p>Copyright © 2024. SellerTerminal. All rights reserved.</p>
             </div>
           </Col>
           <Col lg={3} className='d-flex align-items-center justify-content-center justify-content-lg-end pe-0 order-2 order-lg-3'>
