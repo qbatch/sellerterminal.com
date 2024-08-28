@@ -11,7 +11,34 @@ import EasyRefundWrapper from './style';
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef();
   const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setImageLoaded(true);
+            observer.unobserve(imgRef.current);
+          }
+        });
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(imgRef.current);
+
+    return () => {
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current);
+      }
+    };
+  }, []);
 
   const settings = {
     dots: true,
@@ -44,11 +71,11 @@ const Index = () => {
   };
 
   return (
-    <EasyRefundWrapper id='work-section'>
+    <EasyRefundWrapper id='work-section' imageLoaded={imageLoaded}>
       <Container className='custom-container'>
-        {/* <ScrollAnimation animateIn="fadeIn"> */}
+        <ScrollAnimation animateIn="fadeIn">
           <h2>Easy Refund <span>Process</span></h2>
-          <div className='refund-bg d-none d-md-block'>
+          <div className='refund-bg d-none d-md-block' ref={imgRef}>
             <Row>
               <Col lg={6}>
                 <Row>
@@ -69,19 +96,19 @@ const Index = () => {
                 <div className='mt-4'>
                   <Slider ref={sliderRef} {...settings}>
                     {easyRefundData.map((item, ind) => (
-                      <img key={ind} src={item.img} alt={item.label} title={item.label} loading='lazy' />
+                      <img key={ind} src={item.img} alt={item.label} title={item.label} loading='lazy' width='100%' height='100%' />
                     ))}
                   </Slider>
                 </div>
               </Col>
             </Row>
           </div>
-        {/* </ScrollAnimation> */}
+        </ScrollAnimation>
         <div className='d-block d-md-none'>
           <Slider {...mobileSettings}>
             {easyRefundData.map((item, ind) => (
               <Card className='mobile-refund'>
-                <Card.Img variant="top" src={item.img} loading='lazy' />
+                <Card.Img variant="top" src={item.img} alt={item.label} loading='lazy' width='100%' height='100%' />
                 <Card.Body>
                   <Card.Title>{item.label}</Card.Title>
                   <Card.Text>

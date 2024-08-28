@@ -19,7 +19,8 @@ const ButtonWrapper = styled(Button)`
   white-space: nowrap;
   border: none;
   ${media.xs`
-    font-size: ${({ theme }) => theme.fonts.baseFontSizeMediumSmal};
+    font-size: ${({ theme }) => theme.fonts.baseFontSizeXs};
+    padding: 6px 12px;
   `}
   .button-icon {
     box-sizing: border-box;

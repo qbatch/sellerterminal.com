@@ -17,7 +17,7 @@ const EasyRefundWrapper = styled.div`
 
   .refund-bg {
     background-color: ${({ theme }) => theme.colors.bgColor};
-    background-image: url('/easy-refund-bg.svg');
+    background-image: ${(props) => `url(${props.imageLoaded ? '/easy-refund-bg.svg' : ''})`};
     background-position: right 0 top 0;
     background-repeat: no-repeat;
     border-radius: 25px;

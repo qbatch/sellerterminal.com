@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import { navigate, Link } from "gatsby";
+import { Link } from "gatsby";
 
 import { Container } from "react-bootstrap";
 import Button from "../../UiComponents/Button";
 import Drawer from "../HeaderDrawer";
-
 import { headerMenu } from "../../../constants";
+import SellerTerminalLogo from "../../../../static/seller-terminal-logo.svg";
+import StWhiteLogo from "../../../../static/st-white-logo.svg";
 
 import HeaderWrapper from "./style";
 
 const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isscrolled, setIsScrolled] = useState(false);
   const sectionRefs = useRef({});
 
   const handleScroll = () => {
@@ -24,9 +25,9 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -45,6 +46,8 @@ const Header = () => {
       threshold: 0.5,
     };
 
+    const observers = [];
+
     headerMenu.forEach((menu) => {
       const section = document.querySelector(menu.to);
       if (section) {
@@ -54,31 +57,28 @@ const Header = () => {
           options
         );
         observer.observe(section);
+        observers.push(observer);
       }
     });
 
     return () => {
-      // Clean up observers
-      headerMenu.forEach((menu) => {
-        const observer = new IntersectionObserver(observerCallback, options);
-        if (observer) {
-          observer.disconnect();
-        }
-      });
+      observers.forEach((observer) => observer.disconnect());
     };
   }, []);
+
   return (
     <>
-      <HeaderWrapper isScrolled={isScrolled}>
+      <HeaderWrapper isScrolled={isscrolled}>
         <Container className="custom-container">
           <div className="header-main">
             <div className="seller-terminal-logo">
               <Link to="/">
-              {isScrolled ? 
-                <img src="./seller-terminal-logo.svg" alt="seller-terminal-logo" />
-              :
-                <img src="./st-white-logo.svg" alt="seller-terminal-logo" />
-              }
+                <img
+                  src={isscrolled ? SellerTerminalLogo : StWhiteLogo}
+                  alt="seller-terminal-logo"
+                  width={174}
+                  height={39}
+                />
               </Link>
             </div>
             <div className="d-flex align-items-center gap-xl-5 gap-4">
@@ -86,7 +86,10 @@ const Header = () => {
                 <ul>
                   {headerMenu.map((menu, ind) => (
                     <li key={ind}>
-                      <Link to={menu.to} className={menu.to === `#${activeSection}` ? 'active' : ''}>
+                      <Link
+                        to={menu.to}
+                        className={menu.to === `#${activeSection}` ? "active" : ""}
+                      >
                         <span>{menu.name}</span>
                       </Link>
                     </li>
@@ -94,12 +97,17 @@ const Header = () => {
                 </ul>
               </nav>
               <div className="menu-items">
-                <Link className="responsive-none" to="https://app.sellerterminal.com/auth/sign-in">
+                <a
+                  className="responsive-none"
+                  href="https://app.sellerterminal.com/auth/sign-in"
+                >
                   Sign In
-                </Link>
+                </a>
                 <Button
-                  className={`responsive-none ${isScrolled ? '' : 'btn-secondary'}`}
-                  onClick={() => navigate('https://app.sellerterminal.com/auth/sign-up')}
+                  className={`responsive-none ${isscrolled ? "" : "btn-secondary"}`}
+                  onClick={() =>
+                    window.location.href = "https://app.sellerterminal.com/auth/sign-up"
+                  }
                   text="Get your free Audit"
                   arrow="true"
                   variant="primary"
@@ -116,7 +124,7 @@ const Header = () => {
       </HeaderWrapper>
       <Drawer openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
     </>
-  )
+  );
 };
 
 export default Header;

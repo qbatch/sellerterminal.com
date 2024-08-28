@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,24 +12,29 @@ import Footer from "../components/PagesComponents/Footer";
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={Theme}>
-      <Header />
       <Helmet>
+        <html lang='en-US' />
         <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"></link>
+        <link
+          key="space-grotesk-bold-woff2"
+          rel="preload"
+          href='/fonts/SpaceGrotesk-Bold.woff2'
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />,
         {/* Google Tag Manager */}
-        <script>
+        {/* <script>
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-BNQQQD2B');`}
-        </script>
+        </script> */}
         {/* End Google Tag Manager */}
 
         {/* Schema  */}
-        <script type="application/ld+json">
+        {/* <script type="application/ld+json">
           {`{
                 "@context":"https://schema.org",
                 "@type":"WebApplication",
@@ -97,11 +102,11 @@ const Layout = ({ children }) => {
                 ]   
             }
             }`}
-        </script>
+        </script> */}
         {/* Schema  */}
 
         {/* Schema  */}
-        <script type="application/ld+json">
+        {/* <script type="application/ld+json">
           {`{
           "@context": "https://schema.org/",
           "@type": "WebSite",
@@ -146,13 +151,12 @@ const Layout = ({ children }) => {
           "keywords": "Seller Terminal, Amazon Seller Reimbursement Services, Automated Amazon Seller Reporting, FBA overcharged fees, Amazon FBA audit, FBA auditor, Amazon seller refunds, Lost inventory reimbursement",
           "mainEntityOfPage": "https://sellerterminal.com/"
         }`}
-        </script>
+        </script> */}
 
         {/* Schema  */}
       </Helmet>
-      <GlobalStyle />
       {/* Google Tag Manager (noscript) */}
-      <noscript>
+      {/* <noscript>
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-BNQQQD2B"
           height="0"
@@ -160,10 +164,14 @@ const Layout = ({ children }) => {
           style={{ display: "none", visibility: "hidden" }}
           title="googletagmanager"
         ></iframe>
-      </noscript>
+      </noscript> */}
       {/*  End Google Tag Manager (noscript) */}
-      {children}
-      <Footer />
+      <GlobalStyle />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        {children}
+        <Footer />
+      </Suspense>
     </ThemeProvider>
   );
 };

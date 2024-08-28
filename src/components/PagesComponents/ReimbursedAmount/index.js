@@ -4,7 +4,7 @@ import Avatar from 'react-avatar';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import RightArrow from '../../../assets/svgs/icons/st-right-arrow.svg';
 import AmountIcon from '../../../assets/svgs/icons/reimbursed-amount.svg';
@@ -38,7 +38,7 @@ const Index = () => {
   return (
     <ReimbursedWrapper>
       <Container className='custom-container'>
-        {/* <ScrollAnimation animateIn="fadeIn"> */}
+        <ScrollAnimation animateIn="fadeIn">
           <div className='reimbursed-box'>
             <div className='d-flex align-items-center justify-content-center heading'>
               <h2>We Investigate</h2>
@@ -54,7 +54,7 @@ const Index = () => {
                     <div className='testimonial-box' key={ind}>
                       <p className='feedback'>{item.feedback}</p>
                       <div className='d-flex align-items-center gap-3'>
-                        <Avatar src={item.clientImg} size="56" round={true} />
+                        <Avatar src={item.clientImg} alt={item.clientName} round={true} className='client-avatar' />
                         <div className='client-name'>
                           <p>{item.clientName}</p>
                           <span>{item.designation}</span>
@@ -82,7 +82,7 @@ const Index = () => {
               </Col>
             </Row>
           </div>
-        {/* </ScrollAnimation> */}
+        </ScrollAnimation>
       </Container>
     </ReimbursedWrapper>
   )

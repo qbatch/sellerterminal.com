@@ -35,22 +35,33 @@ const BannerWrapper = styled.div`
       margin-right: 0;
       margin-top: 12px;
     `}
-    h1 {
+    .heading {
       color: ${({ theme }) => theme.colors.whiteColor};
       margin-bottom: 32px;
       max-width: 860px;
       ${media.xs`
         margin-bottom: 24px;
+        font-size: ${({ theme }) => theme.fonts.baseFontSizeLg};
+        line-height: 32px;
       `}
     }
-    p {
+    .banner-paragraph {
       color: ${({ theme }) => theme.colors.bodyTextVariant};
       max-width: 710px;
       margin-bottom: 32px;
+      font-size: ${({ theme }) => theme.fonts.baseFontSizeSm};
       span {
         color: #00FFFF;
         font-weight: ${({ theme }) => theme.fontWeight.bold};
       }
+      ${media.xs`
+        font-size: ${({ theme }) => theme.fonts.baseFontSizeXs};
+        line-height: 16px;
+        margin-bottom: 24px;
+        span {
+          font-weight: ${({ theme }) => theme.fontWeight.medium};
+        }
+    `}
     }
   }
   .banner-img {

@@ -181,8 +181,8 @@ const GlobalStyles = createGlobalStyle`
         line-height: 40px;
       }
       h2, .h2-style{
-        font-size:${({ theme }) => theme.fonts.baseFontSizeH3};
-        line-height: 40px;
+        font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
+        line-height: 32px;
       }
       h4, .h4-style{
         font-size:${({ theme }) => theme.fonts.baseFontSizeSm};     
@@ -201,7 +201,7 @@ const GlobalStyles = createGlobalStyle`
         line-height: 38px;
       }
       h2, .h2-style{
-        font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
+        font-size:${({ theme }) => theme.fonts.baseFontSizeSm};
         line-height: 32px;
       }
       h4, .h4-style{
@@ -247,7 +247,7 @@ const GlobalStyles = createGlobalStyle`
     display: inline-block;
     width: 8px;
     height: 8px;
-    margin: 0 2px;
+    margin: 0 3px;
     background-color: lightgray;
     border-radius: 50%;
   }

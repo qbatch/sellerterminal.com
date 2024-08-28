@@ -54,16 +54,34 @@ const ReimbursedWrapper = styled.div`
         font-style: italic;
         letter-spacing: -0.9px;
       }
+      .client-avatar {
+        width: 56px !important;
+        height: 56px !important;
+        ${media.xs`
+          width: 26px !important;
+          height: 26px !important;
+        `}
+      }
       .client-name {
         p {
           color: ${({ theme }) => theme.colors.textColor};
           font-size: ${({ theme }) => theme.fonts.baseFontSizeSm};
           line-height: 24px;
           margin-bottom: 4px;
+          ${media.xs`
+            font-size: ${({ theme }) => theme.fonts.baseFontSizeXs};
+            line-height: 14px;
+            margin-bottom: 2px;
+          `}
         }
         span {
           color: ${({ theme }) => theme.colors.textColor};
           line-height: 20px;
+          display: block;
+          ${media.xs`
+            font-size: 10px;
+            line-height: 14px;
+          `}
         }
       }
     }

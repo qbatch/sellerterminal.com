@@ -3,7 +3,7 @@ import { media } from '../../../theme/media-mixins';
 
 const RefundWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primaryColor};
-  background-image: url('/refund-bg-img.svg');
+  background-image: ${(props) => `url(${props.imageLoaded ? '/refund-bg-img.svg' : ''})`};
   padding: 96px 0 54px;
   ${media.sm`
     padding: 48px 0;

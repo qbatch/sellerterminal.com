@@ -27,7 +27,7 @@ const SEO = ({ title, description, pathname, children }) => {
         name="google-site-verification"
         content="opICxee3noY9Tt6UqmCqi-bSE4HaTxwIVwyuielRJSI"
       />
-      <meta http-equiv="content-language" content="en-us" />
+      <meta httpEquiv="content-language" content="en-us" />
       {children}
     </>
   );

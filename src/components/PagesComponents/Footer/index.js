@@ -133,6 +133,7 @@ const Footer = () => {
                         target="_blank"
                         to={`https://www.${title}.com${title === 'linkedin' ? '/company' : ''}/${title === 'youtube' ? '@' : ''
                           }sellerterminal/`}
+                        title={title}
                       >
                         <link.logo />
                       </Link>
