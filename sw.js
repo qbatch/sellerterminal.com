@@ -27,17 +27,40 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-490289644baa4e2b92a3.js"
+    "url": "webpack-runtime-0b44bee8da48c9212ae3.js"
+  },
+  {
+    "url": "styles.b735f11a66a6573be67b.css"
   },
   {
     "url": "framework-7fba185ab6dd38e2e7c9.js"
   },
   {
-    "url": "app-c3e57a5e72063c25a255.js"
+    "url": "app-ceae76dcc3a91cca9b57.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "435c4a7a35acb80e3d85287a23db672e"
+    "revision": "d8425071d26bdffc1a5b51e2b959bd07"
+  },
+  {
+    "url": "fonts/SpaceGrotesk-Bold.woff2",
+    "revision": "c2a5f2876d22201ac2160bf5075455dd"
+  },
+  {
+    "url": "fonts/SpaceGrotesk-Regular.woff2",
+    "revision": "7845a059d8aa9877bb1b67f658414d76"
+  },
+  {
+    "url": "fonts/Inter18pt-Bold.woff2",
+    "revision": "3d4aed7e6ba6544e250d8d1c3037b240"
+  },
+  {
+    "url": "fonts/Inter18pt-Regular.woff2",
+    "revision": "b1376a34ab286e2382cd1a5f8af75537"
+  },
+  {
+    "url": "fonts/Inter18pt-Medium.woff2",
+    "revision": "f692b89fdfa1b7c91b4fe77fd9c389cf"
   },
   {
     "url": "manifest.webmanifest",
@@ -151,7 +174,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-c3e57a5e72063c25a255.js`))) {
+  if (!resources || !(await caches.match(`/app-ceae76dcc3a91cca9b57.js`))) {
     return await fetch(event.request)
   }
 
