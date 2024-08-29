@@ -90,7 +90,7 @@ const Index = () => {
   };
 
   return (
-    <OurServicesWrapper id='work-section' imageLoaded={imageLoaded}>
+    <OurServicesWrapper imageLoaded={imageLoaded}>
       <Container className='custom-container'>
         <ScrollAnimation animateIn="fadeIn">
           <h2>Our <span>Services</span></h2>

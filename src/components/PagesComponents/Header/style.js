@@ -57,7 +57,11 @@ const HeaderWrapper = styled.header`
           &:last-of-type {
             padding-right: 0;
           }
-          a {
+          cursor: pointer;
+          position: relative;
+          span {
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
             color: ${({ isScrolled, theme }) => (isScrolled ? theme.colors.textMedium : theme.colors.whiteColor)};
             font-weight: ${({ theme }) => theme.fontWeight.medium};
             &:hover,
@@ -65,13 +69,6 @@ const HeaderWrapper = styled.header`
               color: ${({ isScrolled, theme }) => (isScrolled ? theme.colors.primaryColor : theme.colors.textHighlight)};
               font-weight: ${({ theme }) => theme.fontWeight.medium};
             }
-          }
-          cursor: pointer;
-          position: relative;
-
-          span {
-            transition: all 0.3s ease-in-out;
-            display: inline-block;
           }
         }
       }

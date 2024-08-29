@@ -25,11 +25,11 @@ const Index = React.memo(() => {
             </div>
           </Col>
           <Col lg={5}>
-            <ScrollAnimation animateIn="fadeInRight" animateOnce>
-              <div className='banner-img'>
+            <div className='banner-img'>
+              <ScrollAnimation animateIn="fadeInRight" animateOnce>
                 <img src={BannerImg} alt='banner' title='banner' />
-              </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
+            </div>
           </Col>
         </Row>
       </Container>

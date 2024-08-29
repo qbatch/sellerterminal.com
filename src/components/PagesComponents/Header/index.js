@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { useLocation } from "@reach/router";
 
 import { Container } from "react-bootstrap";
@@ -67,6 +67,27 @@ const Header = () => {
     };
   }, []);
 
+  const handleSectionClick = (menu) => {
+    if (menu.isSection) {
+      if (location.pathname === "/") {
+        document.querySelector(menu.to).scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/", { state: { scrollToSection: menu.to } });
+      }
+    } else {
+      navigate(menu.to);
+    }
+  };
+
+  useEffect(() => {
+    if (location.state && location.state.scrollToSection) {
+      const section = document.querySelector(location.state.scrollToSection);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   const isActive = (menu) => {
     if (menu.isSection && location.pathname === "/") {
       return menu.to === `#${activeSection}` ? "active" : "";
@@ -96,12 +117,12 @@ const Header = () => {
                 <ul>
                   {headerMenu.map((menu, ind) => (
                     <li key={ind}>
-                      <Link
-                        to={menu.to}
+                      <span
+                        onClick={() => handleSectionClick(menu)}
                         className={isActive(menu)}
                       >
-                        <span>{menu.name}</span>
-                      </Link>
+                        {menu.name}
+                      </span>
                     </li>
                   ))}
                 </ul>
