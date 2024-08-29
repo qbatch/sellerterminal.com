@@ -1,15 +1,13 @@
 import styled from 'styled-components';
 import { media } from '../../../theme/media-mixins';
 
-const EasyRefundWrapper = styled.div`
+const OurServicesWrapper = styled.div`
   padding: 96px 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.dividingColor};
   ${media.sm`
     padding: 48px 0 72px;
-    background-color: ${({ theme }) => theme.colors.bgColor};
   `}
   h2 {
-    text-align: center;
     margin-bottom: 56px;
     ${media.xs`
       margin-bottom: 36px;
@@ -22,16 +20,19 @@ const EasyRefundWrapper = styled.div`
     background-position: right 0 top 0;
     background-repeat: no-repeat;
     border-radius: 25px;
-    padding: 40px 40px 16px;
+    padding: 40px;
 
     .refund-box {
       background-color: ${({ theme }) => theme.colors.whiteColor};
-      border-radius: 24px;
+      border-radius: 20px;
       padding: 16px 24px 16px 16px;
       margin-bottom: 24px;
+      position: relative;
       cursor: pointer;
       flex: 1;
-
+      &:last-child {
+        margin-bottom: 0;
+      }
       label {
         font-size: ${({ theme }) => theme.fonts.baseFontSizeSm};
         font-weight: ${({ theme }) => theme.fontWeight.bold};
@@ -91,6 +92,21 @@ const EasyRefundWrapper = styled.div`
       `}
     }
   }
+  .services-img {
+    display: flex !important;
+    justify-content: flex-end;
+    margin-top: 32px;
+    ${media.md`
+      justify-content: center;
+    `}
+    img {
+      width: 584px;
+    }
+  }
+  .progress-position {
+    position: absolute;
+    top: 10px;
+  }
 `
 
-export default EasyRefundWrapper;
+export default OurServicesWrapper;

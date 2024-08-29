@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 
 import { Container } from "react-bootstrap";
 import Button from "../../UiComponents/Button";
@@ -13,8 +14,9 @@ import HeaderWrapper from "./style";
 const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
-  const [isscrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const sectionRefs = useRef({});
+  const location = useLocation();
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -31,7 +33,7 @@ const Header = () => {
     };
   }, []);
 
-  const observerCallback = (entries, observer) => {
+  const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setActiveSection(entry.target.id);
@@ -49,15 +51,14 @@ const Header = () => {
     const observers = [];
 
     headerMenu.forEach((menu) => {
-      const section = document.querySelector(menu.to);
-      if (section) {
-        sectionRefs.current[menu.to] = section;
-        const observer = new IntersectionObserver(
-          (entries) => observerCallback(entries, observer),
-          options
-        );
-        observer.observe(section);
-        observers.push(observer);
+      if (menu.isSection) {
+        const section = document.querySelector(menu.to);
+        if (section) {
+          sectionRefs.current[menu.to] = section;
+          const observer = new IntersectionObserver(observerCallback, options);
+          observer.observe(section);
+          observers.push(observer);
+        }
       }
     });
 
@@ -66,15 +67,24 @@ const Header = () => {
     };
   }, []);
 
+  const isActive = (menu) => {
+    if (menu.isSection && location.pathname === "/") {
+      return menu.to === `#${activeSection}` ? "active" : "";
+    } else if (!menu.isSection && location.pathname === menu.to) {
+      return "active";
+    }
+    return "";
+  };
+
   return (
     <>
-      <HeaderWrapper isScrolled={isscrolled}>
+      <HeaderWrapper isScrolled={isScrolled}>
         <Container className="custom-container">
           <div className="header-main">
             <div className="seller-terminal-logo">
               <Link to="/">
                 <img
-                  src={isscrolled ? SellerTerminalLogo : StWhiteLogo}
+                  src={isScrolled ? SellerTerminalLogo : StWhiteLogo}
                   alt="seller-terminal-logo"
                   width={174}
                   height={39}
@@ -88,7 +98,7 @@ const Header = () => {
                     <li key={ind}>
                       <Link
                         to={menu.to}
-                        className={menu.to === `#${activeSection}` ? "active" : ""}
+                        className={isActive(menu)}
                       >
                         <span>{menu.name}</span>
                       </Link>
@@ -104,9 +114,9 @@ const Header = () => {
                   Sign In
                 </a>
                 <Button
-                  className={`responsive-none ${isscrolled ? "" : "btn-secondary"}`}
+                  className={`responsive-none ${isScrolled ? "" : "btn-secondary"}`}
                   onClick={() =>
-                    window.location.href = "https://app.sellerterminal.com/auth/sign-up"
+                    (window.location.href = "https://app.sellerterminal.com/auth/sign-up")
                   }
                   text="Get your free Audit"
                   arrow="true"

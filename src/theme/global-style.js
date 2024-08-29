@@ -201,7 +201,7 @@ const GlobalStyles = createGlobalStyle`
         line-height: 38px;
       }
       h2, .h2-style{
-        font-size:${({ theme }) => theme.fonts.baseFontSizeSm};
+        font-size:${({ theme }) => theme.fonts.baseFontSizeLg};
         line-height: 32px;
       }
       h4, .h4-style{
@@ -212,7 +212,7 @@ const GlobalStyles = createGlobalStyle`
        line-height: 18px;      
       }
       h3, .h3-style{
-        font-size:${({ theme }) => theme.fonts.baseFontSizeSm}
+        font-size:${({ theme }) => theme.fonts.baseFontSizeSm} !important;
       }
       .header-drawer{
         width:100%!important;
@@ -267,6 +267,22 @@ const GlobalStyles = createGlobalStyle`
   }
   .slick-dots li button:hover {
     opacity: 0;
+  }
+  .services-progressbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 16px;
+    background-color: #64A8A8;
+    height: 6px;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    .progress {
+      height: 100%;
+      background-color: #ffffff;
+      transition: width 0.1s linear;
+    }
   }
 `;
 export default GlobalStyles;

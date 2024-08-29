@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { media } from "../../../theme/media-mixins";
 
 const HeaderWrapper = styled.header`
-  background: ${({ isScrolled }) => (isScrolled ? 'rgba(255, 255, 255, 1)' : 'transparent')};
-  transition: background-color 0.3s ease;
+  background-color: ${({ isScrolled }) => (isScrolled ? 'rgba(255, 255, 255, 1)' : 'transparent')};
+  transition: background-color 0.3s ease-in-out;
   box-shadow: ${({ isScrolled }) => (isScrolled ? '0px 4px 24px rgba(0, 0, 0, 0.05)' : 'none')};
   position: sticky;
   top: 0;

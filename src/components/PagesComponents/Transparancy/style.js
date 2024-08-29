@@ -8,6 +8,7 @@ const TransparancyWrapper = styled.div`
 
   ${media.sm`
     padding: 48px 0;
+    margin: 48px 0;
   `}
 
   .transparancy-heading {

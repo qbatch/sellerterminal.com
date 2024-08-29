@@ -5,6 +5,7 @@ const SoftwarePartnerWrapper = styled.div`
   padding: 96px 0;
   ${media.sm`
     padding: 48px 0;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.dividingColor};
   `}
   .partner-box {
     background-color: ${({ theme }) => theme.colors.bgColor};

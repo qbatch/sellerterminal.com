@@ -4,26 +4,32 @@ const headerMenu = [
   {
     name: "Home",
     to: "#home",
+    isSection: true,
   },
   {
     name: "About",
-    to: "#about-section",
+    to: "/about/",
+    isSection: false,
   },
   {
     name: "How we work",
     to: "#work-section",
+    isSection: true,
   },
   {
     name: "Pricing",
     to: "#pricing-section",
+    isSection: true,
   },
   {
     name: "FAQs",
     to: "#faq-section",
+    isSection: true,
   },
   {
     name: "Support",
     to: "#support-section",
+    isSection: true,
   },
 ];
 
@@ -322,7 +328,66 @@ const fbaFeesData = [
     img: '/overcharges-img.svg',
     data: overchargesDetails
   },
-]
+];
+
+const ourCommitmentData = [
+  {
+    title: 'Comprehensive FBA Reimbursements',
+    desc: "We meticulously audit your Amazon transactions to uncover lost revenue and discrepancies. Our advanced software and dedicated recovery team ensure you receive the maximum reimbursements.",
+    img: '/fba-reimbursement.svg'
+  },
+  {
+    title: 'Transparent and Traceable',
+    desc: "Our easy-to-use dashboard provides real-time updates on every claim to help you stay informed about the status of your reimbursements. We ensure complete transparency and traceability in all transactions.",
+    img: '/traceable.svg'
+  },
+  {
+    title: 'Amazon Compliance',
+    desc: "We strictly adhere to Amazon’s Terms of Service, ensuring all our processes are compliant and risk-free. Our team stays updated with the latest Amazon policies to protect your account and reputation.",
+    img: '/amazon-compliance.svg'
+  },
+  {
+    title: 'No Upfront Fees',
+    desc: "Our success is tied to yours. We operate on a contingency basis, meaning you don’t pay unless you receive your refunds. This performance-based model ensures our goals are aligned with yours.",
+    img: '/upfront-fees.svg'
+  },
+];
+
+const ourServicesData = [
+  {
+    label: 'Free, No-Obligation Audit',
+    desc: "Get started with a complimentary audit of your Amazon account. We’ll provide you with a recovery estimate within 8-10 hours.",
+    img: '/no-obligation-audit.png'
+  },
+  {
+    label: 'Full-Suite Reimbursement Services',
+    desc: "From fees and orders to inventory and returns, we handle all FBA reimbursement claims. Our comprehensive service covers every aspect of your Amazon business.",
+    img: '/reimbursement-services.png'
+  },
+  {
+    label: 'Dedicated Support',
+    desc: "Each seller is assigned a personal recovery agent who provides tailored assistance and support. Our team is always ready to answer your questions and help you navigate the reimbursement process.",
+    img: '/dedicated-support.png'
+  }
+];
+
+const whyChooseData = [
+  {
+    title: 'Proven Track \n Record',
+    desc: "Join over 1,000 sellers, brands, and aggregators who have successfully recovered their money with our help. We have a 99% success rate and have recovered over $1M in funds.",
+    img: '/track-record.svg'
+  },
+  {
+    title: 'Expertise and \n Innovation',
+    desc: "Our team combines expertise with cutting-edge technology to deliver the best results. We continuously refine our processes to stay ahead of the curve.",
+    img: '/expertise.svg'
+  },
+  {
+    title: 'Seller-Centric \n Approach',
+    desc: "Your success is our priority. We are committed to providing exceptional service and support, helping you reclaim your money and reinvest it into growing your business.",
+    img: '/seller-centric.svg'
+  },
+];
 
 export {
   headerMenu,
@@ -336,5 +401,8 @@ export {
   easyRefundData,
   frequentquestion,
   footerlinksPrimary,
-  fbaFeesData
+  fbaFeesData,
+  ourCommitmentData,
+  ourServicesData,
+  whyChooseData
 };
