@@ -34,6 +34,7 @@ const OurServicesWrapper = styled.div`
         margin-bottom: 0;
       }
       label {
+        font-family: "Space Grotesk", sans-serif;
         font-size: ${({ theme }) => theme.fonts.baseFontSizeSm};
         font-weight: ${({ theme }) => theme.fontWeight.bold};
         color: ${({ theme }) => theme.colors.secondaryColor};

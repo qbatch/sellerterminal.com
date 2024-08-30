@@ -28,10 +28,17 @@ const MarketplaceWrapper = styled.div`
     h2 {
       margin-bottom: 32px;
       max-width: 506px;
+      line-height: 60px;
+      @media (max-width: 1200px) {
+        line-height: 40px;
+      }
+      ${media.sm`
+        line-height: 32px;
+      `}
       ${media.xs`
         margin-bottom: 24px;
       `}
-    }
+      }
     p {
       margin-bottom: 32px;
     }

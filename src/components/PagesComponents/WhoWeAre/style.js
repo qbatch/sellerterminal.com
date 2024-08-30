@@ -73,7 +73,7 @@ const WhoWeAreWrapper = styled.div`
     }
     p {
       font-weight: ${({ theme }) => theme.fontWeight.semiBold};
-      color: ${({ theme }) => theme.colors.textColor};
+      color: ${({ theme }) => theme.colors.secondaryColor};
       max-width: 620px;
       margin-bottom: 0;
       ${media.md`
