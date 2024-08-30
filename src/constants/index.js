@@ -29,7 +29,7 @@ const headerMenu = [
   {
     name: "Support",
     to: "#support-section",
-    isSection: true,
+    isSection: false,
   },
 ];
 
@@ -298,7 +298,7 @@ const footerlinksPrimary = [
   {
     id: 8,
     name: "Affiliate Program",
-    to: "#affiliate-progmram",
+    to: "/affiliate",
   },
 ];
 
@@ -389,6 +389,52 @@ const whyChooseData = [
   },
 ];
 
+const buildRevenueData = [
+  {
+    title: 'High-Demand, High-Reward',
+    desc: "Amazon sellers lose significant revenue monthly due to errors. Be their hero by offering our in-demand reimbursement service and earn generous commissions!",
+    img: '/high-reward.svg'
+  },
+  {
+    title: 'Top-Tier Commissions and Earning Potential',
+    desc: "Our easy-to-use dashboard provides real-time updates on every claim to help you stay informed about the status of your reimbursements. We ensure complete transparency and traceability in all transactions.",
+    img: '/top-tier.svg'
+  },
+  {
+    title: 'Proven Track Record and Trusted Community',
+    desc: "Seller Terminal has a history of recovering millions for sellers. Join our thriving affiliate community of over 250+ partners and share in our success.",
+    img: '/proven-track.svg'
+  },
+  {
+    title: 'Unlock Hidden Profits, Fuel Your Growth',
+    desc: "Recovered funds are just the beginning. We help you identify additional cash flow opportunities within your business. Reinvest these newfound profits to expand your Amazon empire with confidence.",
+    img: '/hidden-profit.svg'
+  },
+];
+
+const benefitsData = [
+  {
+    title: 'Easy Sign-Up \n Process',
+    desc: "Joining our affiliate program is as easy as 1-2-3. Simply sign up, get approved, and start promoting. No complicated hoops to jump through!",
+    img: '/easy-signup.svg'
+  },
+  {
+    title: 'Ready-to-Use Marketing Materials',
+    desc: "We provide a treasure trove of marketing materials to help you effectively promote Seller Terminal. From eye-catching banners to compelling email templates, we’ve got you covered.",
+    img: '/marketing-material.svg'
+  },
+  {
+    title: 'Real-Time \n Tracking',
+    desc: "Our real-time tracking system lets you keep an eye on your referrals and earnings. Monitor your performance and tweak your strategies for maximum results",
+    img: '/time-tracking.svg'
+  },
+  {
+    title: 'Dedicated Affiliate \n Support',
+    desc: "Got questions? Need advice? Our friendly affiliate support team is always here to help. Whether you need assistance with marketing strategies or your account, we’re just a click away.",
+    img: '/dedicated-support.svg'
+  },
+];
+
 export {
   headerMenu,
   testimonialData,
@@ -404,5 +450,7 @@ export {
   fbaFeesData,
   ourCommitmentData,
   ourServicesData,
-  whyChooseData
+  whyChooseData,
+  buildRevenueData,
+  benefitsData
 };

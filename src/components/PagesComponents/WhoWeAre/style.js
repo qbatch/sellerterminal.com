@@ -4,7 +4,7 @@ import { media } from '../../../theme/media-mixins';
 const WhoWeAreWrapper = styled.div`
   padding: 90px 0;
   ${media.sm`
-    padding: 48px 0 0;
+    padding: 16px 0 0;
   `}
 
   .wrapper-box {

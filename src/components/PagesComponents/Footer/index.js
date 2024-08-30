@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -16,6 +16,10 @@ import FooterWrapper from './style';
 
 const Footer = () => {
   const [openCalendly, setOpenCalendly] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const socialLinks = [
     {

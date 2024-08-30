@@ -284,5 +284,8 @@ const GlobalStyles = createGlobalStyle`
       transition: width 0.1s linear;
     }
   }
+  .hr {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.dividerColor};
+  }
 `;
 export default GlobalStyles;

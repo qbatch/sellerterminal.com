@@ -7,9 +7,10 @@ import BannerImg from '../../../assets/images/about-banner-img.png';
 import AboutBannerWrapper from './style';
 
 const Index = React.memo(() => {
-  const heading = 'Seller Terminal \n Get More From Amazon.'
+  const heading = 'Seller Terminal \n Get More From Amazon.';
+  
   return (
-    <AboutBannerWrapper id='home'>
+    <AboutBannerWrapper>
       <Container className='custom-container'>
         <Row>
           <Col lg={7}>
