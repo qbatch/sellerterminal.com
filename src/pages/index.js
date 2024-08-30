@@ -3,6 +3,7 @@ import "/static/animate.css";
 
 import Layout from "../layout";
 import Seo from '../components/Seo';
+import { frequentquestion } from "../constants";
 
 const Banner = lazy(() => import('../components/PagesComponents/Banner'));
 const ReimbursedAmount = lazy(() => import('../components/PagesComponents/ReimbursedAmount'));
@@ -29,7 +30,7 @@ const IndexPage = () => {
       <SoftwarePartner />
       <Transparancy />
       <EasyRefungProcess />
-      <Faqs />
+      <Faqs content={frequentquestion} />
     </Layout>
   )
 };

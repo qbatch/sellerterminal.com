@@ -254,6 +254,38 @@ const frequentquestion = [
   },
 ];
 
+const affiliateFaqs = [
+  {
+    id: 1,
+    title: "What is the Seller Terminal affiliate program?",
+    content:
+      "The Seller Terminal affiliate program allows you to earn commissions by referring Amazon sellers to our reimbursement services. When a seller signs up and uses our services through your referral link, you earn a percentage of the revenue.",
+  },
+  {
+    id: 2,
+    title: "How do I join the affiliate program?",
+    content: "Simply fill out the registration form on our affiliate page. Once approved, you’ll receive access to your affiliate dashboard and marketing materials."
+  },
+  {
+    id: 3,
+    title: "How much can I earn?",
+    content:
+      "Our commission structure is highly competitive, offering a substantial percentage of the revenue from each referral. Your earnings potential is unlimited, depending on the number of successful referrals.",
+  },
+  {
+    id: 4,
+    title: "When and how do I get paid?",
+    content:
+      "We offer monthly payouts via various payment methods. Your earnings will be tracked in real-time, and you’ll receive your commissions on time, every time.",
+  },
+  {
+    id: 5,
+    title: "What marketing materials are provided? ",
+    content:
+      "We provide a range of marketing materials, including banners, email templates, and social media content, to help you effectively promote Seller Terminal.",
+  },
+];
+
 const footerlinksPrimary = [
   {
     id: 1,
@@ -452,5 +484,6 @@ export {
   ourServicesData,
   whyChooseData,
   buildRevenueData,
-  benefitsData
+  benefitsData,
+  affiliateFaqs
 };

@@ -3,11 +3,10 @@ import { Container } from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import Accordion from "../../UiComponents/Collapse";
-import { frequentquestion } from "../../../constants";
 
 import FaqWrapper from "./style";
 
-const FAQ = () => {
+const FAQ = ({ content }) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const handleToggle = (index) => {
@@ -24,7 +23,7 @@ const FAQ = () => {
             </div>
           </ScrollAnimation>
           <div className="faq-section">
-            {frequentquestion.map((faq, index) => {
+            {content.map((faq, index) => {
               return (
                 <Accordion
                   title={faq.title}

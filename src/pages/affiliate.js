@@ -1,6 +1,7 @@
 import React, { lazy } from 'react';
 
 import Layout from '../layout';
+import { affiliateFaqs } from '../constants';
 
 const AffiliateBanner = lazy(() => import('../components/PagesComponents/AffiliateBanner'));
 const BuildRevenue = lazy(() => import('../components/PagesComponents/BuildRevenue'));
@@ -20,7 +21,7 @@ const Affiliate = () => {
       <Benefits />
       <HowItWorks />
       <StartEarning />
-      <Faqs />
+      <Faqs content={affiliateFaqs} />
       <ReferralsRewards />
     </Layout>
   )
