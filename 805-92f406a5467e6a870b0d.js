@@ -1,0 +1,12 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[805],{9805:function(e,t,r){r.r(t),r.d(t,{default:function(){return f}});var a=r(6540),n=r(3048),l=r(4479),o=r(1105),s=r(8396),c=r.n(s),m=r(2944),i=r(2732),d=r.n(i),u=r(7581),p=r(641);var g=u.default.div.withConfig({displayName:"style__TransparancyWrapper",componentId:"sc-ix0aa8-0"})(["background-color:",";background-image:",";padding:96px 0 54px;"," .transparancy-heading{h2{margin-bottom:24px;color:",";max-width:600px;","}p{color:",";margin-bottom:32px;}}.trans-img{","}"],(e=>{let{theme:t}=e;return t.colors.primaryColor}),(e=>`url(${e.imageLoaded?"/refund-bg-img.svg":""})`),p.$.sm`
+    padding: 48px 0;
+    margin: 48px 0;
+  `,(e=>{let{theme:t}=e;return t.colors.whiteColor}),p.$.xs`
+        margin-bottom: 16px;
+      `,(e=>{let{theme:t}=e;return t.colors.whiteColor}),p.$.sm`
+      svg {
+        width: auto;
+        height: auto;
+      }
+    `);var f=()=>{const{0:e,1:t}=(0,a.useState)(!1),r=(0,a.useRef)();return(0,a.useEffect)((()=>{const e=new IntersectionObserver((a=>{a.forEach((a=>{a.isIntersecting&&(t(!0),e.unobserve(r.current))}))}),{rootMargin:"0px",threshold:.1});return e.observe(r.current),()=>{r.current&&e.unobserve(r.current)}}),[]),a.createElement(g,{ref:r,imageLoaded:e},a.createElement(n.A,{className:"custom-container"},a.createElement(l.A,null,a.createElement(o.A,{md:6,className:"d-flex align-items-center"},a.createElement(c(),{animateIn:"fadeIn"},a.createElement("div",{className:"transparancy-heading"},a.createElement("h2",null,"Transparency and Clarity"),a.createElement("p",null,"Our Amazon Reimbursement Tool provides detailed performance analytics for Amazon sellers."),a.createElement(m.A,{text:"Sign Me Up Now",className:"btn-secondary d-md-flex d-none",arrow:"true",variant:"primary",onClick:()=>window.location.href="https://app.sellerterminal.com/auth/sign-up"})))),a.createElement(o.A,{md:6,className:"d-flex justify-content-center"},a.createElement(c(),{animateIn:"fadeIn"},a.createElement("div",{className:"trans-img"},a.createElement(d(),null)))),a.createElement("div",{className:"d-flex justify-content-center d-md-none mt-4"},a.createElement(m.A,{text:"Sign Me Up Now",arrow:"true",variant:"primary"})))))}}}]);
+//# sourceMappingURL=805-92f406a5467e6a870b0d.js.map
