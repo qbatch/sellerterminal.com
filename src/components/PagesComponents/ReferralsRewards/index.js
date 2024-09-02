@@ -21,7 +21,14 @@ const Index = () => {
                 <div className='referrals-heading'>
                   <h2>Let’s turn your referrals <span>into rewards!</span></h2>
                   <p>Partner with Seller Terminal today and start maximizing your earnings while helping Amazon sellers recover their lost revenue!</p>
-                  <Button text='Become a Partner' arrow="true" variant="primary" />
+                  <Button
+                    text='Become a Partner'
+                    arrow="true"
+                    variant="primary"
+                    onClick={() =>
+                      (window.location.href = "https://app.sellerterminal.com/auth/sign-up")
+                    }
+                  />
                 </div>
               </ScrollAnimation>
             </Col>

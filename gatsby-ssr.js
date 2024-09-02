@@ -1,12 +1,11 @@
 import React from "react";
-import { withPrefix } from 'gatsby';
 
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
   setHeadComponents([
     <link
       key="space-grotesk-bold-woff2"
       rel="preload"
-      href={withPrefix('/fonts/SpaceGrotesk-Bold.woff2')}
+      href='/fonts/SpaceGrotesk-Bold.woff2'
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -14,7 +13,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
     <link
       key="space-grotesk-regular-woff2"
       rel="preload"
-      href={withPrefix('/fonts/SpaceGrotesk-Regular.woff2')}
+      href='/fonts/SpaceGrotesk-Regular.woff2'
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -22,7 +21,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
     <link
       key="inter-bold-woff2"
       rel="preload"
-      href={withPrefix('/fonts/Inter18pt-Bold.woff2')}
+      href='/fonts/Inter18pt-Bold.woff2'
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -30,7 +29,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
     <link
       key="inter-regular-woff2"
       rel="preload"
-      href={withPrefix('/fonts/Inter18pt-Regular.woff2')}
+      href='/fonts/Inter18pt-Regular.woff2'
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -38,7 +37,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
     <link
       key="inter-medium-woff2"
       rel="preload"
-      href={withPrefix('/fonts/Inter18pt-Medium.woff2')}
+      href='/fonts/Inter18pt-Medium.woff2'
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
@@ -46,7 +45,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
     <link 
       key="logo"
       rel="preload" 
-      href="/seller-terminal-logo.svg" 
+      href="/st-white-logo.svg" 
       as="image"
     />,
   ]);

@@ -72,7 +72,9 @@ const Header = () => {
       if (location.pathname === "/") {
         document.querySelector(menu.to).scrollIntoView({ behavior: "smooth" });
       } else {
-        navigate("/", { state: { scrollToSection: menu.to } });
+        navigate("/", {
+          state: { scrollToSection: menu.to },
+        });
       }
     } else {
       navigate(menu.to);
@@ -83,7 +85,9 @@ const Header = () => {
     if (location.state && location.state.scrollToSection) {
       const section = document.querySelector(location.state.scrollToSection);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth" });
+        }, 0);
       }
     }
   }, [location]);

@@ -25,7 +25,15 @@ const Index = React.memo(() => {
                 </div>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeIn" delay={400} animateOnce>
-                <Button text='Become Our Partner' className='btn-secondary' arrow="true" variant="primary" />
+                <Button
+                  text='Become Our Partner'
+                  className='btn-secondary'
+                  arrow="true"
+                  variant="primary"
+                  onClick={() =>
+                    (window.location.href = "https://app.sellerterminal.com/auth/sign-up")
+                  }
+                />
               </ScrollAnimation>
             </div>
           </Col>

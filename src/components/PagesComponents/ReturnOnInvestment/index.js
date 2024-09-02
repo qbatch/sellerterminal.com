@@ -21,7 +21,14 @@ const Index = () => {
                 Our software audits your account while our recovery team files cases, ensuring returns in your bank account.</p>
             </Col>
             <div className='d-flex d-sm-none justify-content-center audit-btn'>
-              <Button text='Get your free Audit' arrow="true" variant="primary" />
+              <Button
+                text='Get your free Audit'
+                arrow="true"
+                variant="primary"
+                onClick={() =>
+                  (window.location.href = "https://app.sellerterminal.com/auth/sign-up")
+                }
+              />
             </div>
           </Row>
           <Row>

@@ -46,7 +46,15 @@ const Index = () => {
                 <div className='transparancy-heading'>
                   <h2>Ready to Start Earning?</h2>
                   <p>For more information, feel free to contact our affiliate support team at <span>support@sellerterminal.com.</span></p>
-                  <Button text='Sign Up Now' className='btn-secondary d-md-flex d-none' arrow="true" variant="primary" />
+                  <Button
+                    text='Sign Up Now'
+                    className='btn-secondary d-md-flex d-none'
+                    arrow="true"
+                    variant="primary"
+                    onClick={() =>
+                      (window.location.href = "https://app.sellerterminal.com/auth/sign-up")
+                    }
+                  />
                 </div>
               </ScrollAnimation>
             </Col>

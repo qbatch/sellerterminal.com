@@ -116,7 +116,7 @@ const Footer = () => {
           <Col lg={3} className='ps-0 order-1'>
             <div className="logo bottom-padding">
               <Link to="/">
-                <img src='/st-white-logo.svg' alt='seller terminal' title='seller terminal' loading='lazy' />
+                <img src='/st-white-logo.svg' alt='seller terminal' title='seller terminal' loading='lazy' width={174} height={39} />
               </Link>
             </div>
           </Col>

@@ -45,7 +45,15 @@ const Index = () => {
               <div className='transparancy-heading'>
                 <h2>Transparency and Clarity</h2>
                 <p>Our Amazon Reimbursement Tool provides detailed performance analytics for Amazon sellers.</p>
-                <Button text='Sign Me Up Now' className='btn-secondary d-md-flex d-none' arrow="true" variant="primary" />
+                <Button
+                  text='Sign Me Up Now'
+                  className='btn-secondary d-md-flex d-none'
+                  arrow="true"
+                  variant="primary"
+                  onClick={() =>
+                    (window.location.href = "https://app.sellerterminal.com/auth/sign-up")
+                  }
+                />
               </div>
             </ScrollAnimation>
           </Col>
