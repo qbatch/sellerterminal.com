@@ -32,7 +32,7 @@ export const Head = () => (
   <Seo
     title="Earn Top Commissions Helping Amazon Sellers | Seller Terminal Affiliate Program"
     description="Join Seller Terminal's affiliate program, help Amazon sellers recover lost revenue, and earn top commissions. Turn your connections into cash today!"
-    pathname='/affiliate'
+    pathname='/affiliate/'
     robots='index, follow'
   />
 );

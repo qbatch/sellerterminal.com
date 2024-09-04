@@ -25,7 +25,7 @@ export const Head = () => (
   <Seo
     title="Maximize Your Amazon FBA Returns | Seller Terminal"
     description="Seller Terminal ensures you're always in control of your Amazon business by helping you recover every dollar owed from Amazon's FBA program."
-    pathname='/about'
+    pathname='/about/'
     robots='index, follow'
   />
 );
