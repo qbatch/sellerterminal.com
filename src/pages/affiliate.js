@@ -1,6 +1,7 @@
 import React, { lazy } from 'react';
 
 import Layout from '../layout';
+import Seo from '../components/Seo';
 import { affiliateFaqs } from '../constants';
 
 const AffiliateBanner = lazy(() => import('../components/PagesComponents/AffiliateBanner'));
@@ -25,6 +26,15 @@ const Affiliate = () => {
       <ReferralsRewards />
     </Layout>
   )
-}
+};
+
+export const Head = () => (
+  <Seo
+    title="Earn Top Commissions Helping Amazon Sellers | Seller Terminal Affiliate Program"
+    description="Join Seller Terminal's affiliate program, help Amazon sellers recover lost revenue, and earn top commissions. Turn your connections into cash today!"
+    pathname='/affiliate'
+    robots='index, follow'
+  />
+);
 
 export default Affiliate;

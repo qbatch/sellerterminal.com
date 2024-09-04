@@ -290,7 +290,7 @@ const footerlinksPrimary = [
   {
     id: 1,
     name: "About",
-    to: "#about-section",
+    to: "/about",
   },
   {
     id: 2,

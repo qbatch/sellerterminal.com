@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useLocation } from '@reach/router';
 
 import Button from '../../UiComponents/Button';
 import Calendly from '../../PagesComponents/Calendly';
@@ -16,10 +17,42 @@ import FooterWrapper from './style';
 
 const Footer = () => {
   const [openCalendly, setOpenCalendly] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  const handleLinkClick = (e, to) => {
+    if (to.includes('#')) {
+      e.preventDefault();
+      const hash = to.split('#')[1];
+      const homepagePath = `/#${hash}`;
+  
+      if (window.location.pathname === '/') {
+        const targetElement = document.querySelector(`#${hash}`);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        navigate(homepagePath)?.then(() => {
+          setTimeout(() => {
+            const targetElement = document.querySelector(`#${hash}`);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 300);
+        });
+      }
+    } else {
+      navigate(to);
+    }
+  };
 
   const socialLinks = [
     {
@@ -63,7 +96,7 @@ const Footer = () => {
               <ul>
                 {footerlinksPrimary.slice(0, 3).map((menu, ind) => (
                   <li key={ind}>
-                    <Link to={menu.to} activeClassName="active">
+                    <Link to={menu.to} activeClassName="active" onClick={(e) => handleLinkClick(e, menu.to)}>
                       <span>{menu.name}</span>
                     </Link>
                   </li>
@@ -74,7 +107,7 @@ const Footer = () => {
               <ul>
                 {footerlinksPrimary.slice(3, 6).map((menu, ind) => (
                   <li key={ind}>
-                    <Link to={menu.to} activeClassName="active">
+                    <Link to={menu.to} activeClassName="active" onClick={(e) => handleLinkClick(e, menu.to)}>
                       <span>{menu.name}</span>
                     </Link>
                   </li>
@@ -85,7 +118,7 @@ const Footer = () => {
               <ul>
                 {footerlinksPrimary.slice(6).map((menu, ind) => (
                   <li key={ind}>
-                    <Link to={menu.to} activeClassName="active">
+                    <Link to={menu.to} activeClassName="active" onClick={(e) => handleLinkClick(e, menu.to)}>
                       <span>{menu.name}</span>
                     </Link>
                   </li>
@@ -130,7 +163,7 @@ const Footer = () => {
               <p>Follow Us at</p>
               <ul>
                 {socialLinks.map((link, i) => {
-                  const { title } = link
+                  const { title } = link;
                   return (
                     <li key={i}>
                       <Link
@@ -149,8 +182,9 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      <Calendly show={openCalendly} onHide={()=> setOpenCalendly(false)} />
+      <Calendly show={openCalendly} onHide={() => setOpenCalendly(false)} />
     </FooterWrapper>
-  )
-}
-export default Footer
+  );
+};
+
+export default Footer;
